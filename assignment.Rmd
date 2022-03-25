@@ -9,6 +9,183 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r}
+
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+```
+
+```{r}
+# singer_gender <- read.csv("datasets/Gender_Dataset_1.4.csv")
+# 
+# songs <- read.csv("datasets/spotify_songs.csv")
+```
+
+```{r}
+
+netflix <- read.csv("datasets/netflix_titles.csv")
+movie_reviews <- read.csv("datasets/rotten_tomatoes_critic_reviews.csv")
+movies <- read.csv("datasets/rotten_tomatoes_movies.csv")
+
+```
+
+```{r}
+NROW(netflix)
+
+netfix_tomatoes_data <- inner_join(netflix, movies, by = c("title" = "movie_title"))
+
+NROW(netfix_tomatoes_data)
+
+```
+
+```{r}
+
+# movies <- read.csv("datasets/movies_metadata.csv", stringsAsFactors = FALSE)
+# credits <- read.csv("datasets/credits.csv", stringsAsFactors = FALSE)
+# 
+# #change some types 
+# movies$budget <- as.numeric(movies$budget)
+
+```
+
+```{r}
+# parse_cast <- function(cast_text) {
+#   text <- 
+#     sub("\\£\\$\\£", "",    #drop the first one
+#         gsub("\'|\"|\\[|\\]|\\{|\\}|,", "",
+#              gsub("\'cast_id\':|\'character\':|\'credit_id\':|\'gender\':|\'id\':|\'name\':|\'order\':|\'profile_path\':", 
+#                   "£$£", 
+#                   cast_text)
+#         )
+#     )
+#   
+#   data <- data.frame(matrix(
+#     trimws(unlist(
+#         strsplit(text, "\\£\\$\\£")
+#         )), 
+#     ncol = 8, byrow = TRUE), stringsAsFactors = FALSE)
+#   
+#   names(data) <- c("cast_id", "character", "credit_id", "gender", "id", "name", "order", "profile_path")
+#   data$order <- as.numeric(data$order)
+#   
+#   return(data %>% select(cast_id, gender, id, name, order))
+# }
+
+```
+
+```{r}
+# num_batches <- 50
+# batch_interval <- ceiling(nrow(credits) / num_batches)
+# batch_brackets <- 0:num_batches * batch_interval
+# batch_brackets[num_batches+1] <- nrow(credits)
+# batch_brackets[1] <- 1
+# 
+# cast_data <- data.frame()
+# for(b_i in 1:num_batches){
+#   
+#   batch_data <- data.frame()
+#   for(b2_i in batch_brackets[b_i]:(batch_brackets[b_i+1]-1)){
+#     #print(b2_i)
+#     this_cast <- parse_cast(credits$cast[b2_i])
+#     if(nrow(this_cast) > 0){
+#       this_cast$movie_id <- as.character(credits$id[b2_i])
+#       batch_data <- rbind(batch_data, this_cast)
+#     }
+#   }
+#   cast_data <- rbind(cast_data, batch_data)
+#   print(paste0("    done batch ", b_i))
+# }
+
+#remove gender = 0 (todo, does 0 means something else?? or just missing data)
+# cast_data <- cast_data[cast_data$gender != 0,]
+
+```
+```{r}
+# write.csv(cast_data,"datasets/cast_data.csv", row.names = FALSE)
+
+# cast_data <- read.csv("datasets/cast_data.csv")
+# 
+#group by actor name
+# cast_gender <- cast_data %>%
+#   group_by(name) %>%
+#   summarise(gender = mean(gender))
+# 
+# write.csv(cast_gender,"datasets/cast_gender.csv", row.names = FALSE)
+
+cast_gender <- read.csv("datasets/cast_gender.csv")
+
+#  netfix_tomatoes_data_unnested <- netfix_tomatoes_data %>% 
+#     mutate(cast = strsplit(as.character(cast), ",")) %>% 
+#     unnest(cast)
+# 
+# netfix_tomatoes_data_unnested$cast <- trimws(netfix_tomatoes_data_unnested$cast, which = c("both"))
+# 
+# write.csv(netfix_tomatoes_data_unnested,"datasets/netfix_tomatoes_data_unnested.csv", row.names = FALSE)
+
+
+# netfix_tomatoes_data_unnested <- read.csv("datasets/netfix_tomatoes_data_unnested.csv")
+
+```
+
+```{r}
+
+# netflix_tomatoes_cast_dataset <- inner_join(netfix_tomatoes_data_unnested, cast_gender, by = c("cast" = "name"))
+# #
+# write.csv(netflix_tomatoes_cast_dataset,"datasets/netflix_tomatoes_cast_dataset.csv", row.names = FALSE)
+# 
+netflix_tomatoes_cast_dataset <- read.csv("datasets/netflix_tomatoes_cast_dataset.csv")
+
+# nrow(netflix_tomatoes_cast_dataset)
+# 
+# NROW(netflix_tomatoes_cast_dataset[netflix_tomatoes_cast_dataset$gender==1,])
+# NROW(netflix_tomatoes_cast_dataset[netflix_tomatoes_cast_dataset$gender==2,])
+# 
+# NROW(netflix_tomatoes_cast_dataset[
+#   (netflix_tomatoes_cast_dataset$gender!=1) && (netflix_tomatoes_cast_dataset$gender!=2),])
+# 
+# length(unique(netflix_tomatoes_cast_dataset$title))
+
+#######
+# netflix_tomatoes_num_of_casts_count_dataset <- netflix_tomatoes_cast_dataset %>%
+#   group_by(show_id, title) %>%
+#     summarise(num_of_casts = n())
+# 
+# netflix_tomatoes_gender_count_dataset <- netflix_tomatoes_cast_dataset %>%
+#   group_by(show_id, type, title, release_year, rating, content_rating, 
+#            tomatometer_status, tomatometer_rating, tomatometer_count,
+#            audience_status, audience_rating, audience_count,
+#            gender) %>%
+#   summarise(num_of_gender = sum(gender))
+# 
+# ## remove decimal points..
+# netflix_tomatoes_gender_count_dataset$gender <- trunc(netflix_tomatoes_gender_count_dataset$gender)
+# netflix_tomatoes_gender_count_dataset$num_of_gender <- trunc(netflix_tomatoes_gender_count_dataset$num_of_gender)
+# 
+# ## need to divide the number of genders back to gender for 'male' is 2..
+# netflix_tomatoes_gender_count_dataset <- netflix_tomatoes_gender_count_dataset %>%
+#   mutate(
+#       num_of_gender = num_of_gender/gender
+#   )
+# 
+# netflix_gender_ratio <- inner_join(netflix_tomatoes_gender_count_dataset, netflix_tomatoes_num_of_casts_count_dataset) %>%
+#   mutate(
+#     gender_rato_percentage = round(num_of_gender/num_of_casts*100),
+#     gender = ifelse(gender == 1, "Female", "Male")
+#   )
+# 
+# 
+# netflix_gender_ratio <- netflix_gender_ratio[
+#   order(-netflix_gender_ratio$release_year, netflix_gender_ratio$title),]
+# 
+# write.csv(netflix_gender_ratio,"datasets/netflix_gender_ratio.csv", row.names = FALSE)
+
+netflix_gender_ratio <- read.csv("datasets/netflix_gender_ratio.csv")
+
+```
+
+
 # Introduction 
 
 Imagine that you are part of a team of product data scientists at Acme, Inc. Your manager, Mx. Coy Ote, has given you the freedom to choose your own product to investigate, and evaluate a way to make it more successful.
@@ -16,6 +193,14 @@ Imagine that you are part of a team of product data scientists at Acme, Inc. You
 **Your task is to select and develop a research question, find appropriate data, then conduct a regression study.** 
 
 ## Research Question
+
+###
+High grossing movies still feature mostly men.
+https://abcnews.go.com/Business/high-grossing-movies-feature-men-study-finds/story?id=32920292
+
+Our research question:
+Does high male cast ratio in a movie/TV improve rotten-tomatoes rating?    
+###
 
 Your research question must be specific, it should clearly state an $X$ and a $Y$, defined at a conceptual level.  Your $X$ should be a design property or characteristic of a product that could be modified in the production process, and your $Y$ should be a metric of success.
 
@@ -81,6 +266,178 @@ In the modeling phase of your project, your team proposes to build three models.
 After a week of work, the project team will produce a one-page research proposal that defines the teams' research question, data sources and plan of action. 
 
 The research question should be informed by an understanding of the data and information that is available. This means that the team will need to pursue at least some preliminary exploratory data analysis. A motivated team might form their research question, and begin to build a functioning data pipeline as an investment in ongoing project success. 
+
+```{r}
+
+#Filter out Unrated "UR" or Not Rated "NR"
+netflix_gender_ratio <- netflix_gender_ratio[netflix_gender_ratio$rating !="UR" & netflix_gender_ratio$rating !="NR" ,]
+netflix_rating_male <- netflix_gender_ratio[netflix_gender_ratio$gender == 'Male',]
+
+#All years
+scatterplot(netflix_rating_male$gender_rato_percentage, netflix_rating_male$tomatometer_rating)
+
+#between years 2015 and 2020
+
+netflix_rating_male_2015_to_2020 <- netflix_rating_male[netflix_rating_male$release_year >= 2015,]
+scatterplot(netflix_rating_male_2015_to_2020$gender_rato_percentage, netflix_rating_male_2015_to_2020$tomatometer_rating)
+
+
+#between years 2010 and 2015
+
+netflix_rating_male_2010_to_2015 <- netflix_rating_male[
+  (netflix_rating_male$release_year >= 2010) & (netflix_rating_male$release_year < 2015),]
+
+scatterplot(netflix_rating_male_2010_to_2015$gender_rato_percentage, netflix_rating_male_2010_to_2015$tomatometer_rating)
+
+
+#between years 2005 and 2010
+
+netflix_rating_male_2005_to_2010 <- netflix_rating_male[
+  (netflix_rating_male$release_year >= 2005) & (netflix_rating_male$release_year < 2010),]
+
+scatterplot(netflix_rating_male_2005_to_2010$gender_rato_percentage, netflix_rating_male_2005_to_2010$tomatometer_rating)
+
+
+#between years 2000 and 2005
+
+netflix_rating_male_2000_to_2005 <- netflix_rating_male[
+  (netflix_rating_male$release_year >= 2000) & (netflix_rating_male$release_year < 2005),]
+
+scatterplot(netflix_rating_male_2000_to_2005$gender_rato_percentage, netflix_rating_male_2000_to_2005$tomatometer_rating)
+
+```
+
+```{r}
+####### try to look at the content rating itself
+# All years
+ggplot(data=netflix_rating_male, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+  geom_point()+
+  geom_smooth(method='lm', formula=y~x)+
+  labs(title="Male cast-ratio vs RT rating: all years", x="male cast-ratio", y="RT rating")
+
+#between years 2015 and 2020
+ggplot(data=netflix_rating_male_2015_to_2020, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+  geom_point()+
+  geom_smooth(method='lm', formula=y~x)+
+  labs(title="Male cast-ratio vs RT rating: 2015-2020", x="male cast-ratio", y="RT rating")
+
+
+#between years 2010 and 2015
+ggplot(data=netflix_rating_male_2010_to_2015, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+  geom_point()+
+  geom_smooth(method='lm', formula=y~x)+
+  labs(title="Male cast-ratio vs RT rating: 2010-2015", x="male cast-ratio", y="RT rating")
+
+
+#between years 2005 and 2010
+ggplot(data=netflix_rating_male_2005_to_2010, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+  geom_point()+
+  geom_smooth(method='lm', formula=y~x)+
+  labs(title="Male cast-ratio vs RT rating: 2005-2010", x="male cast-ratio", y="RT rating")
+
+
+#between years 2000 and 2005
+ggplot(data=netflix_rating_male_2000_to_2005, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+  geom_point()+
+  geom_smooth(method='lm', formula=y~x)+
+  labs(title="Male cast-ratio vs RT rating: 2000-2005", x="male cast-ratio", y="RT rating")
+
+```
+
+```{r}
+
+####### Split movie and TV rating
+
+# All years
+temp_data <- netflix_rating_male
+
+netflix_rating_male_movies_only <- temp_data[
+  temp_data$rating == "G" | temp_data$rating == "PG" |
+    temp_data$rating == "PG-13" | temp_data$rating == "R",] %>%
+ggplot(aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+  geom_point()+
+  geom_smooth(method='lm', formula=y~x)+
+  labs(title="Male cast-ratio vs RT rating: all years (Movie rating)", x="male cast-ratio", y="RT rating")
+
+
+netflix_rating_male_tv_only <- temp_data[
+  temp_data$rating == "TV-14" | temp_data$rating == "TV-G" |
+    temp_data$rating == "TV-MA" | temp_data$rating == "TV-PG" |
+    temp_data$rating == "TV-Y7",] %>%
+ggplot(aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+  geom_point()+
+  geom_smooth(method='lm', formula=y~x)+
+  labs(title="Male cast-ratio vs RT rating: all years (TV rating)", x="male cast-ratio", y="RT rating")
+
+#2015-2020
+temp_data <- netflix_rating_male_2015_to_2020
+
+netflix_rating_male_movies_only <- temp_data[
+  temp_data$rating == "G" | temp_data$rating == "PG" |
+    temp_data$rating == "PG-13" | temp_data$rating == "R",] %>%
+ggplot(aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+  geom_point()+
+  geom_smooth(method='lm', formula=y~x)+
+  labs(title="Male cast-ratio vs RT rating: 2015-2020 (Movie rating)", x="male cast-ratio", y="RT rating")
+
+
+temp_data[
+  temp_data$rating == "TV-14" | temp_data$rating == "TV-G" |
+    temp_data$rating == "TV-MA" | temp_data$rating == "TV-PG" |
+    temp_data$rating == "TV-Y7",] %>%
+ggplot(aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+  geom_point()+
+  geom_smooth(method='lm', formula=y~x)+
+  labs(title="Male cast-ratio vs RT rating: 2015-2020 (TV rating)", x="male cast-ratio", y="RT rating")
+
+#2010-2015
+temp_data <- netflix_rating_male_2010_to_2015
+
+temp_data[
+  temp_data$rating == "G" | temp_data$rating == "PG" |
+    temp_data$rating == "PG-13" | temp_data$rating == "R",] %>%
+ggplot(aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+  geom_point()+
+  geom_smooth(method='lm', formula=y~x)+
+  labs(title="Male cast-ratio vs RT rating: 2010-2015 (Movie rating)", x="male cast-ratio", y="RT rating")
+
+
+netflix_rating_male_tv_only <- temp_data[
+  temp_data$rating == "TV-14" | temp_data$rating == "TV-G" |
+    temp_data$rating == "TV-MA" | temp_data$rating == "TV-PG" |
+    temp_data$rating == "TV-Y7",] %>%
+ggplot(aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+  geom_point()+
+  geom_smooth(method='lm', formula=y~x)+
+  labs(title="Male cast-ratio vs RT rating: 2010-2015 (TV rating)", x="male cast-ratio", y="RT rating")
+
+#2005-2010
+temp_data <- netflix_rating_male_2005_to_2010
+
+temp_data[
+  temp_data$rating == "G" | temp_data$rating == "PG" |
+    temp_data$rating == "PG-13" | temp_data$rating == "R",] %>%
+ggplot(aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+  geom_point()+
+  geom_smooth(method='lm', formula=y~x)+
+  labs(title="Male cast-ratio vs RT rating: 2005-2010 (Movie rating)", x="male cast-ratio", y="RT rating")
+
+temp_data[
+  temp_data$rating == "TV-14" | temp_data$rating == "TV-G" |
+    temp_data$rating == "TV-MA" | temp_data$rating == "TV-PG" |
+    temp_data$rating == "TV-Y7",] %>%
+ggplot(aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+  geom_point()+
+  geom_smooth(method='lm', formula=y~x)+
+  labs(title="Male cast-ratio vs RT rating: 2005-2010 (TV rating)", x="male cast-ratio", y="RT rating")
+
+
+```
+
+```{r}
+
+
+```
 
 The research proposal is intended to provide a structure for the team to have an early conversation with their instructor. It will be graded credit/no credit for completeness (i.e. a reasonable effort by the team will receive full marks). Your instructor will read these proposals and will contact the team with any necessary course corrections, suggestions, or feedback.
 
