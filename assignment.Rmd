@@ -135,7 +135,7 @@ cast_gender <- read.csv("datasets/cast_gender.csv")
 # #
 # write.csv(netflix_tomatoes_cast_dataset,"datasets/netflix_tomatoes_cast_dataset.csv", row.names = FALSE)
 # 
-netflix_tomatoes_cast_dataset <- read.csv("datasets/netflix_tomatoes_cast_dataset.csv")
+# netflix_tomatoes_cast_dataset <- read.csv("datasets/netflix_tomatoes_cast_dataset.csv")
 
 # nrow(netflix_tomatoes_cast_dataset)
 # 
@@ -147,13 +147,13 @@ netflix_tomatoes_cast_dataset <- read.csv("datasets/netflix_tomatoes_cast_datase
 # 
 # length(unique(netflix_tomatoes_cast_dataset$title))
 
-#######
+####### Calculate the gender ratios
 # netflix_tomatoes_num_of_casts_count_dataset <- netflix_tomatoes_cast_dataset %>%
 #   group_by(show_id, title) %>%
 #     summarise(num_of_casts = n())
 # 
 # netflix_tomatoes_gender_count_dataset <- netflix_tomatoes_cast_dataset %>%
-#   group_by(show_id, type, title, release_year, rating, content_rating, 
+#   group_by(show_id, type, title, release_year, rating, content_rating,
 #            tomatometer_status, tomatometer_rating, tomatometer_count,
 #            audience_status, audience_rating, audience_count,
 #            gender) %>%
@@ -179,9 +179,71 @@ netflix_tomatoes_cast_dataset <- read.csv("datasets/netflix_tomatoes_cast_datase
 # netflix_gender_ratio <- netflix_gender_ratio[
 #   order(-netflix_gender_ratio$release_year, netflix_gender_ratio$title),]
 # 
+# ## Filter out Unrated "UR" or Not Rated "NR"
+# netflix_gender_ratio <- netflix_gender_ratio[netflix_gender_ratio$rating !="UR" & netflix_gender_ratio$rating !="NR" ,]
+# ## Only need one ratio
+# netflix_gender_ratio <- netflix_gender_ratio[netflix_gender_ratio$gender == 'Male',]
+# ## More than 1 cast member
+# netflix_gender_ratio <- netflix_gender_ratio[netflix_gender_ratio$num_of_casts > 1,]
 # write.csv(netflix_gender_ratio,"datasets/netflix_gender_ratio.csv", row.names = FALSE)
 
 netflix_gender_ratio <- read.csv("datasets/netflix_gender_ratio.csv")
+
+```
+
+```{r}
+## Option 2: use on Rotten tomatoes movie data and the cast gender data (no netflix)
+# rt_movies <- read.csv("datasets/rotten_tomatoes_movies.csv", stringsAsFactors = FALSE)
+# rt_movies_unnested <- rt_movies %>%
+#     mutate(actors = strsplit(as.character(actors), ",")) %>%
+#     unnest(actors)
+# 
+# rt_movies_unnested$cast <- trimws(rt_movies_unnested$actors, which = c("both"))
+# rt_movies_cast_dataset <- inner_join(rt_movies_unnested, cast_gender, by = c("cast" = "name"))
+# 
+# rt_movies_cast_count_dataset <- rt_movies_cast_dataset %>%
+#   group_by(rotten_tomatoes_link, movie_title) %>%
+#     summarise(num_of_casts = n())
+# 
+# rt_movies_gender_count_dataset <- rt_movies_cast_dataset %>%
+#   group_by(rotten_tomatoes_link, movie_title, original_release_date, content_rating,
+#            tomatometer_status, tomatometer_rating, tomatometer_count,
+#            audience_status, audience_rating, audience_count,
+#            gender) %>%
+#   summarise(num_of_gender = sum(gender))
+# ## remove decimal points..
+# rt_movies_gender_count_dataset$gender <- trunc(rt_movies_gender_count_dataset$gender)
+# rt_movies_gender_count_dataset$num_of_gender <- trunc(rt_movies_gender_count_dataset$num_of_gender)
+# ## need to divide the number of genders back to gender for 'male' is 2..
+# rt_movies_gender_count_dataset <- rt_movies_gender_count_dataset %>%
+#   mutate(
+#       num_of_gender = num_of_gender/gender
+#   )
+# rt_movies_gender_ratio <- inner_join(rt_movies_gender_count_dataset, rt_movies_cast_count_dataset) %>%
+#   mutate(
+#     gender_rato_percentage = round(num_of_gender/num_of_casts*100),
+#     gender = ifelse(gender == 1, "Female", "Male")
+#   )
+# 
+# #extract only the year part of the original_release_date
+# rt_movies_gender_ratio$original_release_date <- as.Date(rt_movies_gender_ratio$original_release_date)
+# rt_movies_gender_ratio$release_year <- as.numeric(format(rt_movies_gender_ratio$original_release_date, "%Y"))
+# 
+# rt_movies_gender_ratio <- rt_movies_gender_ratio[
+#   order(-rt_movies_gender_ratio$release_year, rt_movies_gender_ratio$movie_title),]
+# 
+# rt_movies_gender_ratio$rating <- rt_movies_gender_ratio$content_rating
+# 
+# 
+# ## Filter out Unrated "UR" or Not Rated "NR"
+# rt_movies_gender_ratio <- rt_movies_gender_ratio[rt_movies_gender_ratio$rating !="UR" & rt_movies_gender_ratio$rating !="NR" ,]
+# ## Only need one ratio
+# rt_movies_gender_ratio <- rt_movies_gender_ratio[rt_movies_gender_ratio$gender == 'Male',]
+# ## More than 1 cast member
+# rt_movies_gender_ratio <- rt_movies_gender_ratio[rt_movies_gender_ratio$num_of_casts > 1,]
+# write.csv(rt_movies_gender_ratio,"datasets/rt_movies_gender_ratio.csv", row.names = FALSE)
+
+rt_movies_gender_ratio <- read.csv("datasets/rt_movies_gender_ratio.csv")
 
 ```
 
@@ -268,175 +330,309 @@ After a week of work, the project team will produce a one-page research proposal
 The research question should be informed by an understanding of the data and information that is available. This means that the team will need to pursue at least some preliminary exploratory data analysis. A motivated team might form their research question, and begin to build a functioning data pipeline as an investment in ongoing project success. 
 
 ```{r}
+# lead_actors_gender <- read.csv("datasets/all_actors_movies_gender_gold.csv")
+# boo <- inner_join(netflix_gender_ratio, lead_actors_gender, by=c("title" = "name"))
 
-#Filter out Unrated "UR" or Not Rated "NR"
-netflix_gender_ratio <- netflix_gender_ratio[netflix_gender_ratio$rating !="UR" & netflix_gender_ratio$rating !="NR" ,]
-netflix_rating_male <- netflix_gender_ratio[netflix_gender_ratio$gender == 'Male',]
+# netflix_gender_ratio <- read.csv("datasets/netflix_gender_ratio.csv")
+# netflix_gender_ratio <- rt_movies_gender_ratio
+```
 
-#All years
-scatterplot(netflix_rating_male$gender_rato_percentage, netflix_rating_male$tomatometer_rating)
+```{r}
 
-#between years 2015 and 2020
+plot_scatterplot <- function(dataset) {
+  #All years
+  plot(ggplot(data=dataset, aes(gender_rato_percentage, tomatometer_rating))+
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: all years", x="male cast-ratio", y="RT rating"))
+  
+  #between years 2015 and 2020
+  dataset_2015_to_2020 <- dataset[dataset$release_year >= 2015,]
+  plot(ggplot(data=dataset_2015_to_2020, aes(gender_rato_percentage, tomatometer_rating))+
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: 2015-2020", x="male cast-ratio", y="RT rating"))
+  
+  #between years 2010 and 2015
+  dataset_2010_to_2015 <- dataset[
+    (dataset$release_year >= 2010) & (dataset$release_year < 2015),]
+  plot(ggplot(data=dataset_2010_to_2015, aes(gender_rato_percentage, tomatometer_rating))+
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: 2010-2015", x="male cast-ratio", y="RT rating"))
+  
+  #between years 2005 and 2010
+  dataset_2005_to_2010 <- dataset[
+    (dataset$release_year >= 2005) & (dataset$release_year < 2010),]
+  plot(ggplot(data=dataset_2005_to_2010, aes(gender_rato_percentage, tomatometer_rating))+
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: 2005-2010", x="male cast-ratio", y="RT rating"))
 
-netflix_rating_male_2015_to_2020 <- netflix_rating_male[netflix_rating_male$release_year >= 2015,]
-scatterplot(netflix_rating_male_2015_to_2020$gender_rato_percentage, netflix_rating_male_2015_to_2020$tomatometer_rating)
+  #between years 2000 and 2005
+  dataset_2000_to_2005 <- dataset[
+    (dataset$release_year >= 2000) & (dataset$release_year < 2005),]
+  plot(ggplot(data=dataset_2000_to_2005, aes(gender_rato_percentage, tomatometer_rating))+
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: 2000-2005", x="male cast-ratio", y="RT rating"))
+}
+```
+```{r}
+plot_scatterplot(netflix_gender_ratio)
+```
 
 
-#between years 2010 and 2015
-
-netflix_rating_male_2010_to_2015 <- netflix_rating_male[
-  (netflix_rating_male$release_year >= 2010) & (netflix_rating_male$release_year < 2015),]
-
-scatterplot(netflix_rating_male_2010_to_2015$gender_rato_percentage, netflix_rating_male_2010_to_2015$tomatometer_rating)
-
-
-#between years 2005 and 2010
-
-netflix_rating_male_2005_to_2010 <- netflix_rating_male[
-  (netflix_rating_male$release_year >= 2005) & (netflix_rating_male$release_year < 2010),]
-
-scatterplot(netflix_rating_male_2005_to_2010$gender_rato_percentage, netflix_rating_male_2005_to_2010$tomatometer_rating)
-
-
-#between years 2000 and 2005
-
-netflix_rating_male_2000_to_2005 <- netflix_rating_male[
-  (netflix_rating_male$release_year >= 2000) & (netflix_rating_male$release_year < 2005),]
-
-scatterplot(netflix_rating_male_2000_to_2005$gender_rato_percentage, netflix_rating_male_2000_to_2005$tomatometer_rating)
-
+```{r}
+plot_scatterplot(rt_movies_gender_ratio)
 ```
 
 ```{r}
 ####### try to look at the content rating itself
-# All years
-ggplot(data=netflix_rating_male, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
-  geom_point()+
-  geom_smooth(method='lm', formula=y~x)+
-  labs(title="Male cast-ratio vs RT rating: all years", x="male cast-ratio", y="RT rating")
 
-#between years 2015 and 2020
-ggplot(data=netflix_rating_male_2015_to_2020, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
-  geom_point()+
-  geom_smooth(method='lm', formula=y~x)+
-  labs(title="Male cast-ratio vs RT rating: 2015-2020", x="male cast-ratio", y="RT rating")
-
-
-#between years 2010 and 2015
-ggplot(data=netflix_rating_male_2010_to_2015, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
-  geom_point()+
-  geom_smooth(method='lm', formula=y~x)+
-  labs(title="Male cast-ratio vs RT rating: 2010-2015", x="male cast-ratio", y="RT rating")
-
-
-#between years 2005 and 2010
-ggplot(data=netflix_rating_male_2005_to_2010, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
-  geom_point()+
-  geom_smooth(method='lm', formula=y~x)+
-  labs(title="Male cast-ratio vs RT rating: 2005-2010", x="male cast-ratio", y="RT rating")
-
-
-#between years 2000 and 2005
-ggplot(data=netflix_rating_male_2000_to_2005, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
-  geom_point()+
-  geom_smooth(method='lm', formula=y~x)+
-  labs(title="Male cast-ratio vs RT rating: 2000-2005", x="male cast-ratio", y="RT rating")
-
+plot_scatterplot_group_by_rating <- function(dataset) {
+  # All years
+  plot(ggplot(data=dataset, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: all years", x="male cast-ratio", y="RT rating"))
+  
+  #between years 2015 and 2020
+  dataset_2015_to_2020 <- dataset[dataset$release_year >= 2015,]
+  plot(ggplot(data=dataset_2015_to_2020, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: 2015-2020", x="male cast-ratio", y="RT rating"))
+  
+  #between years 2010 and 2015
+  dataset_2010_to_2015 <- dataset[
+    (dataset$release_year >= 2010) & (dataset$release_year < 2015),]
+  plot(ggplot(data=dataset_2010_to_2015, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: 2010-2015", x="male cast-ratio", y="RT rating"))
+  
+  #between years 2005 and 2010
+  dataset_2005_to_2010 <- dataset[
+    (dataset$release_year >= 2005) & (dataset$release_year < 2010),]
+  plot(ggplot(data=dataset_2005_to_2010, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: 2005-2010", x="male cast-ratio", y="RT rating"))
+  
+  #between years 2000 and 2005
+  dataset_2000_to_2005 <- dataset[
+    (dataset$release_year >= 2000) & (dataset$release_year < 2005),]
+  plot(ggplot(data=dataset_2000_to_2005, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: 2000-2005", x="male cast-ratio", y="RT rating"))
+}
 ```
-
+```{r}
+plot_scatterplot_group_by_rating(netflix_gender_ratio)
+```
+```{r}
+plot_scatterplot_group_by_rating(rt_movies_gender_ratio)
+```
 ```{r}
 
 ####### Split movie and TV rating
 
-# All years
-temp_data <- netflix_rating_male
+plot_scatterplot_group_by_rating_for_movie <- function(dataset) {
+  
+  d <- dataset[
+    dataset$rating == "G" | dataset$rating == "PG" |
+      dataset$rating == "PG-13" | dataset$rating == "R",]
+  plot(ggplot(data=d, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: all years (Movie rating)", x="male cast-ratio", y="RT rating"))
+    
+  #2015-2020
+  dataset_2015_to_2020 <- dataset[dataset$release_year >= 2015,]
+  dataset_2015_to_2020 <- dataset_2015_to_2020[
+    dataset_2015_to_2020$rating == "G" | dataset_2015_to_2020$rating == "PG" |
+      dataset_2015_to_2020$rating == "PG-13" | dataset_2015_to_2020$rating == "R",]
+  plot(ggplot(data=dataset_2015_to_2020, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: 2015-2020 (Movie rating)", x="male cast-ratio", y="RT rating"))
 
-netflix_rating_male_movies_only <- temp_data[
-  temp_data$rating == "G" | temp_data$rating == "PG" |
-    temp_data$rating == "PG-13" | temp_data$rating == "R",] %>%
-ggplot(aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
-  geom_point()+
-  geom_smooth(method='lm', formula=y~x)+
-  labs(title="Male cast-ratio vs RT rating: all years (Movie rating)", x="male cast-ratio", y="RT rating")
+  #2010-2015
+  dataset_2010_to_2015 <- dataset[
+    (dataset$release_year >= 2010) & (dataset$release_year < 2015),]
+  dataset_2010_to_2015 <- dataset_2010_to_2015[
+    dataset_2010_to_2015$rating == "G" | dataset_2010_to_2015$rating == "PG" |
+      dataset_2010_to_2015$rating == "PG-13" | dataset_2010_to_2015$rating == "R",]
+  plot(ggplot(data=dataset_2010_to_2015, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: 2010-2015 (Movie rating)", x="male cast-ratio", y="RT rating"))
 
+  #2005-2010
+  dataset_2000_to_2005 <- dataset[
+    (dataset$release_year >= 2000) & (dataset$release_year < 2005),]
+  dataset_2000_to_2005 <- dataset_2000_to_2005[
+    dataset_2000_to_2005$rating == "G" | dataset_2000_to_2005$rating == "PG" |
+      dataset_2000_to_2005$rating == "PG-13" | dataset_2000_to_2005$rating == "R",]
+  plot(ggplot(data=dataset_2000_to_2005, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: 2005-2010 (Movie rating)", x="male cast-ratio", y="RT rating"))
+}
 
-netflix_rating_male_tv_only <- temp_data[
-  temp_data$rating == "TV-14" | temp_data$rating == "TV-G" |
-    temp_data$rating == "TV-MA" | temp_data$rating == "TV-PG" |
-    temp_data$rating == "TV-Y7",] %>%
-ggplot(aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
-  geom_point()+
-  geom_smooth(method='lm', formula=y~x)+
-  labs(title="Male cast-ratio vs RT rating: all years (TV rating)", x="male cast-ratio", y="RT rating")
+plot_scatterplot_for_movie <- function(dataset) {
+  
+  d <- dataset[
+    dataset$rating == "G" | dataset$rating == "PG" |
+      dataset$rating == "PG-13" | dataset$rating == "R",]
+  plot(ggplot(data=d, aes(x=gender_rato_percentage, y=tomatometer_rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating for Movie: all years", x="male cast-ratio", y="RT rating"))
+    
+  #2015-2020
+  dataset_2015_to_2020 <- dataset[dataset$release_year >= 2015,]
+  dataset_2015_to_2020 <- dataset_2015_to_2020[
+    dataset_2015_to_2020$rating == "G" | dataset_2015_to_2020$rating == "PG" |
+      dataset_2015_to_2020$rating == "PG-13" | dataset_2015_to_2020$rating == "R",]
+  plot(ggplot(data=dataset_2015_to_2020, aes(x=gender_rato_percentage, y=tomatometer_rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating for Movie: 2015-2020", x="male cast-ratio", y="RT rating"))
 
-#2015-2020
-temp_data <- netflix_rating_male_2015_to_2020
+  #2010-2015
+  dataset_2010_to_2015 <- dataset[
+    (dataset$release_year >= 2010) & (dataset$release_year < 2015),]
+  dataset_2010_to_2015 <- dataset_2010_to_2015[
+    dataset_2010_to_2015$rating == "G" | dataset_2010_to_2015$rating == "PG" |
+      dataset_2010_to_2015$rating == "PG-13" | dataset_2010_to_2015$rating == "R",]
+  plot(ggplot(data=dataset_2010_to_2015, aes(x=gender_rato_percentage, y=tomatometer_rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating for Movie: 2010-2015", x="male cast-ratio", y="RT rating"))
 
-netflix_rating_male_movies_only <- temp_data[
-  temp_data$rating == "G" | temp_data$rating == "PG" |
-    temp_data$rating == "PG-13" | temp_data$rating == "R",] %>%
-ggplot(aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
-  geom_point()+
-  geom_smooth(method='lm', formula=y~x)+
-  labs(title="Male cast-ratio vs RT rating: 2015-2020 (Movie rating)", x="male cast-ratio", y="RT rating")
+  #2005-2010
+  dataset_2000_to_2005 <- dataset[
+    (dataset$release_year >= 2000) & (dataset$release_year < 2005),]
+  dataset_2000_to_2005 <- dataset_2000_to_2005[
+    dataset_2000_to_2005$rating == "G" | dataset_2000_to_2005$rating == "PG" |
+      dataset_2000_to_2005$rating == "PG-13" | dataset_2000_to_2005$rating == "R",]
+  plot(ggplot(data=dataset_2000_to_2005, aes(x=gender_rato_percentage, y=tomatometer_rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating for Movie: 2005-2010", x="male cast-ratio", y="RT rating"))
+}
 
+plot_scatterplot_group_by_rating_for_tv <- function(dataset) {
+  d <- dataset[
+    dataset$rating == "TV-14" | dataset$rating == "TV-G" |
+      dataset$rating == "TV-MA" | dataset$rating == "TV-PG" |
+      dataset$rating == "TV-Y7",]
+  plot(ggplot(data=d, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: all years (TV rating)", x="male cast-ratio", y="RT rating"))
 
-temp_data[
-  temp_data$rating == "TV-14" | temp_data$rating == "TV-G" |
-    temp_data$rating == "TV-MA" | temp_data$rating == "TV-PG" |
-    temp_data$rating == "TV-Y7",] %>%
-ggplot(aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
-  geom_point()+
-  geom_smooth(method='lm', formula=y~x)+
-  labs(title="Male cast-ratio vs RT rating: 2015-2020 (TV rating)", x="male cast-ratio", y="RT rating")
+  #2015-2020
+  dataset_2015_to_2020 <- dataset[dataset$release_year >= 2015,]
+  dataset_2015_to_2020 <- dataset_2015_to_2020[
+    dataset_2015_to_2020$rating == "TV-14" | dataset_2015_to_2020$rating == "TV-G" |
+      dataset_2015_to_2020$rating == "TV-MA" | dataset_2015_to_2020$rating == "TV-PG" |
+      dataset_2015_to_2020$rating == "TV-Y7",]
+  plot(ggplot(data=dataset_2015_to_2020, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: 2015-2020 (TV rating)", x="male cast-ratio", y="RT rating"))
 
-#2010-2015
-temp_data <- netflix_rating_male_2010_to_2015
+  #2010-2015
+  dataset_2010_to_2015 <- dataset[
+    (dataset$release_year >= 2010) & (dataset$release_year < 2015),]
+  dataset_2010_to_2015 <- dataset_2010_to_2015[
+    dataset_2010_to_2015$rating == "TV-14" | dataset_2010_to_2015$rating == "TV-G" |
+      dataset_2010_to_2015$rating == "TV-MA" | dataset_2010_to_2015$rating == "TV-PG" |
+      dataset_2010_to_2015$rating == "TV-Y7",]
+  plot(ggplot(data=dataset_2010_to_2015, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: 2010-2015 (TV rating)", x="male cast-ratio", y="RT rating"))
 
-temp_data[
-  temp_data$rating == "G" | temp_data$rating == "PG" |
-    temp_data$rating == "PG-13" | temp_data$rating == "R",] %>%
-ggplot(aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
-  geom_point()+
-  geom_smooth(method='lm', formula=y~x)+
-  labs(title="Male cast-ratio vs RT rating: 2010-2015 (Movie rating)", x="male cast-ratio", y="RT rating")
+  #2005-2010
+  dataset_2000_to_2005 <- dataset[
+    (dataset$release_year >= 2000) & (dataset$release_year < 2005),]
+  dataset_2000_to_2005 <- dataset_2000_to_2005[
+    dataset_2000_to_2005$rating == "TV-14" | dataset_2000_to_2005$rating == "TV-G" |
+      dataset_2000_to_2005$rating == "TV-MA" | dataset_2000_to_2005$rating == "TV-PG" |
+      dataset_2000_to_2005$rating == "TV-Y7",]
+  plot(ggplot(data=dataset_2000_to_2005, aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating: 2005-2010 (TV rating)", x="male cast-ratio", y="RT rating"))
+}
 
+plot_scatterplot_for_tv <- function(dataset) {
+  d <- dataset[
+    dataset$rating == "TV-14" | dataset$rating == "TV-G" |
+      dataset$rating == "TV-MA" | dataset$rating == "TV-PG" |
+      dataset$rating == "TV-Y7",]
+  plot(ggplot(data=d, aes(x=gender_rato_percentage, y=tomatometer_rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating for TV: all years", x="male cast-ratio", y="RT rating"))
 
-netflix_rating_male_tv_only <- temp_data[
-  temp_data$rating == "TV-14" | temp_data$rating == "TV-G" |
-    temp_data$rating == "TV-MA" | temp_data$rating == "TV-PG" |
-    temp_data$rating == "TV-Y7",] %>%
-ggplot(aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
-  geom_point()+
-  geom_smooth(method='lm', formula=y~x)+
-  labs(title="Male cast-ratio vs RT rating: 2010-2015 (TV rating)", x="male cast-ratio", y="RT rating")
+  #2015-2020
+  dataset_2015_to_2020 <- dataset[dataset$release_year >= 2015,]
+  dataset_2015_to_2020 <- dataset_2015_to_2020[
+    dataset_2015_to_2020$rating == "TV-14" | dataset_2015_to_2020$rating == "TV-G" |
+      dataset_2015_to_2020$rating == "TV-MA" | dataset_2015_to_2020$rating == "TV-PG" |
+      dataset_2015_to_2020$rating == "TV-Y7",]
+  plot(ggplot(data=dataset_2015_to_2020, aes(x=gender_rato_percentage, y=tomatometer_rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating for TV: 2015-2020", x="male cast-ratio", y="RT rating"))
 
-#2005-2010
-temp_data <- netflix_rating_male_2005_to_2010
+  #2010-2015
+  dataset_2010_to_2015 <- dataset[
+    (dataset$release_year >= 2010) & (dataset$release_year < 2015),]
+  dataset_2010_to_2015 <- dataset_2010_to_2015[
+    dataset_2010_to_2015$rating == "TV-14" | dataset_2010_to_2015$rating == "TV-G" |
+      dataset_2010_to_2015$rating == "TV-MA" | dataset_2010_to_2015$rating == "TV-PG" |
+      dataset_2010_to_2015$rating == "TV-Y7",]
+  plot(ggplot(data=dataset_2010_to_2015, aes(x=gender_rato_percentage, y=tomatometer_rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating for TV: 2010-2015", x="male cast-ratio", y="RT rating"))
 
-temp_data[
-  temp_data$rating == "G" | temp_data$rating == "PG" |
-    temp_data$rating == "PG-13" | temp_data$rating == "R",] %>%
-ggplot(aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
-  geom_point()+
-  geom_smooth(method='lm', formula=y~x)+
-  labs(title="Male cast-ratio vs RT rating: 2005-2010 (Movie rating)", x="male cast-ratio", y="RT rating")
+  #2005-2010
+  dataset_2000_to_2005 <- dataset[
+    (dataset$release_year >= 2000) & (dataset$release_year < 2005),]
+  dataset_2000_to_2005 <- dataset_2000_to_2005[
+    dataset_2000_to_2005$rating == "TV-14" | dataset_2000_to_2005$rating == "TV-G" |
+      dataset_2000_to_2005$rating == "TV-MA" | dataset_2000_to_2005$rating == "TV-PG" |
+      dataset_2000_to_2005$rating == "TV-Y7",]
+  plot(ggplot(data=dataset_2000_to_2005, aes(x=gender_rato_percentage, y=tomatometer_rating)) +
+    geom_point()+
+    geom_smooth(method='lm', formula=y~x)+
+    labs(title="Male cast-ratio vs RT rating for TV: 2005-2010", x="male cast-ratio", y="RT rating"))
+}
+```
 
-temp_data[
-  temp_data$rating == "TV-14" | temp_data$rating == "TV-G" |
-    temp_data$rating == "TV-MA" | temp_data$rating == "TV-PG" |
-    temp_data$rating == "TV-Y7",] %>%
-ggplot(aes(x=gender_rato_percentage, y=tomatometer_rating, color=rating)) +
-  geom_point()+
-  geom_smooth(method='lm', formula=y~x)+
-  labs(title="Male cast-ratio vs RT rating: 2005-2010 (TV rating)", x="male cast-ratio", y="RT rating")
+```{r}
+# plot_scatterplot_group_by_rating_for_movie(netflix_gender_ratio)
+plot_scatterplot_for_movie(netflix_gender_ratio)
 
+```
+```{r}
 
+# plot_scatterplot_group_by_rating_for_tv(netflix_gender_ratio)
+plot_scatterplot_for_tv(netflix_gender_ratio)
 ```
 
 ```{r}
 
-
+# plot_scatterplot_group_by_rating_for_movie(rt_movies_gender_ratio)
+plot_scatterplot_for_movie(rt_movies_gender_ratio)
 ```
 
 The research proposal is intended to provide a structure for the team to have an early conversation with their instructor. It will be graded credit/no credit for completeness (i.e. a reasonable effort by the team will receive full marks). Your instructor will read these proposals and will contact the team with any necessary course corrections, suggestions, or feedback.
