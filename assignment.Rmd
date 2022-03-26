@@ -26,7 +26,7 @@ library(tidyr)
 ```{r}
 
 netflix <- read.csv("datasets/netflix_titles.csv")
-movie_reviews <- read.csv("datasets/rotten_tomatoes_critic_reviews.csv")
+# movie_reviews <- read.csv("datasets/rotten_tomatoes_critic_reviews.csv")
 movies <- read.csv("datasets/rotten_tomatoes_movies.csv")
 
 ```
@@ -135,7 +135,10 @@ cast_gender <- read.csv("datasets/cast_gender.csv")
 # #
 # write.csv(netflix_tomatoes_cast_dataset,"datasets/netflix_tomatoes_cast_dataset.csv", row.names = FALSE)
 # 
-# netflix_tomatoes_cast_dataset <- read.csv("datasets/netflix_tomatoes_cast_dataset.csv")
+netflix_tomatoes_cast_dataset <- read.csv("datasets/netflix_tomatoes_cast_dataset.csv")
+
+# only keep United States
+netflix_tomatoes_cast_dataset <- netflix_tomatoes_cast_dataset[netflix_tomatoes_cast_dataset$country == "United States",]
 
 # nrow(netflix_tomatoes_cast_dataset)
 # 
@@ -148,46 +151,47 @@ cast_gender <- read.csv("datasets/cast_gender.csv")
 # length(unique(netflix_tomatoes_cast_dataset$title))
 
 ####### Calculate the gender ratios
-# netflix_tomatoes_num_of_casts_count_dataset <- netflix_tomatoes_cast_dataset %>%
-#   group_by(show_id, title) %>%
-#     summarise(num_of_casts = n())
-# 
-# netflix_tomatoes_gender_count_dataset <- netflix_tomatoes_cast_dataset %>%
-#   group_by(show_id, type, title, release_year, rating, content_rating,
-#            tomatometer_status, tomatometer_rating, tomatometer_count,
-#            audience_status, audience_rating, audience_count,
-#            gender) %>%
-#   summarise(num_of_gender = sum(gender))
-# 
-# ## remove decimal points..
-# netflix_tomatoes_gender_count_dataset$gender <- trunc(netflix_tomatoes_gender_count_dataset$gender)
-# netflix_tomatoes_gender_count_dataset$num_of_gender <- trunc(netflix_tomatoes_gender_count_dataset$num_of_gender)
-# 
-# ## need to divide the number of genders back to gender for 'male' is 2..
-# netflix_tomatoes_gender_count_dataset <- netflix_tomatoes_gender_count_dataset %>%
-#   mutate(
-#       num_of_gender = num_of_gender/gender
-#   )
-# 
-# netflix_gender_ratio <- inner_join(netflix_tomatoes_gender_count_dataset, netflix_tomatoes_num_of_casts_count_dataset) %>%
-#   mutate(
-#     gender_rato_percentage = round(num_of_gender/num_of_casts*100),
-#     gender = ifelse(gender == 1, "Female", "Male")
-#   )
-# 
-# 
-# netflix_gender_ratio <- netflix_gender_ratio[
-#   order(-netflix_gender_ratio$release_year, netflix_gender_ratio$title),]
-# 
-# ## Filter out Unrated "UR" or Not Rated "NR"
-# netflix_gender_ratio <- netflix_gender_ratio[netflix_gender_ratio$rating !="UR" & netflix_gender_ratio$rating !="NR" ,]
-# ## Only need one ratio
-# netflix_gender_ratio <- netflix_gender_ratio[netflix_gender_ratio$gender == 'Male',]
+netflix_tomatoes_num_of_casts_count_dataset <- netflix_tomatoes_cast_dataset %>%
+  group_by(show_id, title) %>%
+    summarise(num_of_casts = n())
+
+netflix_tomatoes_gender_count_dataset <- netflix_tomatoes_cast_dataset %>%
+  group_by(show_id, type, title, release_year, rating, content_rating,
+           tomatometer_status, tomatometer_rating, tomatometer_count,
+           audience_status, audience_rating, audience_count,
+           gender) %>%
+  summarise(num_of_gender = sum(gender))
+
+## remove decimal points..
+netflix_tomatoes_gender_count_dataset$gender <- trunc(netflix_tomatoes_gender_count_dataset$gender)
+netflix_tomatoes_gender_count_dataset$num_of_gender <- trunc(netflix_tomatoes_gender_count_dataset$num_of_gender)
+
+## need to divide the number of genders back to gender for 'male' is 2..
+netflix_tomatoes_gender_count_dataset <- netflix_tomatoes_gender_count_dataset %>%
+  mutate(
+      num_of_gender = num_of_gender/gender
+  )
+
+netflix_gender_ratio <- inner_join(netflix_tomatoes_gender_count_dataset, netflix_tomatoes_num_of_casts_count_dataset) %>%
+  mutate(
+    gender_rato_percentage = round(num_of_gender/num_of_casts*100),
+    gender = ifelse(gender == 1, "Female", "Male")
+  )
+
+
+netflix_gender_ratio <- netflix_gender_ratio[
+  order(-netflix_gender_ratio$release_year, netflix_gender_ratio$title),]
+
+## Filter out Unrated "UR" or Not Rated "NR"
+netflix_gender_ratio <- netflix_gender_ratio[netflix_gender_ratio$rating !="UR" & netflix_gender_ratio$rating !="NR" ,]
+## Only need one ratio
+netflix_gender_ratio <- netflix_gender_ratio[netflix_gender_ratio$gender == 'Male',]
 # ## More than 1 cast member
-# netflix_gender_ratio <- netflix_gender_ratio[netflix_gender_ratio$num_of_casts > 1,]
-# write.csv(netflix_gender_ratio,"datasets/netflix_gender_ratio.csv", row.names = FALSE)
+netflix_gender_ratio <- netflix_gender_ratio[netflix_gender_ratio$num_of_casts > 1,]
+write.csv(netflix_gender_ratio,"datasets/netflix_gender_ratio.csv", row.names = FALSE)
 
 netflix_gender_ratio <- read.csv("datasets/netflix_gender_ratio.csv")
+
 
 ```
 
@@ -246,6 +250,65 @@ netflix_gender_ratio <- read.csv("datasets/netflix_gender_ratio.csv")
 rt_movies_gender_ratio <- read.csv("datasets/rt_movies_gender_ratio.csv")
 
 ```
+```{r}
+
+hist(netflix_gender_ratio$tomatometer_rating)
+hist(netflix_gender_ratio$gender_rato_percentage)
+
+# netflix_gender_ratio_90_100 <- netflix_gender_ratio[
+#   netflix_gender_ratio$gender_rato_percentage >= 90 & netflix_gender_ratio$gender_rato_percentage < 100,]
+# 
+# hist(netflix_gender_ratio_90_100$tomatometer_rating)
+# hist(netflix_gender_ratio_90_100$gender_rato_percentage)
+# 
+# netflix_gender_ratio_80_90 <- netflix_gender_ratio[
+#   netflix_gender_ratio$gender_rato_percentage >= 80 & netflix_gender_ratio$gender_rato_percentage < 90,]
+# 
+# hist(netflix_gender_ratio_80_90$tomatometer_rating)
+# hist(netflix_gender_ratio_80_90$gender_rato_percentage)
+# 
+# netflix_gender_ratio_70_80 <- netflix_gender_ratio[
+#   (netflix_gender_ratio$gender_rato_percentage >= 70) & (netflix_gender_ratio$gender_rato_percentage < 80),]
+# 
+# hist(netflix_gender_ratio_70_80$tomatometer_rating)
+# hist(netflix_gender_ratio_70_80$gender_rato_percentage)
+# 
+# netflix_gender_ratio_60_70 <- netflix_gender_ratio[
+#   (netflix_gender_ratio$gender_rato_percentage >= 60) & (netflix_gender_ratio$gender_rato_percentage < 70),]
+# hist(netflix_gender_ratio_60_70$tomatometer_rating)
+# hist(netflix_gender_ratio_60_70$gender_rato_percentage)
+# 
+# netflix_gender_ratio_50_60 <- netflix_gender_ratio[
+#   (netflix_gender_ratio$gender_rato_percentage >= 50) & (netflix_gender_ratio$gender_rato_percentage < 60),]
+# hist(netflix_gender_ratio_50_60$tomatometer_rating)
+# hist(netflix_gender_ratio_50_60$gender_rato_percentage)
+# 
+# netflix_gender_ratio_40_50 <- netflix_gender_ratio[
+#   (netflix_gender_ratio$gender_rato_percentage >= 40) & (netflix_gender_ratio$gender_rato_percentage < 50),]
+# hist(netflix_gender_ratio_40_50$tomatometer_rating)
+# hist(netflix_gender_ratio_40_50$gender_rato_percentage)
+# 
+# netflix_gender_ratio_30_40 <- netflix_gender_ratio[
+#   (netflix_gender_ratio$gender_rato_percentage >= 30) & (netflix_gender_ratio$gender_rato_percentage < 40),]
+# hist(netflix_gender_ratio_30_40$tomatometer_rating)
+# hist(netflix_gender_ratio_30_40$gender_rato_percentage)
+# 
+# netflix_gender_ratio_20_30 <- netflix_gender_ratio[
+#   (netflix_gender_ratio$gender_rato_percentage >= 20) & (netflix_gender_ratio$gender_rato_percentage < 30),]
+# hist(netflix_gender_ratio_20_30$tomatometer_rating)
+# hist(netflix_gender_ratio_20_30$gender_rato_percentage)
+# 
+# netflix_gender_ratio_10_20 <- netflix_gender_ratio[
+#   (netflix_gender_ratio$gender_rato_percentage >= 10) & (netflix_gender_ratio$gender_rato_percentage < 20),]
+# hist(netflix_gender_ratio_10_20$tomatometer_rating)
+# hist(netflix_gender_ratio_10_20$gender_rato_percentage)
+# 
+# netflix_gender_ratio_0_10 <- netflix_gender_ratio[
+#   (netflix_gender_ratio$gender_rato_percentage >= 0) & (netflix_gender_ratio$gender_rato_percentage < 10),]
+# hist(netflix_gender_ratio_0_10$tomatometer_rating)
+# hist(netflix_gender_ratio_0_10$gender_rato_percentage)
+```
+
 
 
 # Introduction 
@@ -331,6 +394,9 @@ The research question should be informed by an understanding of the data and inf
 
 ```{r}
 # lead_actors_gender <- read.csv("datasets/all_actors_movies_gender_gold.csv")
+
+# movies_lead_actor <- read.csv("datasets/movies.csv")
+
 # boo <- inner_join(netflix_gender_ratio, lead_actors_gender, by=c("title" = "name"))
 
 # netflix_gender_ratio <- read.csv("datasets/netflix_gender_ratio.csv")
@@ -346,40 +412,59 @@ plot_scatterplot <- function(dataset) {
     geom_smooth(method='lm', formula=y~x)+
     labs(title="Male cast-ratio vs RT rating: all years", x="male cast-ratio", y="RT rating"))
   
-  #between years 2015 and 2020
-  dataset_2015_to_2020 <- dataset[dataset$release_year >= 2015,]
-  plot(ggplot(data=dataset_2015_to_2020, aes(gender_rato_percentage, tomatometer_rating))+
-    geom_point()+
-    geom_smooth(method='lm', formula=y~x)+
-    labs(title="Male cast-ratio vs RT rating: 2015-2020", x="male cast-ratio", y="RT rating"))
-  
-  #between years 2010 and 2015
-  dataset_2010_to_2015 <- dataset[
-    (dataset$release_year >= 2010) & (dataset$release_year < 2015),]
-  plot(ggplot(data=dataset_2010_to_2015, aes(gender_rato_percentage, tomatometer_rating))+
-    geom_point()+
-    geom_smooth(method='lm', formula=y~x)+
-    labs(title="Male cast-ratio vs RT rating: 2010-2015", x="male cast-ratio", y="RT rating"))
-  
-  #between years 2005 and 2010
-  dataset_2005_to_2010 <- dataset[
-    (dataset$release_year >= 2005) & (dataset$release_year < 2010),]
-  plot(ggplot(data=dataset_2005_to_2010, aes(gender_rato_percentage, tomatometer_rating))+
-    geom_point()+
-    geom_smooth(method='lm', formula=y~x)+
-    labs(title="Male cast-ratio vs RT rating: 2005-2010", x="male cast-ratio", y="RT rating"))
-
-  #between years 2000 and 2005
-  dataset_2000_to_2005 <- dataset[
-    (dataset$release_year >= 2000) & (dataset$release_year < 2005),]
-  plot(ggplot(data=dataset_2000_to_2005, aes(gender_rato_percentage, tomatometer_rating))+
-    geom_point()+
-    geom_smooth(method='lm', formula=y~x)+
-    labs(title="Male cast-ratio vs RT rating: 2000-2005", x="male cast-ratio", y="RT rating"))
+  # #between years 2015 and 2020
+  # dataset_2015_to_2020 <- dataset[dataset$release_year >= 2015,]
+  # plot(ggplot(data=dataset_2015_to_2020, aes(gender_rato_percentage, tomatometer_rating))+
+  #   geom_point()+
+  #   geom_smooth(method='lm', formula=y~x)+
+  #   labs(title="Male cast-ratio vs RT rating: 2015-2020", x="male cast-ratio", y="RT rating"))
+  # 
+  # #between years 2010 and 2015
+  # dataset_2010_to_2015 <- dataset[
+  #   (dataset$release_year >= 2010) & (dataset$release_year < 2015),]
+  # plot(ggplot(data=dataset_2010_to_2015, aes(gender_rato_percentage, tomatometer_rating))+
+  #   geom_point()+
+  #   geom_smooth(method='lm', formula=y~x)+
+  #   labs(title="Male cast-ratio vs RT rating: 2010-2015", x="male cast-ratio", y="RT rating"))
+  # 
+  # #between years 2005 and 2010
+  # dataset_2005_to_2010 <- dataset[
+  #   (dataset$release_year >= 2005) & (dataset$release_year < 2010),]
+  # plot(ggplot(data=dataset_2005_to_2010, aes(gender_rato_percentage, tomatometer_rating))+
+  #   geom_point()+
+  #   geom_smooth(method='lm', formula=y~x)+
+  #   labs(title="Male cast-ratio vs RT rating: 2005-2010", x="male cast-ratio", y="RT rating"))
+  # 
+  # #between years 2000 and 2005
+  # dataset_2000_to_2005 <- dataset[
+  #   (dataset$release_year >= 2000) & (dataset$release_year < 2005),]
+  # plot(ggplot(data=dataset_2000_to_2005, aes(gender_rato_percentage, tomatometer_rating))+
+  #   geom_point()+
+  #   geom_smooth(method='lm', formula=y~x)+
+  #   labs(title="Male cast-ratio vs RT rating: 2000-2005", x="male cast-ratio", y="RT rating"))
 }
 ```
 ```{r}
-plot_scatterplot(netflix_gender_ratio)
+# " | dataset$rating == "PG" |
+#       dataset$rating == "PG-13" | dataset$rating == "R"
+
+
+    # dataset$rating == "TV-14" | dataset$rating == "TV-G" |
+    #   dataset$rating == "TV-MA" | dataset$rating == "TV-PG" |
+    #   dataset$rating == "TV-Y7",]
+      
+#PG has a strong 
+
+# boo <- netflix_gender_ratio[netflix_gender_ratio$rating == "R",]
+# 
+# NROW(boo)
+# 
+# plot_scatterplot(boo)
+# 
+# lm = lm(tomatometer_rating ~ gender_rato_percentage, boo)
+# summary(lm)
+
+
 ```
 
 
@@ -433,7 +518,7 @@ plot_scatterplot_group_by_rating <- function(dataset) {
 plot_scatterplot_group_by_rating(netflix_gender_ratio)
 ```
 ```{r}
-plot_scatterplot_group_by_rating(rt_movies_gender_ratio)
+# plot_scatterplot_group_by_rating(rt_movies_gender_ratio)
 ```
 ```{r}
 
@@ -619,14 +704,14 @@ plot_scatterplot_for_tv <- function(dataset) {
 ```
 
 ```{r}
-# plot_scatterplot_group_by_rating_for_movie(netflix_gender_ratio)
-plot_scatterplot_for_movie(netflix_gender_ratio)
+plot_scatterplot_group_by_rating_for_movie(netflix_gender_ratio)
+# plot_scatterplot_for_movie(netflix_gender_ratio)
 
 ```
 ```{r}
 
-# plot_scatterplot_group_by_rating_for_tv(netflix_gender_ratio)
-plot_scatterplot_for_tv(netflix_gender_ratio)
+plot_scatterplot_group_by_rating_for_tv(netflix_gender_ratio)
+# plot_scatterplot_for_tv(netflix_gender_ratio)
 ```
 
 ```{r}

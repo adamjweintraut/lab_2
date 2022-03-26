@@ -1,43 +1,20 @@
 "show_id","type","title","release_year","rating","content_rating","tomatometer_status","tomatometer_rating","tomatometer_count","audience_status","audience_rating","audience_count","gender","num_of_gender","num_of_casts","gender_rato_percentage"
-"s108","Movie","37 Seconds",2020,"TV-MA","NR","Fresh",88,16,"Upright",86,21,"Male",2,3,67
 "s408","Movie","All Day and a Night",2020,"R","R","Rotten",57,35,"Upright",63,105,"Male",1,2,50
 "s428","Movie","Almost Love",2020,"TV-MA","NR","Fresh",67,30,"Upright",71,34,"Male",4,6,67
-"s439","Movie","Altered Carbon: Resleeved",2020,"TV-MA","NR","Fresh",60,5,"Spilled",47,95,"Male",1,2,50
 "s715","Movie","Banana Split",2020,"TV-MA","R","Certified-Fresh",89,53,"Upright",60,172,"Male",1,6,17
 "s1451","Movie","Coffee & Kareem",2020,"TV-MA","NR","Rotten",20,69,"Spilled",30,398,"Male",1,3,33
-"s1556","TV Show","Cursed",2020,"TV-MA","R","Rotten",17,96,"Spilled",30,55933,"Male",6,7,86
-"s1845","TV Show","Dracula",2020,"TV-14","NR","Certified-Fresh",92,48,"Upright",81,44775,"Male",2,9,22
-"s1845","TV Show","Dracula",2020,"TV-14","R","Fresh",60,5,"Spilled",43,1284,"Male",2,9,22
-"s1845","TV Show","Dracula",2020,"TV-14","R","Rotten",59,17,"Spilled",58,9776,"Male",2,9,22
-"s2020","TV Show","Equinox",2020,"TV-MA","R","Rotten",33,9,"Spilled",42,1320,"Male",1,3,33
 "s2072","Movie","Extraction",2020,"R","R","Fresh",66,207,"Upright",69,3755,"Male",3,8,38
 "s2072","Movie","Extraction",2020,"R","R","Rotten",6,18,"Spilled",17,1093,"Male",3,8,38
-"s2073","TV Show","Extracurricular",2020,"TV-MA","NR","Fresh",67,6,"Spilled",42,26,"Male",3,3,100
-"s2106","TV Show","Family Business",2020,"TV-MA","R","Rotten",38,16,"Spilled",27,7791,"Male",1,3,33
-"s2139","Movie","Fearless",2020,"TV-Y7","R","Fresh",85,39,"Upright",80,12368,"Male",4,7,57
 "s2142","Movie","Feel the Beat",2020,"TV-G","NR","Rotten",47,15,"Spilled",57,141,"Male",2,5,40
-"s2406","Movie","Ghosts of War",2020,"R","R","Rotten",38,40,"Spilled",44,64,"Male",6,6,100
-"s2550","Movie","Guilty",2020,"TV-MA","NR","Fresh",60,5,"Spilled",22,18,"Male",2,2,100
 "s2622","Movie","Hard Kill",2020,"R","NR","Rotten",0,17,"Upright",71,308,"Male",3,3,100
 "s2656","Movie","Have a Good Trip: Adventures in Psychedelics",2020,"TV-MA","NR","Rotten",58,26,"Upright",72,118,"Male",2,2,100
 "s2813","Movie","Horse Girl",2020,"R","R","Fresh",70,56,"Spilled",48,433,"Male",4,8,50
-"s2905","Movie","I Am Vengeance: Retaliation",2020,"R","R","Rotten",44,9,"Spilled",25,20,"Male",5,6,83
-"s3034","TV Show","Into the Night",2020,"TV-MA","R","Rotten",38,24,"Spilled",49,3421,"Male",2,3,67
 "s3205","Movie","John Henry",2020,"R","R","Rotten",0,20,"Spilled",23,168,"Male",3,3,100
 "s3732","Movie","Lost Girls",2020,"R","R","Fresh",72,50,"Spilled",52,279,"Male",4,9,44
-"s3780","Movie","Love Wedding Repeat",2020,"TV-MA","NR","Rotten",32,66,"Spilled",36,345,"Male",3,6,50
-"s5067","TV Show","Ragnarok",2020,"TV-MA","PG-13","Fresh",69,13,"Spilled",43,769,"Male",2,4,50
 "s5499","Movie","Sergio",2020,"R","R","Rotten",43,46,"Spilled",51,168,"Male",2,3,67
 "s5751","Movie","Spenser Confidential",2020,"R","R","Rotten",37,82,"Spilled",53,1120,"Male",3,5,60
 "s6102","TV Show","The Baby-Sitters Club",2020,"TV-G","PG","Fresh",67,15,"Spilled",47,9969,"Male",2,2,100
-"s6196","Movie","The Call",2020,"TV-MA","R","Rotten",44,131,"Upright",65,54459,"Male",1,2,50
-"s6318","TV Show","The Duchess",2020,"TV-MA","PG-13","Fresh",62,170,"Upright",67,68912,"Male",1,3,33
-"s6394","TV Show","The Gift",2020,"TV-MA","R","Certified-Fresh",91,194,"Upright",75,51153,"Male",3,6,50
-"s6394","TV Show","The Gift",2020,"TV-MA","R","Rotten",57,122,"Spilled",55,51003,"Male",3,6,50
-"s6457","TV Show","The Hollow",2020,"TV-Y7","NR","Rotten",40,5,"Upright",68,99,"Male",3,4,75
 "s6572","Movie","The Last Thing He Wanted",2020,"R","R","Rotten",5,56,"Spilled",13,297,"Male",5,7,71
-"s6574","TV Show","The Last Word",2020,"TV-MA","R","Rotten",40,5,"Spilled",48,1680,"Male",1,6,17
-"s6574","TV Show","The Last Word",2020,"TV-MA","R","Rotten",40,95,"Upright",64,2476,"Male",1,6,17
 "s6593","TV Show","The Liberator",2020,"TV-MA","R","Rotten",38,26,"Upright",65,2192,"Male",2,2,100
 "s6620","Movie","The Lost Husband",2020,"PG-13","PG-13","Rotten",55,22,"Upright",65,256,"Male",1,4,25
 "s6636","Movie","The Main Event",2020,"TV-G","NR","Rotten",26,19,"Spilled",23,64,"Male",2,6,33
@@ -45,100 +22,60 @@
 "s6709","Movie","The Night Clerk",2020,"R","R","Rotten",36,45,"Spilled",31,227,"Male",3,6,50
 "s6726","TV Show","The Order",2020,"TV-MA","R","Rotten",0,6,"Spilled",28,8940,"Male",7,18,39
 "s6726","TV Show","The Order",2020,"TV-MA","R","Rotten",8,60,"Spilled",38,22588,"Male",7,18,39
-"s6735","Movie","The Outpost",2020,"R","R","Certified-Fresh",92,90,"Upright",83,478,"Male",5,5,100
 "s6976","Movie","The Vanished",2020,"R","R","Rotten",15,13,"Spilled",49,66,"Male",4,5,80
-"s7001","Movie","The Willoughbys",2020,"PG","NR","Certified-Fresh",90,63,"Upright",64,507,"Male",4,6,67
-"s7014","TV Show","The Woods",2020,"TV-MA","R","Fresh",67,15,"Spilled",37,25330,"Male",1,2,50
 "s7025","Movie","The Wrong Missy",2020,"TV-MA","NR","Rotten",33,57,"Spilled",51,1035,"Male",4,8,50
 "s7085","Movie","Tigertail",2020,"PG","PG","Certified-Fresh",81,77,"Upright",67,137,"Male",3,4,75
 "s7113","Movie","To All the Boys: P.S. I Still Love You",2020,"TV-14","NR","Certified-Fresh",75,71,"Spilled",40,500,"Male",3,7,43
 "s7327","Movie","Uncorked",2020,"TV-MA","NR","Certified-Fresh",91,46,"Upright",65,198,"Male",2,2,100
-"s7421","Movie","Villain",2020,"R","R","Fresh",71,24,"Spilled",53,38,"Male",4,4,100
-"s7510","Movie","We Summon the Darkness",2020,"R","R","Fresh",69,67,"Spilled",32,238,"Male",3,6,50
 "s7711","Movie","Yes, God, Yes",2020,"R","R","Certified-Fresh",94,109,"Upright",68,391,"Male",2,5,40
 "s76","Movie","1BR",2019,"TV-MA","NR","Certified-Fresh",86,71,"Spilled",55,377,"Male",2,2,100
 "s128","Movie","6 Underground",2019,"R","R","Rotten",36,92,"Upright",60,4122,"Male",5,7,71
 "s161","Movie","A Christmas Prince: The Royal Baby",2019,"TV-PG","NR","Rotten",33,9,"Spilled",31,80,"Male",3,6,50
 "s324","Movie","After",2019,"PG-13","PG-13","Rotten",19,37,"Upright",69,2660,"Male",2,10,20
 "s324","Movie","After",2019,"PG-13","R","Rotten",8,12,"Upright",65,173,"Male",2,10,20
-"s465","Movie","American Hangman",2019,"TV-MA","NR","Rotten",44,9,"Upright",60,132,"Male",3,4,75
 "s475","Movie","American Son",2019,"TV-MA","NR","Rotten",48,25,"Spilled",50,330,"Male",2,6,33
 "s475","Movie","American Son",2019,"TV-MA","R","Fresh",100,13,"Spilled",51,602,"Male",2,6,33
 "s519","Movie","Angel Has Fallen",2019,"R","R","Rotten",39,183,"",93,14668,"Male",6,8,75
-"s635","Movie","Avengement",2019,"TV-MA","NR","Fresh",84,19,"Upright",65,171,"Male",6,7,86
 "s639","Movie","Awake",2019,"TV-MA","NR","Rotten",14,7,"Spilled",37,27,"Male",3,8,38
 "s639","Movie","Awake",2019,"TV-MA","R","Rotten",24,63,"Spilled",54,237790,"Male",3,8,38
-"s679","Movie","Back to School",2019,"TV-MA","PG-13","Fresh",86,35,"Upright",68,33134,"Male",1,2,50
 "s683","Movie","Backdraft 2",2019,"R","R","Rotten",40,5,"Spilled",16,88,"Male",5,6,83
 "s702","Movie","Badland",2019,"TV-14","R","Rotten",16,19,"Spilled",54,294,"Male",6,9,67
 "s790","Movie","Beats",2019,"TV-MA","NR","Fresh",90,10,"Spilled",57,112,"Male",1,2,50
 "s834","Movie","Beneath the Leaves",2019,"TV-MA","NR","Rotten",20,5,"Spilled",9,64,"Male",5,7,71
 "s865","Movie","Between Two Ferns: The Movie",2019,"TV-MA","NR","Certified-Fresh",74,58,"Spilled",43,332,"Male",3,4,75
-"s1113","Movie","Brother",2019,"TV-MA","R","Rotten",47,74,"Upright",79,8713,"Male",1,3,33
-"s1116","TV Show","Brotherhood",2019,"TV-MA","R","Rotten",54,26,"Spilled",54,1639,"Male",1,2,50
-"s1347","TV Show","Chocolate",2019,"TV-14","R","Fresh",74,34,"Upright",73,12249,"Male",1,2,50
-"s1350","Movie","Chopsticks",2019,"TV-MA","NR","Rotten",17,6,"Upright",78,27,"Male",2,2,100
-"s1421","Movie","Close",2019,"TV-MA","NR","Rotten",37,35,"Spilled",35,343,"Male",1,4,25
-"s1447","Movie","Code 8",2019,"TV-MA","NR","Fresh",79,19,"Upright",63,624,"Male",5,6,83
 "s1580","Movie","Daddy Issues",2019,"TV-MA","NR","Rotten",0,7,"",NA,NA,"Male",3,5,60
 "s1667","TV Show","Dear White People",2019,"TV-MA","R","Certified-Fresh",91,133,"Upright",61,22538,"Male",4,5,80
 "s1799","Movie","Dolemite Is My Name",2019,"R","R","Certified-Fresh",97,226,"",91,113,"Male",7,7,100
-"s1807","Movie","Domino",2019,"R","R","Rotten",18,158,"Spilled",56,247068,"Male",4,10,40
-"s1807","Movie","Domino",2019,"R","R","Rotten",33,70,"Spilled",18,82,"Male",4,10,40
 "s1826","Movie","Doom: Annihilation",2019,"R","R","Rotten",43,7,"Spilled",16,294,"Male",3,4,75
-"s1879","Movie","Drive",2019,"TV-14","NR","Rotten",0,8,"Spilled",17,24,"Male",2,6,33
-"s1879","Movie","Drive",2019,"TV-14","R","Certified-Fresh",92,265,"Upright",79,118817,"Male",2,6,33
 "s1885","Movie","Drunk Parents",2019,"R","R","Rotten",0,5,"Spilled",16,263,"Male",6,7,86
-"s1909","Movie","Earthquake Bird",2019,"R","R","Rotten",50,40,"Spilled",54,197,"Male",1,4,25
 "s1912","TV Show","Easy",2019,"TV-MA","R","Rotten",59,17,"Spilled",48,1998,"Male",5,12,42
 "s1977","Movie","Eli",2019,"TV-MA","R","Rotten",48,25,"Spilled",38,551,"Male",1,6,17
-"s1978","Movie","Elisa & Marcela",2019,"TV-MA","NR","Rotten",43,14,"",NA,NA,"Male",3,4,75
 "s1981","Movie","Elizabeth Harvest",2019,"R","R","Rotten",52,21,"Spilled",40,156,"Male",3,5,60
 "s2076","Movie","Extremely Wicked, Shockingly Evil and Vile",2019,"R","R","Rotten",54,180,"Spilled",57,1401,"Male",7,10,70
 "s2100","Movie","Falling Inn Love",2019,"TV-PG","NR","Fresh",65,20,"Spilled",32,235,"Male",2,3,67
-"s2190","Movie","Fisherman's Friends",2019,"PG-13","PG-13","Fresh",67,49,"Upright",70,137,"Male",5,7,71
-"s2226","Movie","For Love or Money",2019,"TV-MA","PG","Rotten",37,19,"Spilled",45,9076,"Male",4,6,67
 "s2254","Movie","Fractured",2019,"TV-MA","NR","Rotten",59,29,"Spilled",50,551,"Male",3,5,60
-"s2384","Movie","Get In",2019,"TV-MA","NR","Rotten",50,6,"Spilled",35,17,"Male",2,2,100
 "s2423","Movie","Girl on the Third Floor",2019,"TV-MA","NR","Fresh",84,37,"Spilled",22,415,"Male",1,4,25
 "s2490","Movie","Good Sam",2019,"TV-PG","NR","Rotten",50,6,"Upright",66,41,"Male",5,7,71
 "s2730","Movie","High Flying Bird",2019,"TV-MA","NR","Certified-Fresh",92,130,"Spilled",50,60,"Male",4,6,67
-"s2735","Movie","High Strung Free Dance",2019,"TV-14","PG","Rotten",50,6,"Upright",85,92,"Male",1,3,33
 "s2773","Movie","Holiday in the Wild",2019,"TV-PG","NR","Rotten",38,8,"Spilled",47,194,"Male",2,3,67
-"s2831","Movie","House Arrest",2019,"TV-14","PG","Rotten",10,30,"Spilled",45,20035,"Male",1,2,50
-"s2906","Movie","I Am Woman",2019,"TV-MA","NR","Fresh",65,72,"Upright",76,37,"Male",3,4,75
-"s2916","Movie","I Lost My Body",2019,"TV-MA","NR","Certified-Fresh",96,81,"Upright",84,561,"Male",2,3,67
-"s2975","Movie","In the Shadow of the Moon",2019,"TV-MA","NR","Rotten",58,52,"Spilled",36,352,"Male",3,10,30
-"s2975","Movie","In the Shadow of the Moon",2019,"TV-MA","PG","Certified-Fresh",95,113,"Upright",91,6163,"Male",3,10,30
-"s2976","Movie","In the Tall Grass",2019,"TV-MA","NR","Rotten",36,72,"Spilled",33,748,"Male",2,3,67
-"s3042","Movie","Invader Zim: Enter the Florpus",2019,"TV-Y7","NR","Fresh",100,21,"Upright",92,53,"Male",3,3,100
-"s3051","Movie","Ip Man 4: The Finale",2019,"TV-MA","NR","Fresh",87,31,"",95,826,"Male",5,5,100
 "s3107","Movie","Jacob's Ladder",2019,"R","R","Fresh",73,66,"Upright",84,53062,"Male",5,14,36
 "s3107","Movie","Jacob's Ladder",2019,"R","R","Rotten",4,23,"Spilled",39,148,"Male",5,14,36
 "s3230","Movie","Juanita",2019,"TV-MA","NR","Fresh",81,16,"Upright",65,104,"Male",2,4,50
 "s3349","Movie","Kevin Hart's Guide to Black History",2019,"TV-PG","NR","Fresh",80,5,"Upright",67,45,"Male",4,6,67
-"s3421","Movie","Klaus",2019,"PG","PG","Certified-Fresh",94,67,"Upright",97,2040,"Male",4,6,67
 "s3608","Movie","Let It Snow",2019,"PG-13","PG-13","Fresh",81,26,"Spilled",45,377,"Male",2,9,22
 "s3734","TV Show","Lost in Space",2019,"TV-PG","PG-13","Rotten",28,83,"Spilled",24,173873,"Male",3,6,50
 "s3760","Movie","Love Is Blind",2019,"TV-MA","NR","Rotten",40,5,"Spilled",44,18,"Male",5,7,71
-"s3950","Movie","Marriage Story",2019,"R","R","Certified-Fresh",94,381,"",85,184,"Male",3,7,43
 "s4100","Movie","Miles Davis: Birth of the Cool",2019,"TV-MA","NR","Certified-Fresh",92,59,"Upright",81,97,"Male",2,2,100
 "s4112","Movie","Mine 9",2019,"TV-MA","NR","Fresh",89,19,"Upright",77,141,"Male",4,4,100
 "s4147","Movie","Miss Virginia",2019,"TV-MA","NR","Rotten",50,14,"Upright",84,56,"Male",3,6,50
 "s4290","Movie","Murder Mystery",2019,"PG-13","PG-13","Rotten",43,67,"Spilled",42,1007,"Male",6,8,75
 "s4660","Movie","Only",2019,"TV-MA","NR","Rotten",40,20,"Spilled",32,119,"Male",2,3,67
 "s4736","Movie","Paddleton",2019,"TV-MA","NR","Certified-Fresh",90,41,"Upright",88,546,"Male",2,2,100
-"s4895","Movie","Point Blank",2019,"TV-MA","NR","Rotten",38,34,"Spilled",30,133,"Male",4,18,22
-"s4895","Movie","Point Blank",2019,"TV-MA","R","Certified-Fresh",91,79,"Upright",76,5057,"Male",4,18,22
-"s4895","Movie","Point Blank",2019,"TV-MA","R","Fresh",95,37,"Upright",84,7614,"Male",4,18,22
-"s4903","Movie","Polaroid",2019,"PG-13","PG-13","Rotten",0,5,"Spilled",29,2927,"Male",2,7,29
-"s4919","TV Show","Possessed",2019,"TV-MA","NR","Fresh",90,10,"Upright",76,1238,"Male",1,2,50
 "s5106","Movie","Rattlesnake",2019,"TV-MA","NR","Rotten",28,18,"Spilled",15,113,"Male",1,3,33
 "s5210","Movie","Rim of the World",2019,"TV-14","NR","Rotten",23,13,"Spilled",47,296,"Male",9,12,75
 "s5244","Movie","Rocko's Modern Life: Static Cling",2019,"TV-Y7","NR","Fresh",92,24,"Upright",67,292,"Male",4,5,80
 "s5317","Movie","Rust Creek",2019,"R","R","Certified-Fresh",84,44,"Upright",66,576,"Male",3,4,75
 "s5418","Movie","Saving Zoë",2019,"R","R","Rotten",0,6,"Spilled",49,73,"Male",3,5,60
-"s5428","Movie","Scarecrow",2019,"TV-MA","R","Fresh",75,24,"Upright",79,6594,"Male",2,2,100
 "s5442","TV Show","Scream",2019,"TV-MA","R","Certified-Fresh",78,74,"Upright",79,478595,"Male",6,9,67
 "s5462","Movie","Secret Obsession",2019,"TV-14","NR","Rotten",29,17,"Spilled",9,79,"Male",4,6,67
 "s5482","Movie","See You Yesterday",2019,"TV-MA","NR","Certified-Fresh",95,39,"Spilled",37,250,"Male",1,2,50
@@ -149,41 +86,22 @@
 "s5909","TV Show","Supergirl",2019,"TV-14","PG","Rotten",9,32,"Spilled",26,49240,"Male",4,11,36
 "s5941","Movie","Sweetheart",2019,"PG-13","NR","Fresh",95,38,"Spilled",52,275,"Male",3,5,60
 "s5976","Movie","Tall Girl",2019,"TV-PG","NR","",NA,NA,"",NA,NA,"Male",2,5,40
-"s6085","Movie","The Angry Birds Movie 2",2019,"PG","PG","Fresh",73,110,"",84,4023,"Male",5,8,62
-"s6152","Movie","The Body Remembers When the World Broke Open",2019,"TV-MA","NR","Fresh",97,36,"Spilled",58,26,"Male",1,2,50
-"s6168","Movie","The Boy Who Harnessed the Wind",2019,"TV-PG","NR","Certified-Fresh",86,63,"Upright",88,374,"Male",2,3,67
-"s6232","Movie","The Coldest Game",2019,"TV-MA","NR","Rotten",0,5,"Spilled",50,102,"Male",5,6,83
-"s6285","TV Show","The Deep",2019,"TV-Y7","NR","Fresh",94,31,"Upright",63,381,"Male",2,6,33
-"s6285","TV Show","The Deep",2019,"TV-Y7","PG","Rotten",48,21,"Spilled",38,5432,"Male",2,6,33
 "s6301","Movie","The Dirt",2019,"TV-MA","NR","Rotten",38,72,"Upright",94,6710,"Male",3,3,100
-"s6369","Movie","The Forest of Love",2019,"TV-MA","NR","Fresh",100,11,"Upright",62,32,"Male",2,2,100
 "s6434","Movie","The Hard Way",2019,"TV-MA","R","Fresh",77,22,"Spilled",52,11223,"Male",5,5,100
 "s6452","Movie","The Highwaymen",2019,"R","R","Rotten",57,138,"Upright",73,1339,"Male",6,8,75
 "s6508","Movie","The Irishman",2019,"R","R","Certified-Fresh",96,439,"",86,1057,"Male",14,19,74
-"s6531","Movie","The King",2019,"R","R","Fresh",71,141,"Upright",83,2084,"Male",6,16,38
-"s6531","Movie","The King",2019,"R","R","Rotten",57,79,"Upright",66,39816,"Male",6,16,38
 "s6539","Movie","The Knight Before Christmas",2019,"TV-14","NR","Fresh",70,20,"Spilled",42,225,"Male",1,4,25
 "s6564","Movie","The Last Laugh",2019,"TV-MA","NR","Rotten",53,15,"Spilled",36,145,"Male",5,7,71
 "s6571","Movie","The Last Summer",2019,"TV-14","NR","Rotten",17,6,"Spilled",24,70,"Male",2,6,33
 "s6576","Movie","The Laundromat",2019,"R","R","Rotten",41,167,"Spilled",40,900,"Male",6,10,60
-"s6611","Movie","The Lonely Island Presents: The Unauthorized Bash Brothers Experience",2019,"TV-MA","NR","Fresh",100,12,"",NA,NA,"Male",4,8,50
 "s6736","Movie","The Outsider",2019,"TV-MA","NR","Rotten",5,20,"Spilled",12,249,"Male",5,15,33
 "s6736","Movie","The Outsider",2019,"TV-MA","NR","Rotten",17,23,"Upright",68,782,"Male",5,15,33
 "s6736","Movie","The Outsider",2019,"TV-MA","NR","Rotten",47,17,"Spilled",37,41,"Male",5,15,33
 "s6747","Movie","The Perfect Date",2019,"TV-14","NR","Fresh",65,17,"Spilled",36,548,"Male",5,6,83
 "s6752","Movie","The Perfection",2019,"TV-MA","NR","Certified-Fresh",72,92,"Spilled",57,541,"Male",2,5,40
-"s6785","Movie","The Professor and the Madman",2019,"TV-14","NR","Rotten",43,30,"Upright",78,370,"Male",8,10,80
-"s6809","Movie","The Red Sea Diving Resort",2019,"TV-MA","NR","Rotten",29,41,"Upright",78,775,"Male",9,10,90
-"s6857","Movie","The Secret Life of Pets 2",2019,"PG","PG","Fresh",60,159,"",90,21937,"Male",6,10,60
-"s6871","Movie","The Silence",2019,"PG-13","NR","Certified-Fresh",88,40,"Upright",71,4389,"Male",3,18,17
-"s6871","Movie","The Silence",2019,"PG-13","NR","Rotten",30,33,"Spilled",25,349,"Male",3,18,17
-"s6871","Movie","The Silence",2019,"PG-13","R","Rotten",50,6,"Spilled",38,374,"Male",3,18,17
-"s6956","Movie","The Two Popes",2019,"PG-13","PG-13","Certified-Fresh",89,219,"Upright",88,2370,"Male",3,3,100
 "s6964","TV Show","The Unicorn",2019,"TV-14","NR","Fresh",91,11,"Upright",65,218,"Male",2,4,50
 "s7036","Movie","Then Came You",2019,"TV-14","NR","Rotten",59,22,"Upright",76,253,"Male",5,8,62
 "s7229","Movie","Triple Frontier",2019,"R","R","Fresh",70,132,"Spilled",55,2034,"Male",5,6,83
-"s7230","Movie","Triple Threat",2019,"R","R","Fresh",69,32,"Spilled",36,227,"Male",4,6,67
-"s7309","TV Show","Ultraviolet",2019,"TV-MA","PG-13","Rotten",8,83,"Spilled",30,279994,"Male",1,3,33
 "s7329","Movie","Uncut Gems",2019,"R","R","Certified-Fresh",92,331,"",52,12112,"Male",3,4,75
 "s7349","Movie","Unicorn Store",2019,"TV-14","NR","Fresh",64,86,"Spilled",41,1590,"Male",4,8,50
 "s7391","TV Show","Van Helsing",2019,"TV-MA","PG-13","Rotten",24,226,"Spilled",57,609042,"Male",5,6,83
@@ -195,295 +113,147 @@
 "s175","Movie","A Futile and Stupid Gesture",2018,"TV-MA","NR","Fresh",67,43,"Upright",71,563,"Male",8,12,67
 "s256","Movie","A Wrinkle in Time",2018,"PG","PG","Rotten",42,334,"Spilled",26,8801,"Male",6,13,46
 "s263","Movie","A.X.L.",2018,"PG","NR","Rotten",27,22,"Upright",60,789,"Male",8,9,89
-"s303","Movie","Acts of Violence",2018,"R","R","Rotten",0,13,"Spilled",30,308,"Male",5,7,71
-"s315","Movie","Adrift",2018,"PG-13","NR","Fresh",71,14,"Upright",62,3784,"Male",2,8,25
-"s315","Movie","Adrift",2018,"PG-13","PG-13","Fresh",69,197,"Upright",66,2272,"Male",2,8,25
-"s420","Movie","All the Devil's Men",2018,"R","R","Rotten",23,13,"Spilled",19,71,"Male",4,5,80
 "s449","Movie","Amateur",2018,"TV-MA","NR","Fresh",60,5,"Upright",67,115,"Male",2,3,67
-"s492","Movie","An Evening with Beverly Luff Linn",2018,"R","R","Rotten",52,50,"Spilled",48,224,"Male",6,8,75
-"s542","Movie","Anon",2018,"TV-MA","NR","Rotten",37,49,"Spilled",35,700,"Male",5,8,62
 "s547","Movie","Ant-Man and the Wasp",2018,"PG-13","PG-13","Certified-Fresh",87,426,"Upright",75,24677,"Male",8,12,67
-"s564","Movie","Apostle",2018,"TV-MA","NR","Certified-Fresh",78,68,"Spilled",54,1301,"Male",5,6,83
 "s636","Movie","Avengers: Infinity War",2018,"PG-13","PG-13","Certified-Fresh",85,472,"Upright",91,58720,"Male",20,27,74
-"s638","Movie","Await Further Instructions",2018,"TV-MA","NR","Fresh",80,20,"Spilled",28,634,"Male",3,5,60
-"s805","Movie","Been So Long",2018,"TV-MA","NR","Fresh",92,12,"Upright",70,112,"Male",3,4,75
-"s835","Movie","Benji",2018,"TV-PG","G","Fresh",86,7,"Spilled",55,33834,"Male",6,14,43
-"s835","Movie","Benji",2018,"TV-PG","NR","Fresh",60,10,"Upright",70,149,"Male",6,14,43
-"s866","Movie","Between Worlds",2018,"R","R","Rotten",32,22,"Upright",84,623,"Male",2,5,40
 "s905","Movie","Big Kill",2018,"R","R","Rotten",22,9,"Upright",60,86,"Male",7,9,78
 "s935","Movie","Bird Box",2018,"R","R","Fresh",63,160,"Spilled",57,7325,"Male",4,9,44
-"s946","Movie","Black '47",2018,"R","R","Certified-Fresh",78,55,"Upright",76,768,"Male",7,7,100
 "s960","Movie","Black Panther",2018,"PG-13","PG-13","Certified-Fresh",96,512,"Upright",79,88211,"Male",10,13,77
 "s972","Movie","Blaze",2018,"R","R","Certified-Fresh",95,91,"Upright",68,832,"Male",7,16,44
 "s972","Movie","Blaze",2018,"R","R","Fresh",73,11,"Spilled",47,2117,"Male",7,16,44
 "s1077","Movie","Brampton's Own",2018,"TV-MA","NR","Rotten",40,5,"Spilled",59,27,"Male",4,8,50
-"s1082","Movie","Braven",2018,"R","R","Fresh",77,31,"Upright",76,1869,"Male",6,7,86
-"s1173","Movie","Calibre",2018,"TV-MA","NR","Fresh",95,20,"Upright",74,691,"Male",4,4,100
 "s1274","Movie","Change in the Air",2018,"PG","PG","Rotten",11,9,"Spilled",50,48,"Male",4,8,50
 "s1374","Movie","Christopher Robin",2018,"PG","PG","Fresh",73,270,"Upright",83,5748,"Male",6,7,86
 "s1412","Movie","Class Rank",2018,"TV-MA","NR","Fresh",86,14,"Upright",67,153,"Male",4,8,50
-"s1463","TV Show","Collateral",2018,"TV-MA","R","Certified-Fresh",86,234,"Upright",84,364227,"Male",2,7,29
 "s1470","Movie","Come Sunday",2018,"TV-14","NR","Fresh",68,34,"Upright",60,146,"Male",5,5,100
-"s1557","Movie","Curtiz",2018,"TV-MA","NR","Rotten",57,7,"Upright",64,11,"Male",3,5,60
-"s1643","Movie","Day of the Dead: Bloodline",2018,"R","R","Rotten",13,8,"Spilled",9,397,"Male",3,5,60
 "s1695","Movie","Delirium",2018,"R","NR","Rotten",0,5,"Spilled",39,72,"Male",3,5,60
 "s1702","Movie","Den of Thieves",2018,"R","R","Rotten",41,135,"Upright",62,4426,"Male",8,9,89
 "s1888","Movie","Duck Butter",2018,"TV-MA","NR","Rotten",57,37,"Spilled",42,120,"Male",2,7,29
 "s1895","Movie","Dumplin'",2018,"PG-13","NR","Certified-Fresh",85,62,"Upright",74,1114,"Male",2,8,25
-"s2012","Movie","Entanglement",2018,"TV-MA","NR","Fresh",64,36,"Spilled",52,130,"Male",2,6,33
-"s2035","Movie","Euphoria",2018,"R","R","Rotten",19,26,"Spilled",38,34,"Male",2,5,40
 "s2071","Movie","Extinction",2018,"TV-MA","NR","Rotten",33,24,"Spilled",47,1237,"Male",4,16,25
 "s2071","Movie","Extinction",2018,"TV-MA","R","Rotten",18,11,"Spilled",33,1918,"Male",4,16,25
 "s2132","Movie","Father of the Year",2018,"TV-MA","NR","Rotten",0,11,"Spilled",50,361,"Male",3,5,60
 "s2186","Movie","First Match",2018,"TV-MA","NR","Fresh",85,20,"Upright",82,188,"Male",3,3,100
 "s2266","Movie","Freak Show",2018,"TV-MA","NR","Rotten",52,42,"Upright",69,189,"Male",3,9,33
-"s2267","Movie","Freaks",2018,"R","NR","Certified-Fresh",95,55,"Upright",88,24463,"Male",2,12,17
-"s2267","Movie","Freaks",2018,"R","R","Certified-Fresh",88,82,"",86,152,"Male",2,12,17
 "s2346","Movie","Game Over, Man!",2018,"TV-MA","NR","Rotten",19,16,"Spilled",46,1030,"Male",7,9,78
-"s2368","Movie","Gemini",2018,"TV-PG","R","Certified-Fresh",72,78,"Spilled",41,986,"Male",3,4,75
-"s2373","Movie","Genius",2018,"TV-14","PG-13","Rotten",53,109,"Spilled",46,2890,"Male",2,2,100
 "s2451","Movie","God Bless the Broken Road",2018,"PG","PG","Rotten",17,12,"Upright",78,250,"Male",2,8,25
 "s2456","Movie","God's Not Dead: A Light in Darkness",2018,"PG","PG","Rotten",10,20,"Spilled",54,1199,"Male",3,5,60
-"s2500","Movie","Goosebumps 2: Haunted Halloween",2018,"PG","PG","Rotten",47,95,"Spilled",37,1350,"Male",4,6,67
 "s2609","Movie","Happy Anniversary",2018,"TV-MA","NR","Fresh",83,6,"Spilled",52,171,"Male",4,7,57
-"s2734","Movie","High Society",2018,"TV-MA","G","Fresh",82,17,"Upright",83,11464,"Male",3,4,75
 "s2768","Movie","Hold the Dark",2018,"TV-MA","NR","Fresh",71,83,"Spilled",31,1204,"Male",5,7,71
 "s2805","Movie","Hope Springs Eternal",2018,"PG","PG","Fresh",88,8,"Spilled",32,120,"Male",1,3,33
 "s2830","Movie","Hotel Transylvania 3: Summer Vacation",2018,"PG","PG","Fresh",62,118,"Spilled",48,3485,"Male",7,11,64
 "s2833","TV Show","House of Cards",2018,"TV-MA","PG-13","Rotten",56,9,"Upright",69,4108,"Male",10,21,48
 "s2838","Movie","How It Ends",2018,"TV-MA","NR","Rotten",17,18,"Spilled",16,1524,"Male",2,5,40
-"s2904","Movie","I Am Vengeance",2018,"R","R","Rotten",38,8,"Spilled",30,45,"Male",3,4,75
 "s2931","Movie","Ibiza",2018,"TV-MA","NR","Fresh",67,24,"Spilled",39,515,"Male",2,5,40
-"s2962","Movie","In Darkness",2018,"TV-MA","NR","Rotten",47,32,"Spilled",35,319,"Male",3,12,25
-"s2962","Movie","In Darkness",2018,"TV-MA","R","Certified-Fresh",88,111,"Upright",80,11049,"Male",3,12,25
 "s3061","Movie","Irreplaceable You",2018,"TV-MA","NR","Rotten",32,19,"Spilled",59,216,"Male",4,8,50
 "s3219","Movie","Jonathan",2018,"TV-MA","NR","Fresh",63,27,"Spilled",56,196,"Male",4,7,57
-"s3432","Movie","Kodachrome",2018,"TV-MA","NR","Fresh",70,50,"Upright",69,601,"Male",2,3,67
 "s3616","Movie","Lez Bomb",2018,"TV-14","NR","Fresh",89,9,"Upright",67,160,"Male",2,4,50
 "s3639","Movie","Like Father",2018,"TV-MA","NR","Rotten",46,41,"Spilled",46,544,"Male",3,4,75
 "s3740","TV Show","Love",2018,"TV-MA","NR","Rotten",39,92,"Spilled",38,3413,"Male",1,2,50
-"s3827","Movie","Lust Stories",2018,"TV-MA","NR","Fresh",100,10,"Upright",63,436,"Male",2,5,40
-"s3887","Movie","Malevolent",2018,"TV-MA","NR","Rotten",38,8,"Spilled",17,317,"Male",2,4,50
 "s3908","TV Show","Maniac",2018,"TV-MA","NR","Rotten",53,74,"Spilled",44,12398,"Male",4,27,15
 "s3908","TV Show","Maniac",2018,"TV-MA","R","Fresh",89,9,"Spilled",31,887,"Male",4,27,15
 "s3908","TV Show","Maniac",2018,"TV-MA","R","Rotten",40,20,"Spilled",58,6799,"Male",4,27,15
 "s3952","TV Show","Mars",2018,"TV-PG","NR","Fresh",86,7,"",NA,NA,"Male",2,4,50
-"s4098","Movie","Mile 22",2018,"R","R","Rotten",23,189,"Spilled",44,2769,"Male",5,6,83
-"s4124","Movie","Mirai",2018,"PG","PG","Certified-Fresh",90,83,"Upright",80,911,"Male",2,3,67
-"s4151","Movie","Mission of Honor",2018,"TV-MA","NR","Fresh",83,6,"Spilled",46,69,"Male",2,2,100
-"s4248","Movie","Mowgli: Legend of the Jungle",2018,"PG-13","PG-13","Rotten",53,104,"Spilled",51,1855,"Male",9,12,75
-"s4299","Movie","Mute",2018,"TV-MA","NR","Rotten",21,86,"Spilled",46,1529,"Male",3,3,100
 "s4401","Movie","Nappily Ever After",2018,"TV-MA","NR","Fresh",71,14,"Upright",73,347,"Male",3,5,60
-"s4459","Movie","Next Gen",2018,"TV-PG","NR","Fresh",80,5,"Upright",67,642,"Male",4,6,67
 "s4464","Movie","Night Comes On",2018,"TV-MA","NR","Certified-Fresh",98,49,"Upright",79,393,"Male",2,2,100
-"s4562","Movie","Occupation",2018,"R","R","Rotten",50,20,"Upright",88,1831,"Male",5,7,71
 "s4647","Movie","One Last Thing",2018,"TV-MA","R","Rotten",11,9,"Upright",61,21320,"Male",2,6,33
-"s4674","Movie","Operation Red Sea",2018,"TV-MA","NR","Fresh",80,10,"Upright",64,448,"Male",2,2,100
-"s4694","Movie","Our House",2018,"PG-13","NR","Fresh",62,26,"Spilled",27,228,"Male",2,7,29
-"s4708","Movie","Outlaw King",2018,"R","R","Fresh",61,148,"Upright",67,1451,"Male",8,9,89
 "s4710","Movie","Outside In",2018,"TV-MA","NR","Certified-Fresh",95,41,"Upright",77,339,"Male",2,6,33
-"s4825","Movie","Peppermint",2018,"R","R","Rotten",12,144,"Upright",71,3226,"Male",4,7,57
-"s4830","TV Show","Perfume",2018,"TV-MA","R","Rotten",11,9,"Spilled",51,1489,"Male",6,8,75
-"s4837","Movie","Peter Rabbit",2018,"PG","PG","Fresh",63,146,"Spilled",56,3410,"Male",2,7,29
 "s4856","Movie","Piercing",2018,"R","R","Fresh",72,96,"Spilled",43,268,"Male",2,7,29
 "s4979","Movie","Private Life",2018,"R","R","Certified-Fresh",94,104,"Upright",78,1000,"Male",3,7,43
-"s4992","Movie","Prospect",2018,"R","R","Certified-Fresh",88,49,"Upright",70,1092,"Male",2,2,100
-"s4995","Movie","Psychokinesis",2018,"TV-MA","NR","Fresh",80,10,"Spilled",58,259,"Male",1,2,50
-"s5081","Movie","Rajma Chawal",2018,"TV-MA","NR","Fresh",60,5,"",NA,NA,"Male",4,5,80
-"s5166","TV Show","Requiem",2018,"TV-MA","NR","Fresh",86,36,"Upright",66,4728,"Male",4,9,44
-"s5183","Movie","Revenger",2018,"TV-MA","NR","Rotten",40,5,"Spilled",50,57,"Male",2,3,67
 "s5291","Movie","Roxanne Roxanne",2018,"TV-MA","NR","Fresh",70,30,"Upright",62,220,"Male",2,3,67
-"s5340","TV Show","Safe",2018,"TV-MA","R","Certified-Fresh",86,58,"Upright",75,6486,"Male",3,10,30
-"s5340","TV Show","Safe",2018,"TV-MA","R","Rotten",58,109,"Spilled",59,110336,"Male",3,10,30
-"s5369","Movie","Samson",2018,"PG-13","PG-13","Rotten",25,16,"Spilled",49,819,"Male",4,5,80
 "s5504","Movie","Set It Up",2018,"TV-MA","NR","Certified-Fresh",92,59,"Upright",68,1302,"Male",4,7,57
-"s5533","Movie","Shadow",2018,"TV-14","NR","Certified-Fresh",94,102,"Upright",79,424,"Male",2,6,33
-"s5533","Movie","Shadow",2018,"TV-14","NR","Fresh",71,7,"Spilled",29,488,"Male",2,6,33
 "s5557","TV Show","She's Gotta Have It",2018,"TV-MA","R","Fresh",91,32,"Upright",73,6642,"Male",1,2,50
 "s5573","TV Show","Shooter",2018,"TV-14","R","Rotten",47,149,"Upright",80,456528,"Male",3,5,60
-"s5643","TV Show","Sisters",2018,"TV-MA","R","Fresh",60,176,"Spilled",52,40512,"Male",2,8,25
-"s5643","TV Show","Sisters",2018,"TV-MA","R","Fresh",87,38,"Upright",72,6112,"Male",2,8,25
-"s5697","Movie","Solo",2018,"TV-MA","PG-13","Rotten",8,36,"Spilled",26,6236,"Male",1,2,50
 "s5699","Movie","Solo: A Star Wars Story",2018,"PG-13","PG-13","Fresh",70,474,"Upright",64,43979,"Male",4,7,57
 "s5755","Movie","Spider-Man: Into the Spider-Verse",2018,"PG","PG","Certified-Fresh",97,383,"Upright",93,20151,"Male",4,9,44
-"s5773","Movie","Sprinter",2018,"TV-MA","NR","Fresh",73,11,"Upright",91,22,"Male",1,2,50
 "s5812","Movie","Step Sisters",2018,"PG-13","PG-13","Rotten",22,9,"Spilled",46,168,"Male",2,8,25
 "s5816","Movie","Steve Martin and Martin Short: An Evening You Will Forget for the Rest of Your Life",2018,"TV-14","NR","Fresh",100,10,"Upright",71,98,"Male",2,2,100
 "s5942","Movie","Swiped",2018,"TV-14","NR","Rotten",17,6,"Spilled",59,1335,"Male",4,7,57
-"s5966","TV Show","Taken",2018,"TV-14","PG-13","Rotten",58,175,"Upright",85,738934,"Male",4,6,67
-"s6050","Movie","The 12th Man",2018,"TV-MA","NR","Fresh",86,21,"Upright",79,612,"Male",2,3,67
 "s6073","Movie","The After Party",2018,"TV-MA","NR","Rotten",0,5,"Upright",87,393,"Male",3,5,60
-"s6084","Movie","The Angel",2018,"TV-MA","NR","Fresh",75,12,"Upright",60,243,"Male",3,4,75
 "s6111","Movie","The Ballad of Buster Scruggs",2018,"R","R","Certified-Fresh",90,224,"Upright",77,3514,"Male",4,5,80
-"s6178","Movie","The Breaker Upperers",2018,"TV-MA","NR","Certified-Fresh",87,47,"Spilled",51,363,"Male",1,2,50
 "s6219","Movie","The Christmas Chronicles",2018,"TV-PG","NR","Fresh",67,58,"Upright",77,1268,"Male",5,6,83
 "s6236","Movie","The Competition",2018,"TV-14","NR","Rotten",17,6,"Spilled",53,139,"Male",2,6,33
-"s6237","Movie","The Con Is On",2018,"R","R","Rotten",0,5,"Spilled",42,165,"Male",6,13,46
-"s6282","Movie","The Debt Collector",2018,"TV-MA","NR","Fresh",83,6,"Spilled",39,91,"Male",4,5,80
-"s6429","Movie","The Guernsey Literary and Potato Peel Pie Society",2018,"TV-PG","NR","Certified-Fresh",80,71,"Upright",81,1426,"Male",3,7,43
-"s6430","TV Show","The Guest",2018,"TV-14","R","Certified-Fresh",91,115,"Upright",69,23074,"Male",2,3,67
-"s6433","Movie","The Happytime Murders",2018,"R","R","Rotten",23,243,"Spilled",40,2660,"Male",4,7,57
 "s6455","Movie","The Holiday Calendar",2018,"TV-G","NR","Rotten",33,6,"Spilled",35,101,"Male",2,5,40
-"s6472","Movie","The Hummingbird Project",2018,"R","R","Rotten",58,118,"Spilled",48,216,"Male",4,5,80
-"s6475","Movie","The Hurricane Heist",2018,"PG-13","PG-13","Rotten",47,59,"Spilled",23,832,"Male",4,6,67
-"s6529","Movie","The Kindergarten Teacher",2018,"R","R","Certified-Fresh",91,98,"Upright",68,766,"Male",3,6,50
-"s6536","Movie","The Kissing Booth",2018,"TV-14","NR","Rotten",17,12,"Spilled",57,2729,"Male",1,2,50
 "s6548","Movie","The Land of Steady Habits",2018,"TV-MA","NR","Certified-Fresh",83,41,"Spilled",47,315,"Male",6,9,67
 "s6579","Movie","The Legacy of a Whitetail Deer Hunter",2018,"TV-14","NR","Rotten",30,23,"Spilled",42,136,"Male",3,4,75
 "s6601","Movie","The Little Mermaid",2018,"PG","G","Certified-Fresh",93,71,"Upright",88,900315,"Male",2,7,29
 "s6612","Movie","The Long Dumb Road",2018,"R","R","Fresh",75,28,"Spilled",51,182,"Male",2,7,29
-"s6705","Movie","The New Romantic",2018,"TV-MA","NR","Fresh",62,29,"Spilled",37,144,"Male",3,4,75
 "s6715","Movie","The Nutcracker and the Four Realms",2018,"PG","PG","Rotten",32,202,"Spilled",34,2313,"Male",6,12,50
-"s6725","Movie","The Open House",2018,"TV-MA","NR","Rotten",15,13,"Spilled",8,2065,"Male",3,5,60
-"s6732","Movie","The Other Side of the Wind",2018,"R","R","Certified-Fresh",84,98,"Spilled",58,339,"Male",6,10,60
 "s6772","Movie","The Polka King",2018,"TV-14","NR","Fresh",66,35,"Spilled",49,385,"Male",5,8,62
 "s6781","Movie","The Princess Switch",2018,"TV-G","NR","Fresh",75,12,"Spilled",48,461,"Male",1,3,33
-"s6827","Movie","The Ritual",2018,"TV-MA","NR","Fresh",73,90,"Upright",60,2091,"Male",3,3,100
-"s6933","Movie","The Titan",2018,"TV-MA","NR","Rotten",18,28,"Spilled",15,784,"Male",4,7,57
-"s6943","Movie","The Tribe",2018,"TV-MA","NR","Certified-Fresh",88,132,"Upright",69,5374,"Male",1,3,33
 "s6996","Movie","The Week Of",2018,"TV-14","NR","Rotten",27,26,"Spilled",33,602,"Male",3,4,75
 "s7069","Movie","Thriller",2018,"TV-MA","NR","Rotten",40,25,"Spilled",15,34,"Male",5,6,83
-"s7239","TV Show","Troy",2018,"TV-MA","R","Rotten",54,228,"Upright",73,825158,"Male",3,5,60
 "s7335","Movie","Under the Eiffel Tower",2018,"TV-MA","NR","Rotten",41,17,"Spilled",49,59,"Male",4,5,80
-"s7376","Movie","Us and Them",2018,"TV-MA","NR","Fresh",60,20,"Upright",64,169,"Male",1,2,50
-"s7474","TV Show","Wanderlust",2018,"TV-MA","R","Rotten",59,145,"Spilled",39,42331,"Male",3,7,43
-"s7484","TV Show","Warrior",2018,"TV-MA","PG-13","Certified-Fresh",83,191,"Upright",92,59397,"Male",4,5,80
-"s7493","TV Show","Watership Down",2018,"TV-PG","PG","Fresh",82,34,"Upright",86,33940,"Male",15,18,83
-"s7558","Movie","What Keeps You Alive",2018,"R","R","Certified-Fresh",82,50,"Spilled",42,661,"Male",1,3,33
 "s7562","Movie","What Still Remains",2018,"TV-14","NR","Fresh",90,10,"Spilled",47,378,"Male",4,6,67
 "s7587","Movie","When We First Met",2018,"TV-14","NR","Rotten",43,23,"Spilled",57,867,"Male",2,4,50
-"s7595","Movie","White Chamber",2018,"TV-MA","NR","Rotten",43,7,"Spilled",22,36,"Male",2,5,40
-"s7597","Movie","White Fang",2018,"TV-PG","PG","Fresh",65,20,"Upright",63,39910,"Male",4,5,80
 "s7625","Movie","Wildlife",2018,"PG-13","PG-13","Certified-Fresh",93,206,"Upright",73,1888,"Male",4,6,67
 "s7626","Movie","Wildling",2018,"R","R","Fresh",70,46,"Spilled",40,583,"Male",2,4,50
-"s7632","Movie","Winchester",2018,"PG-13","PG-13","Rotten",13,130,"Spilled",32,2802,"Male",4,6,67
 "s11","Movie","1922",2017,"TV-MA","NR","Certified-Fresh",91,43,"Spilled",57,1880,"Male",3,4,75
-"s90","Movie","24 Hours to Live",2017,"R","R","Rotten",52,21,"Spilled",29,324,"Male",4,6,67
 "s132","Movie","68 Kill",2017,"R","NR","Fresh",70,23,"Spilled",54,517,"Male",6,9,67
-"s149","Movie","A Bad Moms Christmas",2017,"R","R","Rotten",32,129,"Spilled",44,13280,"Male",3,9,33
 "s160","Movie","A Christmas Prince",2017,"TV-PG","NR","Fresh",73,11,"Spilled",47,317,"Male",1,3,33
 "s176","Movie","A Ghost Story",2017,"R","R","Certified-Fresh",91,274,"Upright",66,16789,"Male",2,4,50
-"s302","Movie","Acts of Vengeance",2017,"R","R","Rotten",55,11,"Spilled",24,204,"Male",5,6,83
-"s331","Movie","Aftermath",2017,"R","NR","Rotten",47,17,"Spilled",17,361,"Male",7,20,35
-"s331","Movie","Aftermath",2017,"R","R","Rotten",42,55,"Spilled",25,3063,"Male",7,20,35
 "s455","Movie","American Assassin",2017,"R","R","Rotten",34,175,"Upright",60,18483,"Male",5,6,83
-"s497","Movie","An Ordinary Man",2017,"R","R","Rotten",41,22,"Spilled",35,64,"Male",2,3,67
-"s503","Movie","Anchor and Hope",2017,"TV-MA","NR","Fresh",75,28,"Upright",69,107,"Male",1,4,25
-"s690","Movie","Bad Day for the Cut",2017,"TV-MA","NR","Fresh",92,13,"Upright",70,431,"Male",3,4,75
 "s716","Movie","Band Aid",2017,"R","NR","Certified-Fresh",87,71,"Upright",73,3249,"Male",4,12,33
 "s807","Movie","Before I Fall",2017,"PG-13","PG-13","Fresh",65,122,"Spilled",56,9236,"Male",3,11,27
-"s841","Movie","Berlin Syndrome",2017,"R","R","Certified-Fresh",75,88,"Spilled",53,4425,"Male",2,4,50
-"s876","Movie","Beyond Skyline",2017,"R","R","Fresh",65,20,"Spilled",38,791,"Male",4,4,100
 "s939","Movie","Bitch",2017,"R","NR","Fresh",67,39,"Spilled",30,224,"Male",4,9,44
 "s992","TV Show","Bloodline",2017,"TV-MA","R","Rotten",53,19,"Spilled",56,111,"Male",9,14,64
 "s1103","Movie","Bright",2017,"TV-MA","NR","Rotten",28,109,"Upright",83,19445,"Male",7,10,70
-"s1135","Movie","Bullet Head",2017,"R","R","Rotten",59,17,"Spilled",31,243,"Male",5,5,100
 "s1148","Movie","Burning Sands",2017,"TV-MA","NR","Fresh",88,26,"Upright",60,314,"Male",6,10,60
 "s1150","Movie","Bushwick",2017,"TV-MA","NR","Rotten",48,73,"Spilled",31,700,"Male",2,5,40
-"s1276","Movie","Chappaquiddick",2017,"PG-13","PG-13","Certified-Fresh",81,141,"Upright",68,2288,"Male",5,8,62
-"s1293","Movie","Chasing the Dragon",2017,"TV-MA","NR","Rotten",57,7,"Upright",72,490,"Male",3,3,100
 "s1368","Movie","Christmas Inheritance",2017,"TV-G","NR","Rotten",43,7,"Spilled",35,136,"Male",5,7,71
 "s1532","Movie","Creep 2",2017,"TV-MA","NR","Fresh",100,23,"Upright",72,998,"Male",2,3,67
 "s1552","Movie","Cult of Chucky",2017,"R","NR","Fresh",79,24,"Spilled",46,1702,"Male",4,9,44
-"s1589","Movie","Dance Academy: The Comeback",2017,"TV-PG","NR","Fresh",100,15,"Upright",81,676,"Male",2,4,50
-"s1617","TV Show","Dark Matter",2017,"TV-PG","R","Rotten",40,40,"Spilled",40,11981,"Male",2,4,50
 "s1672","Movie","Death House",2017,"R","R","Rotten",40,5,"Spilled",39,213,"Male",8,13,62
 "s1673","Movie","Death Note",2017,"TV-MA","NR","Rotten",38,76,"Spilled",24,6202,"Male",3,4,75
 "s1689","Movie","Deidra & Laney Rob a Train",2017,"TV-14","NR","Fresh",92,24,"Spilled",57,237,"Male",3,11,27
-"s1728","Movie","Devil's Gate",2017,"TV-MA","NR","Rotten",38,16,"Spilled",24,178,"Male",4,6,67
 "s1945","Movie","El Camino Christmas",2017,"TV-MA","NR","Rotten",40,5,"Spilled",39,232,"Male",4,5,80
-"s2183","Movie","First Kill",2017,"R","R","Rotten",15,20,"Spilled",24,811,"Male",2,4,50
 "s2315","Movie","Fun Mom Dinner",2017,"R","R","Rotten",32,28,"Spilled",35,260,"Male",4,8,50
 "s2380","Movie","Gerald's Game",2017,"TV-MA","NR","Certified-Fresh",91,76,"Upright",71,3730,"Male",2,4,50
 "s2427","Movie","Girlfriend's Day",2017,"TV-MA","NR","Rotten",43,7,"Spilled",37,210,"Male",13,16,81
-"s2457","Movie","God's Own Country",2017,"TV-MA","NR","Certified-Fresh",98,127,"Upright",87,4440,"Male",1,2,50
-"s2459","TV Show","Godzilla",2017,"TV-14","PG-13","Certified-Fresh",76,323,"Upright",66,176587,"Male",6,14,43
-"s2459","TV Show","Godzilla",2017,"TV-14","PG-13","Rotten",15,79,"Spilled",28,302947,"Male",6,14,43
 "s2491","Movie","Good Time",2017,"R","R","Certified-Fresh",92,238,"Upright",81,9189,"Male",1,2,50
-"s2563","TV Show","Gypsy",2017,"TV-MA","NR","Fresh",64,14,"Upright",74,6403,"Male",2,20,10
-"s2563","TV Show","Gypsy",2017,"TV-MA","NR","Rotten",57,7,"Upright",76,4576,"Male",2,20,10
 "s2597","Movie","Hangman",2017,"R","NR","Fresh",100,6,"Spilled",33,137,"Male",5,18,28
 "s2597","Movie","Hangman",2017,"R","R","Rotten",4,23,"Spilled",30,483,"Male",5,18,28
 "s2718","Movie","Hickok",2017,"TV-MA","NR","Rotten",57,7,"Spilled",18,162,"Male",4,6,67
 "s2817","Movie","Hostiles",2017,"R","R","Fresh",70,220,"Upright",75,5461,"Male",11,12,92
-"s2829","TV Show","Hotel Transylvania",2017,"TV-Y7","PG","Rotten",45,145,"Upright",72,151358,"Male",2,2,100
-"s2841","Movie","How to Be a Latin Lover",2017,"PG-13","PG-13","Rotten",39,31,"Upright",61,7082,"Male",5,10,50
-"s2984","Movie","Inconceivable",2017,"R","R","Rotten",31,13,"Upright",62,895,"Male",3,6,50
-"s3021","TV Show","Inspector Gadget",2017,"TV-Y7","PG","Rotten",21,63,"Spilled",18,275618,"Male",3,4,75
 "s3254","Movie","Justice",2017,"R","R","Fresh",67,9,"",NA,NA,"Male",6,8,75
 "s3366","Movie","Kickboxer: Retaliation",2017,"R","R","Fresh",92,13,"Upright",69,472,"Male",5,6,83
-"s3406","Movie","Kings",2017,"R","R","Rotten",13,38,"Spilled",35,147,"Male",3,4,75
 "s3459","Movie","Krystal",2017,"R","R","Rotten",14,22,"Spilled",44,136,"Male",5,9,56
 "s3513","Movie","Lady Bird",2017,"R","R","Certified-Fresh",99,391,"Upright",79,22610,"Male",5,9,56
 "s3660","Movie","Little Evil",2017,"TV-MA","NR","Fresh",92,12,"Spilled",47,1107,"Male",4,8,50
-"s3894","TV Show","Man Down",2017,"TV-MA","R","Rotten",16,55,"Spilled",58,3680,"Male",2,8,25
-"s3926","Movie","Mara",2017,"TV-MA","R","Rotten",29,17,"Spilled",24,154,"Male",3,6,50
-"s4053","Movie","Message from the King",2017,"TV-MA","R","Rotten",45,11,"Spilled",50,431,"Male",4,7,57
-"s4061","Movie","MFKZ",2017,"R","NR","Rotten",39,18,"Upright",82,224,"Male",4,5,80
 "s4068","Movie","Michael Bolton's Big, Sexy Valentine's Day Special",2017,"TV-MA","NR","Fresh",100,5,"Upright",62,74,"Male",18,25,72
 "s4164","Movie","Mohawk",2017,"TV-MA","NR","Certified-Fresh",84,43,"Spilled",28,218,"Male",5,6,83
-"s4169","Movie","Molly's Game",2017,"R","R","Certified-Fresh",81,297,"Upright",84,11954,"Male",8,9,89
-"s4185","Movie","Monster Family",2017,"PG","PG","Rotten",10,21,"Spilled",22,234,"Male",2,5,40
 "s4271","Movie","Mudbound",2017,"R","R","Certified-Fresh",97,197,"Upright",85,5833,"Male",3,5,60
-"s4393","Movie","Nails",2017,"TV-MA","NR","Rotten",40,15,"Spilled",23,93,"Male",1,3,33
 "s4394","Movie","Naked",2017,"TV-14","NR","Rotten",0,8,"Spilled",31,567,"Male",4,8,50
 "s4455","Movie","Newness",2017,"TV-MA","NR","Fresh",69,16,"Upright",60,346,"Male",3,5,60
 "s4542","Movie","November Criminals",2017,"PG-13","PG-13","Rotten",0,11,"Spilled",23,786,"Male",7,10,70
-"s4599","Movie","Okja",2017,"TV-MA","NR","Certified-Fresh",86,235,"Upright",81,10553,"Male",6,9,67
 "s4700","Movie","Our Souls at Night",2017,"TV-14","NR","Certified-Fresh",88,42,"Upright",75,1006,"Male",3,7,43
 "s4707","TV Show","Outlander",2017,"TV-MA","R","Rotten",37,62,"Spilled",44,46883,"Male",11,15,73
-"s5107","Movie","Ravenous",2017,"TV-MA","R","Rotten",48,61,"Upright",78,21482,"Male",2,4,50
-"s5160","Movie","Rememory",2017,"PG-13","PG-13","Rotten",25,20,"Spilled",43,882,"Male",5,7,71
-"s5180","TV Show","Revenge",2017,"TV-MA","R","Certified-Fresh",93,132,"Spilled",57,2682,"Male",1,4,25
-"s5180","TV Show","Revenge",2017,"TV-MA","R","Rotten",35,17,"Spilled",54,9175,"Male",1,4,25
 "s5253","Movie","Roger Corman's Death Race 2050",2017,"R","R","Fresh",88,8,"Spilled",33,395,"Male",2,5,40
-"s5277","Movie","Room for Rent",2017,"TV-MA","NR","Fresh",82,11,"Spilled",45,73,"Male",3,5,60
-"s5342","Movie","Sahara",2017,"TV-Y7","NR","Fresh",100,10,"Upright",86,4881,"Male",5,10,50
-"s5342","Movie","Sahara",2017,"TV-Y7","PG-13","Rotten",38,178,"Spilled",53,213587,"Male",5,10,50
 "s5374","Movie","Sand Castle",2017,"TV-MA","NR","Rotten",47,17,"Spilled",44,589,"Male",6,6,100
 "s5376","Movie","Sandy Wexler",2017,"TV-14","NR","Rotten",27,22,"Spilled",39,911,"Male",8,9,89
 "s5408","Movie","Saturday Church",2017,"TV-MA","NR","Fresh",93,29,"Upright",75,214,"Male",1,2,50
 "s5411","Movie","Savage Dog",2017,"TV-MA","NR","Fresh",69,13,"Spilled",42,137,"Male",5,5,100
-"s5413","TV Show","Save Me",2017,"TV-MA","NR","Fresh",68,31,"Upright",67,1036,"Male",3,5,60
-"s5567","Movie","Shimmer Lake",2017,"TV-MA","NR","Fresh",60,10,"Spilled",58,509,"Male",7,8,88
 "s5584","Movie","Shot Caller",2017,"R","R","Fresh",69,48,"Upright",80,3821,"Male",8,9,89
-"s5651","Movie","Skins",2017,"TV-MA","R","Rotten",59,58,"Upright",85,2260,"Male",2,5,40
-"s5660","Movie","Slam",2017,"TV-MA","R","Fresh",61,23,"Upright",84,2702,"Male",1,3,33
-"s5673","Movie","Small Crimes",2017,"TV-MA","NR","Rotten",59,17,"Spilled",30,283,"Male",4,6,67
 "s5675","Movie","Small Town Crime",2017,"R","R","Fresh",77,35,"Upright",67,646,"Male",8,11,73
 "s5703","Movie","Some Freaks",2017,"TV-MA","NR","Fresh",92,12,"Upright",71,559,"Male",1,4,25
 "s5712","TV Show","Somewhere Between",2017,"TV-14","NR","Fresh",88,24,"Upright",86,491,"Male",3,7,43
 "s5748","Movie","Speech & Debate",2017,"PG-13","PG-13","Rotten",55,11,"Spilled",47,152,"Male",4,8,50
-"s5882","Movie","Sun Dogs",2017,"TV-MA","NR","Fresh",80,5,"Upright",72,120,"Male",7,9,78
 "s5890","Movie","Super Dark Times",2017,"TV-MA","NR","Certified-Fresh",90,48,"Upright",72,2733,"Male",2,2,100
-"s5940","Movie","Sweet Virginia",2017,"R","R","Certified-Fresh",79,56,"Spilled",58,1288,"Male",6,10,60
 "s6103","Movie","The Babysitter",2017,"TV-MA","NR","Fresh",72,29,"Upright",61,2334,"Male",4,18,22
 "s6103","Movie","The Babysitter",2017,"TV-MA","R","Rotten",17,6,"Spilled",16,4844,"Male",4,18,22
 "s6107","Movie","The Bachelors",2017,"TV-14","NR","Fresh",83,18,"Upright",74,323,"Male",6,9,67
 "s6112","Movie","The Ballad of Lefty Brown",2017,"R","R","Fresh",79,28,"Spilled",54,587,"Male",5,6,83
-"s6191","Movie","The Bye Bye Man",2017,"PG-13","PG-13","Rotten",19,89,"Spilled",22,7274,"Male",4,9,44
 "s6202","Movie","The Case for Christ",2017,"TV-PG","PG","Rotten",59,27,"Upright",87,47,"Male",4,6,67
 "s6226","Movie","The Clapper",2017,"R","R","Rotten",23,26,"Spilled",31,261,"Male",5,8,62
-"s6281","Movie","The Death of Stalin",2017,"R","R","Certified-Fresh",95,244,"Upright",78,6474,"Male",8,10,80
 "s6303","Movie","The Disaster Artist",2017,"R","R","Certified-Fresh",91,345,"Upright",85,15204,"Male",7,12,58
 "s6306","Movie","The Discovery",2017,"TV-MA","NR","Rotten",45,62,"Spilled",43,1287,"Male",4,6,67
 "s6333","Movie","The Endless",2017,"TV-MA","NR","Certified-Fresh",92,128,"Upright",67,3561,"Male",4,5,80
 "s6363","Movie","The Florida Project",2017,"R","R","Certified-Fresh",96,308,"Upright",80,13337,"Male",2,2,100
-"s6367","Movie","The Foreigner",2017,"R","R","Fresh",65,124,"Upright",72,16296,"Male",7,9,78
 "s6402","Movie","The Good Catholic",2017,"PG-13","PG-13","Rotten",46,13,"Upright",81,216,"Male",2,2,100
-"s6443","Movie","The Healer",2017,"TV-14","NR","Rotten",17,6,"Spilled",56,160,"Male",2,3,67
-"s6471","Movie","The Humanity Bureau",2017,"R","R","Rotten",25,8,"Spilled",23,191,"Male",5,6,83
 "s6486","Movie","The Incredible Jessica James",2017,"TV-MA","NR","Certified-Fresh",88,59,"Upright",66,807,"Male",1,5,20
 "s6526","Movie","The Keeping Hours",2017,"PG-13","PG-13","Fresh",80,5,"Upright",71,117,"Male",2,8,25
-"s6528","Movie","The Killing of a Sacred Deer",2017,"R","R","Certified-Fresh",80,275,"Upright",63,10187,"Male",3,6,50
-"s6600","Movie","The Little Hours",2017,"R","R","Certified-Fresh",78,127,"Spilled",49,6827,"Male",7,12,58
-"s6605","Movie","The Little Vampire",2017,"TV-G","PG","Rotten",55,66,"Spilled",55,52336,"Male",4,6,67
-"s6610","Movie","The Lodgers",2017,"R","R","Rotten",56,45,"Spilled",39,279,"Male",3,3,100
 "s6625","Movie","The Lovers",2017,"R","R","Rotten",8,13,"Spilled",20,1307,"Male",3,6,50
 "s6663","Movie","The Meyerowitz Stories (New and Selected)",2017,"TV-MA","NR","Certified-Fresh",92,183,"Upright",72,5508,"Male",5,11,45
-"s6679","TV Show","The Mist",2017,"TV-MA","R","Fresh",72,145,"Upright",65,198389,"Male",4,7,57
-"s6695","Movie","The Music of Silence",2017,"TV-PG","NR","Rotten",0,17,"Upright",81,115,"Male",4,6,67
-"s6733","Movie","The Ottoman Lieutenant",2017,"R","NR","Rotten",19,36,"Spilled",51,820,"Male",6,8,75
 "s6734","Movie","The Outcasts",2017,"TV-14","PG-13","Rotten",56,9,"Spilled",47,2891,"Male",1,7,14
 "s6847","Movie","The Saint",2017,"TV-14","PG-13","Rotten",30,46,"Upright",63,67535,"Male",8,10,80
 "s6914","Movie","The Super",2017,"R","R","Rotten",0,9,"Spilled",43,6946,"Male",4,18,22
@@ -496,803 +266,399 @@
 "s7186","Movie","Tramps",2017,"TV-MA","NR","Fresh",95,22,"Upright",68,629,"Male",3,5,60
 "s7470","Movie","Walking Out",2017,"PG-13","PG-13","Certified-Fresh",90,49,"Spilled",56,867,"Male",4,5,80
 "s7480","Movie","War Machine",2017,"TV-MA","NR","Rotten",48,92,"Spilled",34,5491,"Male",7,7,100
-"s7551","Movie","What Happened to Monday",2017,"TV-MA","NR","Rotten",58,36,"Upright",67,3058,"Male",4,7,57
 "s7576","Movie","Wheelman",2017,"TV-MA","NR","Fresh",88,24,"Upright",66,786,"Male",4,6,67
 "s7630","Movie","Win It All",2017,"TV-MA","NR","Certified-Fresh",85,40,"Spilled",55,690,"Male",3,3,100
 "s7658","Movie","Woodshock",2017,"R","R","Rotten",24,55,"Spilled",24,1109,"Male",2,4,50
 "s7660","Movie","Woody Woodpecker",2017,"PG","PG","Rotten",13,8,"Spilled",32,210,"Male",4,5,80
-"s7688","Movie","XX",2017,"R","R","Fresh",70,61,"Spilled",19,2496,"Male",5,11,45
 "s7730","Movie","You Get Me",2017,"TV-MA","NR","",NA,NA,"Spilled",27,532,"Male",1,7,14
 "s84","Movie","20th Century Women",2016,"R","R","Certified-Fresh",88,222,"Upright",74,12959,"Male",2,5,40
 "s152","Movie","A Boy Called Po",2016,"PG","PG","Rotten",31,13,"Upright",80,102,"Male",5,8,62
 "s191","Movie","A Kind of Murder",2016,"R","R","Rotten",35,17,"Spilled",14,503,"Male",3,6,50
-"s206","Movie","A Monster Calls",2016,"PG-13","PG-13","Certified-Fresh",86,262,"Upright",81,25284,"Male",3,7,43
-"s430","Movie","Alone in Berlin",2016,"R","R","Rotten",57,54,"Spilled",50,557,"Male",5,8,62
-"s442","Movie","Always Be My Maybe",2016,"TV-14","PG-13","Certified-Fresh",89,94,"Upright",80,1908,"Male",2,2,100
-"s468","Movie","American Honey",2016,"R","R","Certified-Fresh",79,211,"Upright",63,8500,"Male",1,4,25
-"s583","Movie","ARQ",2016,"TV-MA","NR","Rotten",43,7,"Spilled",46,903,"Male",3,5,60
-"s697","Movie","Bad Rap",2016,"TV-MA","NR","Fresh",70,10,"Upright",77,44,"Male",1,2,50
 "s756","Movie","Barry",2016,"TV-MA","NR","Certified-Fresh",80,46,"Spilled",52,882,"Male",4,7,57
 "s765","Movie","Batman: The Killing Joke",2016,"R","R","Rotten",40,40,"Spilled",46,9753,"Male",6,7,86
-"s987","Movie","Blood Father",2016,"R","R","Certified-Fresh",89,97,"Upright",63,9869,"Male",6,8,75
 "s999","Movie","Blue Jay",2016,"TV-MA","NR","Fresh",91,32,"Upright",77,2392,"Male",2,3,67
-"s1035","Movie","Bombshell",2016,"TV-MA","R","Fresh",69,318,"",84,6822,"Male",1,2,50
-"s1075","Movie","Brain on Fire",2016,"PG-13","PG-13","Rotten",13,16,"Upright",67,762,"Male",4,7,57
 "s1081","Movie","Brave New Jersey",2016,"TV-MA","NR","Rotten",47,19,"Spilled",37,158,"Male",4,7,57
 "s1152","Movie","Buster's Mal Heart",2016,"TV-MA","NR","Fresh",70,50,"Spilled",56,2023,"Male",5,9,56
 "s1162","Movie","Cabin Fever",2016,"R","R","Fresh",62,140,"Spilled",44,250223,"Male",3,10,30
 "s1162","Movie","Cabin Fever",2016,"R","R","Rotten",0,28,"Spilled",12,695,"Male",3,10,30
 "s1228","Movie","Carrie Pilby",2016,"TV-MA","NR","Fresh",62,26,"Upright",73,1078,"Male",5,7,71
 "s1246","Movie","Catfight",2016,"TV-MA","NR","Fresh",73,60,"Spilled",43,1152,"Male",4,8,50
-"s1362","Movie","Christine",2016,"R","R","Certified-Fresh",88,124,"Upright",71,5530,"Male",5,18,28
-"s1362","Movie","Christine",2016,"R","R","Fresh",69,29,"Upright",64,64586,"Male",5,18,28
 "s1375","Movie","Chronically Metropolitan",2016,"TV-MA","NR","Rotten",40,10,"Spilled",38,49,"Male",3,6,50
-"s1479","Movie","Compulsion",2016,"TV-MA","NR","Fresh",100,10,"Upright",86,1456,"Male",1,4,25
-"s1613","Movie","Dark Crimes",2016,"R","R","Rotten",0,37,"Spilled",30,957,"Male",6,9,67
-"s1682","TV Show","Deep Water",2016,"TV-MA","PG","Certified-Fresh",96,55,"Upright",87,4961,"Male",7,10,70
-"s1723","Movie","Detour",2016,"R","NR","Fresh",100,29,"Upright",78,5376,"Male",6,14,43
-"s1723","Movie","Detour",2016,"R","R","Fresh",65,31,"Spilled",42,271,"Male",6,14,43
 "s1796","Movie","Dog Eat Dog",2016,"TV-MA","NR","Rotten",50,70,"Spilled",18,716,"Male",4,6,67
-"s1819","Movie","Don't Knock Twice",2016,"R","R","Rotten",24,25,"Spilled",21,735,"Male",1,5,20
 "s1821","Movie","Don't Think Twice",2016,"R","R","Certified-Fresh",98,135,"Upright",69,19250,"Male",4,6,67
 "s1988","Movie","Emelie",2016,"TV-MA","NR","Fresh",88,34,"Spilled",41,1590,"Male",2,5,40
-"s2230","Movie","For the Love of Spock",2016,"TV-14","NR","Fresh",100,31,"Upright",82,1661,"Male",9,11,82
 "s2260","Movie","Frank & Lola",2016,"TV-MA","NR","Fresh",69,42,"Spilled",42,2390,"Male",3,7,43
-"s2271","Movie","Free Fire",2016,"R","R","Fresh",69,234,"Spilled",52,9373,"Male",10,11,91
 "s2275","Movie","Free State of Jones",2016,"R","R","Rotten",47,187,"Upright",64,20821,"Male",6,8,75
 "s2283","TV Show","Frequency",2016,"TV-14","PG-13","Certified-Fresh",70,125,"Upright",81,135884,"Male",5,7,71
-"s2288","Movie","Friend Request",2016,"R","R","Rotten",16,75,"Spilled",28,5056,"Male",4,9,44
 "s2293","TV Show","From Dusk Till Dawn",2016,"TV-MA","R","Fresh",62,50,"Upright",76,273797,"Male",6,7,86
 "s2481","Movie","Good Kids",2016,"R","R","Rotten",33,6,"Spilled",41,403,"Male",4,7,57
-"s2498","Movie","Goon: Last of the Enforcers",2016,"R","R","Rotten",43,61,"Spilled",41,3528,"Male",6,8,75
 "s2528","Movie","Greater",2016,"PG","PG","Fresh",67,15,"Upright",85,3160,"Male",7,8,88
-"s2578","Movie","Hail, Caesar!",2016,"PG-13","PG-13","Certified-Fresh",85,358,"Spilled",44,40842,"Male",6,11,55
-"s2617","TV Show","Happy Valley",2016,"TV-MA","NR","Fresh",89,35,"Upright",70,1897,"Male",7,9,78
-"s2672","Movie","Headshot",2016,"TV-MA","NR","Fresh",71,14,"Spilled",48,1278,"Male",2,8,25
-"s2672","Movie","Headshot",2016,"TV-MA","NR","Fresh",73,49,"Spilled",57,1618,"Male",2,8,25
 "s2691","Movie","Hell or High Water",2016,"R","R","Certified-Fresh",97,280,"Upright",88,40088,"Male",6,9,67
-"s2723","Movie","Hide and Seek",2016,"TV-14","R","Rotten",13,158,"Spilled",50,278266,"Male",1,3,33
-"s2776","Movie","Holidays",2016,"TV-MA","NR","Rotten",52,29,"Spilled",24,903,"Male",2,10,20
-"s2867","Movie","Hunt for the Wilderpeople",2016,"PG-13","NR","Certified-Fresh",96,198,"Upright",91,24758,"Male",4,5,80
 "s2878","Movie","Hush",2016,"R","NR","Rotten",50,8,"Spilled",37,1587,"Male",2,9,22
 "s2878","Movie","Hush",2016,"R","PG-13","Rotten",12,41,"Spilled",35,8190,"Male",2,9,22
 "s2878","Movie","Hush",2016,"R","R","Certified-Fresh",93,40,"Upright",73,6681,"Male",2,9,22
-"s2903","Movie","I Am the Pretty Thing That Lives in the House",2016,"TV-14","NR","Rotten",58,19,"Spilled",24,1006,"Male",1,4,25
 "s2907","Movie","I Am Wrath",2016,"R","R","Rotten",11,9,"Spilled",33,1450,"Male",6,8,75
-"s2920","Movie","I, Daniel Blake",2016,"R","R","Certified-Fresh",92,182,"Upright",85,8321,"Male",1,3,33
 "s2960","Movie","In a Valley of Violence",2016,"R","R","Certified-Fresh",77,69,"Spilled",51,4096,"Male",6,8,75
 "s2979","Movie","Incarnate",2016,"PG-13","PG-13","Rotten",17,35,"Spilled",23,3325,"Male",4,8,50
-"s3293","Movie","Kaleidoscope",2016,"TV-MA","NR","Fresh",64,22,"Spilled",42,139,"Male",2,4,50
 "s3347","Movie","Kevin Hart: What Now?",2016,"R","R","Fresh",76,59,"Spilled",58,10366,"Male",4,5,80
 "s3367","Movie","Kickboxer: Vengeance",2016,"TV-MA","NR","Rotten",39,33,"Spilled",43,1120,"Male",6,8,75
-"s3378","Movie","Kill Command",2016,"TV-MA","NR","Fresh",75,12,"Spilled",45,1666,"Male",6,8,75
 "s3382","Movie","Kill Ratio",2016,"TV-MA","NR","Rotten",0,5,"Spilled",18,47,"Male",1,2,50
-"s3559","Movie","Leap!",2016,"PG","PG","Rotten",42,62,"Upright",62,7156,"Male",3,7,43
-"s3664","Movie","Little Men",2016,"PG","PG","Certified-Fresh",97,143,"Upright",63,7429,"Male",3,10,30
-"s3664","Movie","Little Men",2016,"PG","PG","Rotten",14,7,"Upright",79,266,"Male",3,10,30
 "s3750","Movie","Love Beats Rhymes",2016,"R","R","Rotten",44,9,"Upright",68,83,"Male",1,4,25
-"s3794","Movie","Loving",2016,"PG-13","PG-13","Certified-Fresh",89,289,"Upright",76,19682,"Male",7,8,88
-"s3928","Movie","Marauders",2016,"R","R","Rotten",20,20,"Spilled",30,947,"Male",6,7,86
 "s3979","Movie","Mascots",2016,"TV-MA","NR","Rotten",49,47,"Spilled",36,667,"Male",10,15,67
-"s4007","Movie","Mean Dreams",2016,"R","R","Certified-Fresh",78,45,"Spilled",56,684,"Male",6,7,86
 "s4042","Movie","Mercy",2016,"TV-MA","R","Rotten",43,14,"Spilled",56,403,"Male",5,7,71
-"s4058","Movie","Metro",2016,"TV-14","R","Rotten",15,34,"Spilled",27,20430,"Male",2,2,100
-"s4075","Movie","Middle School: The Worst Years of My Life",2016,"PG","PG","Fresh",63,43,"Spilled",58,5371,"Male",7,10,70
-"s4081","Movie","Midnight Special",2016,"PG-13","PG-13","Certified-Fresh",84,231,"Upright",67,22339,"Male",5,6,83
-"s4111","Movie","Mine",2016,"TV-14","NR","Fresh",81,16,"",NA,NA,"Male",4,12,33
-"s4111","Movie","Mine",2016,"TV-14","NR","Rotten",17,30,"Spilled",45,1267,"Male",4,12,33
 "s4223","Movie","Moonlight",2016,"R","R","Certified-Fresh",98,384,"Upright",79,45533,"Male",5,12,42
 "s4223","Movie","Moonlight",2016,"R","R","Fresh",60,10,"Upright",67,1430,"Male",5,12,42
 "s4250","Movie","Mr. Church",2016,"PG-13","PG-13","Rotten",24,33,"Upright",80,4653,"Male",4,8,50
-"s4266","Movie","Much Ado About Nothing",2016,"TV-MA","PG-13","Certified-Fresh",86,175,"Upright",77,26393,"Male",1,2,50
-"s4266","Movie","Much Ado About Nothing",2016,"TV-MA","PG-13","Certified-Fresh",90,49,"Upright",86,51472,"Male",1,2,50
 "s4315","Movie","My Entire High School Sinking Into the Sea",2016,"PG-13","PG-13","Certified-Fresh",85,71,"Spilled",56,527,"Male",5,9,56
 "s4504","Movie","Nocturnal Animals",2016,"R","R","Certified-Fresh",74,296,"Upright",73,30150,"Male",6,11,55
 "s4511","Movie","Norman Lear: Just Another Version of You",2016,"TV-MA","NR","Certified-Fresh",86,43,"Upright",67,492,"Male",6,8,75
 "s4580","Movie","Officer Downe",2016,"R","R","Rotten",33,12,"Spilled",30,173,"Male",4,7,57
 "s4665","Movie","Opening Night",2016,"TV-MA","PG-13","Fresh",96,27,"Upright",91,4352,"Male",5,8,62
-"s4670","Movie","Operation Mekong",2016,"TV-MA","NR","Fresh",80,10,"Upright",60,775,"Male",5,5,100
 "s4675","Movie","Operator",2016,"TV-MA","NR","Fresh",100,6,"Upright",60,426,"Male",2,4,50
 "s4682","Movie","Ordinary World",2016,"TV-14","NR","Rotten",47,17,"Spilled",46,464,"Male",6,10,60
-"s4914","Movie","Porto",2016,"TV-MA","NR","Rotten",52,31,"Spilled",40,93,"Male",1,3,33
-"s5070","Movie","Railroad Tigers",2016,"TV-14","NR","Rotten",38,34,"Spilled",46,447,"Male",4,5,80
 "s5074","Movie","Rainbow Time",2016,"TV-MA","NR","Fresh",67,15,"Spilled",48,67,"Male",3,4,75
 "s5126","Movie","Rebirth",2016,"TV-MA","PG","Fresh",92,13,"Upright",79,135,"Male",7,9,78
-"s5134","Movie","Red Christmas",2016,"TV-MA","NR","Rotten",48,21,"Spilled",18,122,"Male",2,3,67
-"s5562","Movie","Shepherds and Butchers",2016,"R","R","Rotten",56,9,"Spilled",51,88,"Male",4,6,67
-"s5652","Movie","Skiptrace",2016,"PG-13","PG-13","Rotten",38,32,"Spilled",27,2628,"Male",3,5,60
-"s5684","Movie","Snowden",2016,"R","R","Fresh",61,257,"Upright",70,28659,"Male",9,12,75
-"s5745","Movie","Special Correspondents",2016,"TV-MA","NR","Rotten",17,36,"Spilled",29,899,"Male",4,7,57
-"s5943","Movie","Swiss Army Man",2016,"R","R","Fresh",71,207,"Upright",72,17090,"Male",6,9,67
-"s5947","Movie","Sword Master",2016,"TV-MA","NR","Fresh",67,12,"Spilled",56,385,"Male",1,3,33
 "s5977","Movie","Tallulah",2016,"TV-MA","NR","Certified-Fresh",85,54,"Upright",69,3370,"Male",4,8,50
 "s6013","Movie","Teenage Cocktail",2016,"TV-MA","NR","Fresh",100,5,"Spilled",51,259,"Male",3,6,50
 "s6025","Movie","Term Life",2016,"R","R","Rotten",0,7,"Spilled",32,1498,"Male",8,10,80
-"s6065","Movie","The Adventure Club",2016,"TV-Y7","NR","Rotten",20,5,"Spilled",50,23,"Male",4,6,67
-"s6098","Movie","The Assignment",2016,"R","R","Fresh",60,20,"Upright",62,4426,"Male",5,18,28
-"s6098","Movie","The Assignment",2016,"R","R","Rotten",33,60,"Spilled",21,493,"Male",5,18,28
-"s6099","Movie","The Autopsy of Jane Doe",2016,"R","R","Certified-Fresh",87,104,"Upright",70,12301,"Male",3,6,50
 "s6108","Movie","The Bad Batch",2016,"R","R","Rotten",47,98,"Spilled",30,2868,"Male",4,6,67
-"s6165","Movie","The Boy",2016,"PG-13","PG-13","Fresh",67,21,"Spilled",38,583,"Male",3,10,30
-"s6165","Movie","The Boy",2016,"PG-13","PG-13","Rotten",30,61,"Spilled",38,19224,"Male",3,10,30
-"s6215","Movie","The Chosen",2016,"TV-14","PG","Fresh",75,12,"Upright",79,895,"Male",4,7,57
-"s6240","Movie","The Confirmation",2016,"PG-13","PG-13","Fresh",91,32,"Spilled",57,877,"Male",7,8,88
 "s6271","Movie","The Darkness",2016,"PG-13","PG-13","Rotten",3,33,"Spilled",19,6724,"Male",4,7,57
-"s6315","Movie","The Drowning",2016,"TV-MA","NR","Rotten",50,14,"Spilled",15,153,"Male",4,6,67
 "s6319","Movie","The Duel",2016,"R","R","Rotten",26,19,"Spilled",30,1146,"Male",5,7,71
-"s6325","Movie","The Edge of Seventeen",2016,"R","R","Certified-Fresh",94,212,"Upright",83,27408,"Male",3,6,50
 "s6341","Movie","The Eyes of My Mother",2016,"R","R","Certified-Fresh",78,99,"Spilled",57,3283,"Male",2,6,33
 "s6368","Movie","The Forest",2016,"PG-13","PG-13","Rotten",10,137,"Spilled",22,14614,"Male",2,4,50
-"s6374","Movie","The Founder",2016,"PG-13","PG-13","Certified-Fresh",80,240,"Upright",82,32410,"Male",6,8,75
 "s6379","Movie","The Fundamentals of Caring",2016,"TV-MA","NR","Fresh",77,35,"Upright",83,5941,"Male",4,6,67
 "s6405","Movie","The Good Neighbor",2016,"TV-MA","NR","Rotten",29,14,"Spilled",46,927,"Male",4,8,50
 "s6458","Movie","The Hollow Point",2016,"R","R","Rotten",40,15,"Spilled",31,428,"Male",4,5,80
 "s6559","Movie","The Last Face",2016,"R","R","Rotten",8,48,"Spilled",33,577,"Male",3,6,50
 "s6575","Movie","The Late Bloomer",2016,"R","R","Rotten",20,10,"Spilled",22,450,"Male",5,9,56
-"s6683","Movie","The Monster",2016,"R","R","Certified-Fresh",81,48,"Spilled",40,4844,"Male",4,6,67
-"s6787","Movie","The Promise",2016,"PG-13","PG-13","Rotten",51,160,"Upright",92,11551,"Male",9,12,75
-"s6868","Movie","The Siege of Jadotville",2016,"TV-MA","NR","Fresh",64,11,"Upright",74,1020,"Male",7,8,88
 "s6890","Movie","The Space Between Us",2016,"PG-13","PG-13","Rotten",16,135,"Spilled",54,14410,"Male",3,6,50
-"s6905","Movie","The Stolen",2016,"TV-14","NR","Rotten",0,5,"Spilled",31,38,"Male",3,5,60
-"s6919","Movie","The Take",2016,"R","R","Fresh",85,13,"Spilled",48,922,"Male",4,6,67
 "s6929","Movie","The Tiger Hunter",2016,"TV-14","NR","Fresh",78,18,"Upright",79,652,"Male",7,8,88
-"s6946","Movie","The Trip to Spain",2016,"TV-MA","NR","Certified-Fresh",83,107,"Upright",64,2221,"Male",2,5,40
 "s7028","Movie","The Young Messiah",2016,"PG-13","PG","Rotten",49,39,"Upright",66,5950,"Male",3,4,75
-"s7215","Movie","Trespass Against Us",2016,"R","R","Rotten",57,70,"Spilled",25,1304,"Male",7,8,88
 "s7228","Movie","Triple 9",2016,"R","R","Rotten",54,181,"Spilled",41,19660,"Male",7,10,70
-"s7313","Movie","Una",2016,"R","R","Certified-Fresh",76,109,"Spilled",49,2124,"Male",3,6,50
 "s7378","Movie","USS Indianapolis: Men of Courage",2016,"R","R","Rotten",17,12,"Spilled",30,2226,"Male",9,9,100
 "s7423","Movie","Vincent N Roxxy",2016,"R","R","Rotten",41,17,"Upright",65,256,"Male",3,5,60
 "s7464","Movie","Wakefield",2016,"R","R","Certified-Fresh",72,69,"Spilled",52,6893,"Male",3,5,60
-"s7481","Movie","War on Everyone",2016,"R","R","Fresh",61,97,"Spilled",37,3507,"Male",6,8,75
 "s7653","Movie","Wolves",2016,"R","R","Rotten",25,20,"Spilled",32,677,"Male",5,14,36
 "s7653","Movie","Wolves",2016,"R","R","Rotten",33,27,"Spilled",45,155,"Male",5,14,36
 "s7686","Movie","XOXO",2016,"TV-MA","NR","Fresh",71,7,"Spilled",52,520,"Male",4,6,67
 "s7715","Movie","Yoga Hosers",2016,"PG-13","PG-13","Rotten",23,60,"Spilled",35,4615,"Male",8,10,80
 "s99","Movie","3 Generations",2015,"PG-13","PG-13","Rotten",32,44,"Spilled",44,2711,"Male",2,8,25
 "s129","Movie","6 Years",2015,"TV-MA","NR","Fresh",69,13,"Spilled",35,776,"Male",4,8,50
-"s237","Movie","A Tale of Love and Darkness",2015,"PG-13","PG-13","Fresh",71,66,"Spilled",50,2477,"Male",3,4,75
 "s514","Movie","Anesthesia",2015,"R","R","Rotten",25,44,"Spilled",50,730,"Male",6,12,50
-"s685","Movie","Backtrack",2015,"R","R","Rotten",30,40,"Spilled",22,89,"Male",4,8,50
-"s962","Movie","Black Sea",2015,"R","R","Certified-Fresh",80,136,"Spilled",59,16311,"Male",8,9,89
 "s970","Movie","Blackway",2015,"PG-13","R","Rotten",20,5,"Spilled",28,879,"Male",8,9,89
-"s979","Movie","Blind Date",2015,"TV-14","NR","Rotten",33,21,"Spilled",34,505,"Male",4,10,40
-"s979","Movie","Blind Date",2015,"TV-14","PG-13","Rotten",21,24,"Spilled",42,18540,"Male",4,10,40
-"s1118","Movie","Brothers",2015,"TV-14","R","Certified-Fresh",89,74,"Upright",86,4124,"Male",6,14,43
-"s1118","Movie","Brothers",2015,"TV-14","R","Fresh",64,157,"Upright",62,194505,"Male",6,14,43
-"s1225","Movie","Carol",2015,"R","R","Certified-Fresh",94,307,"Upright",74,29621,"Male",3,7,43
-"s1277","Movie","Chappie",2015,"R","R","Rotten",33,227,"Spilled",56,49777,"Male",4,5,80
 "s1395","Movie","Circle",2015,"TV-MA","NR","Rotten",50,6,"Spilled",42,1444,"Male",7,11,64
-"s1465","Movie","Colonia",2015,"R","R","Rotten",26,47,"Upright",61,3937,"Male",5,8,62
 "s1500","Movie","Cop Car",2015,"R","R","Certified-Fresh",80,86,"Spilled",53,7424,"Male",3,5,60
 "s1604","Movie","Danny Says",2015,"TV-MA","NR","Fresh",74,31,"Spilled",51,172,"Male",3,3,100
-"s1618","Movie","Dark Places",2015,"R","R","Rotten",23,82,"Spilled",33,7273,"Male",4,10,40
 "s1811","Movie","Don Verdean",2015,"PG-13","PG-13","Rotten",29,38,"Spilled",23,1424,"Male",4,6,67
-"s1987","Movie","Elstree 1976",2015,"TV-PG","NR","Fresh",81,27,"Spilled",39,377,"Male",6,6,100
-"s2017","Movie","Equals",2015,"PG-13","PG-13","",NA,NA,"Spilled",42,3035,"Male",4,6,67
-"s2056","Movie","Ex Machina",2015,"R","R","Certified-Fresh",92,275,"Upright",86,73016,"Male",3,6,50
 "s2199","Movie","Five Nights in Maine",2015,"TV-MA","NR","Rotten",28,29,"Spilled",30,128,"Male",2,6,33
 "s2533","Movie","Green Room",2015,"R","R","Certified-Fresh",91,237,"Upright",75,21801,"Male",7,9,78
 "s2601","TV Show","Hannibal",2015,"TV-MA","R","Rotten",39,171,"Upright",62,403137,"Male",5,8,62
-"s2625","Movie","Hardcore Henry",2015,"R","R","Rotten",51,144,"Spilled",54,18340,"Male",3,4,75
 "s2896","Movie","I Am Michael",2015,"TV-MA","NR","Fresh",64,36,"Spilled",37,3599,"Male",5,8,62
 "s2921","Movie","I'll See You in My Dreams",2015,"PG-13","PG-13","Certified-Fresh",93,91,"Upright",68,12162,"Male",3,9,33
-"s3050","Movie","Ip Man 3",2015,"PG-13","PG-13","Certified-Fresh",76,51,"Upright",72,11699,"Male",5,6,83
 "s3145","Movie","Jem and the Holograms",2015,"PG","PG","Rotten",22,79,"Spilled",40,6093,"Male",1,2,50
-"s3246","Movie","Jupiter Ascending",2015,"PG-13","PG-13","Rotten",27,269,"Spilled",38,95323,"Male",4,8,50
-"s3372","Movie","Kidnapping Mr. Heineken",2015,"R","R","Rotten",19,62,"Spilled",24,912,"Male",6,6,100
-"s3425","Movie","Knock Knock",2015,"R","R","Rotten",37,71,"Spilled",20,8558,"Male",2,6,33
-"s3543","Movie","Last Knights",2015,"R","R","Rotten",16,31,"Spilled",46,3467,"Male",5,7,71
-"s3570","Movie","Legend",2015,"R","PG","Rotten",38,40,"Upright",73,101568,"Male",7,20,35
-"s3570","Movie","Legend",2015,"R","R","Fresh",61,170,"Spilled",59,28339,"Male",7,20,35
 "s3642","Movie","Lila & Eve",2015,"R","R","Rotten",40,40,"Spilled",41,1476,"Male",5,9,56
-"s3898","Movie","Man Up",2015,"R","NR","Certified-Fresh",80,79,"Upright",69,12155,"Male",6,12,50
 "s3918","Movie","Manson Family Vacation",2015,"TV-MA","NR","Fresh",100,14,"Spilled",56,433,"Male",3,4,75
 "s4153","Movie","Mississippi Grind",2015,"R","R","Certified-Fresh",91,118,"Spilled",55,8518,"Male",3,7,43
 "s4166","Movie","Mojave",2015,"R","R","Rotten",31,65,"Spilled",29,391,"Male",5,6,83
-"s4224","Movie","Moonwalkers",2015,"R","R","Rotten",42,38,"Spilled",41,641,"Male",6,7,86
 "s4428","Movie","Natural Selection",2015,"R","R","Fresh",74,35,"Upright",68,1073,"Male",3,6,50
-"s4843","Movie","Phantom",2015,"TV-14","R","Rotten",25,56,"Spilled",33,5437,"Male",2,3,67
-"s5033","Movie","Queen of the Desert",2015,"PG-13","PG-13","Rotten",18,79,"Spilled",34,1356,"Male",5,9,56
-"s5158","Movie","Remember",2015,"R","R","Fresh",70,96,"Upright",79,4932,"Male",7,7,100
 "s5172","Movie","Results",2015,"R","R","Certified-Fresh",84,95,"Spilled",36,3583,"Male",4,7,57
 "s5202","TV Show","Richie Rich",2015,"TV-G","PG","Rotten",24,21,"Spilled",31,228300,"Male",1,2,50
-"s5275","Movie","Room",2015,"R","R","Certified-Fresh",93,312,"Upright",93,49668,"Male",6,10,60
-"s5461","Movie","Secret in Their Eyes",2015,"PG-13","PG-13","Rotten",39,148,"Spilled",41,12821,"Male",5,7,71
-"s5634","Movie","Sinister 2",2015,"R","R","Rotten",16,90,"Spilled",31,29311,"Male",5,6,83
 "s5662","Movie","Sleeping with Other People",2015,"R","R","Fresh",63,131,"Spilled",57,8802,"Male",3,6,50
-"s5672","Movie","Slow West",2015,"R","R","Certified-Fresh",92,134,"Upright",74,11692,"Male",4,5,80
 "s5770","Movie","Spotlight",2015,"R","R","Certified-Fresh",97,367,"Upright",93,70385,"Male",8,9,89
-"s5784","Movie","Standoff",2015,"R","R","Rotten",56,16,"Spilled",44,665,"Male",4,5,80
-"s5815","Movie","Steve Jobs",2015,"R","R","Certified-Fresh",85,312,"Upright",73,42992,"Male",5,9,56
-"s5872","Movie","Suffragette",2015,"PG-13","PG-13","Fresh",73,213,"Upright",68,17014,"Male",5,9,56
 "s6063","Movie","The Adderall Diaries",2015,"R","R","Rotten",23,35,"Spilled",28,629,"Male",9,11,82
-"s6250","Movie","The Crew",2015,"TV-MA","PG-13","Rotten",20,85,"Spilled",34,4124,"Male",2,3,67
-"s6262","Movie","The D Train",2015,"R","R","Rotten",53,133,"Spilled",23,3421,"Male",5,6,83
-"s6266","Movie","The Danish Girl",2015,"R","R","Fresh",67,241,"Upright",72,27428,"Male",7,9,78
 "s6300","Movie","The Diabolical",2015,"TV-MA","NR","Rotten",40,10,"Spilled",19,440,"Male",4,6,67
 "s6435","Movie","The Hateful Eight",2015,"R","R","Certified-Fresh",75,332,"Upright",76,73440,"Male",7,11,64
-"s6474","TV Show","The Hunt",2015,"TV-PG","NR","Fresh",83,6,"",NA,NA,"Male",1,2,50
-"s6474","TV Show","The Hunt",2015,"TV-PG","R","Rotten",57,246,"",66,964,"Male",1,2,50
 "s6506","Movie","The Invitation",2015,"TV-MA","NR","Certified-Fresh",88,104,"Upright",69,13734,"Male",4,8,50
-"s6609","Movie","The Lobster",2015,"R","R","Certified-Fresh",87,260,"Upright",65,34463,"Male",4,9,44
 "s6661","TV Show","The Messengers",2015,"TV-14","PG-13","Rotten",12,84,"Spilled",44,491937,"Male",2,3,67
-"s6818","TV Show","The Returned",2015,"TV-MA","NR","Rotten",58,19,"Spilled",37,846,"Male",7,9,78
 "s6843","Movie","The Runner",2015,"R","R","Rotten",24,38,"Spilled",22,1255,"Male",4,7,57
 "s6853","Movie","The Sea of Trees",2015,"PG-13","PG-13","Rotten",17,52,"Spilled",42,2255,"Male",3,5,60
 "s6904","Movie","The Stanford Prison Experiment",2015,"R","R","Certified-Fresh",84,99,"Upright",75,13818,"Male",8,9,89
 "s6947","Movie","The Trust",2015,"R","R","Fresh",63,46,"Spilled",29,2563,"Male",5,6,83
 "s6977","Movie","The Vatican Tapes",2015,"PG-13","PG-13","Rotten",20,45,"Spilled",59,3162,"Male",7,9,78
-"s7004","Movie","The Witch",2015,"R","R","Certified-Fresh",90,325,"Spilled",59,41974,"Male",4,8,50
 "s7167","Movie","Tracers",2015,"PG-13","PG-13","Rotten",24,29,"Spilled",37,5182,"Male",4,5,80
 "s7257","Movie","Trumbo",2015,"R","PG-13","Certified-Fresh",83,54,"Upright",78,36047,"Male",6,18,33
 "s7257","Movie","Trumbo",2015,"R","R","Certified-Fresh",74,205,"Upright",79,22825,"Male",6,18,33
-"s7459","Movie","Waiting",2015,"TV-MA","R","Rotten",30,92,"Upright",75,233400,"Male",3,4,75
-"s7503","Movie","We Are Your Friends",2015,"R","R","Rotten",38,133,"Spilled",42,8970,"Male",7,9,78
 "s7543","TV Show","Wet Hot American Summer",2015,"TV-MA","R","Rotten",38,76,"Upright",76,39653,"Male",21,29,72
 "s7590","Movie","While We're Young",2015,"R","R","Certified-Fresh",84,205,"Spilled",51,20647,"Male",6,10,60
 "s66","Movie","13 Sins",2014,"R","R","Fresh",65,43,"Spilled",45,4527,"Male",4,5,80
 "s119","Movie","5 Flights Up",2014,"PG-13","PG-13","Rotten",46,63,"Spilled",43,2838,"Male",3,8,38
 "s121","Movie","5 to 7",2014,"R","R","Fresh",70,56,"Upright",71,2374,"Male",3,6,50
-"s197","Movie","A Little Chaos",2014,"R","R","Rotten",48,92,"Spilled",49,4979,"Male",6,11,55
-"s207","Movie","A Most Violent Year",2014,"R","R","Certified-Fresh",89,224,"Upright",69,26415,"Male",7,9,78
-"s466","Movie","American Heist",2014,"R","R","Rotten",13,16,"Spilled",18,1993,"Male",7,8,88
 "s592","Movie","As Above, So Below",2014,"R","R","Rotten",26,77,"Spilled",40,22353,"Male",2,3,67
-"s691","TV Show","Bad Education",2014,"TV-MA","NC17","Certified-Fresh",88,146,"Upright",86,46226,"Male",3,8,38
-"s691","TV Show","Bad Education",2014,"TV-MA","NR","Certified-Fresh",94,141,"Upright",83,671,"Male",3,8,38
 "s908","Movie","Big Stone Gap",2014,"PG-13","PG-13","Rotten",38,21,"Spilled",53,1224,"Male",6,15,40
-"s961","Movie","Black Rose",2014,"TV-MA","NR","Rotten",22,9,"Spilled",15,51,"Male",4,5,80
 "s1191","Movie","Camp X-Ray",2014,"R","R","Certified-Fresh",75,59,"Upright",63,5194,"Male",3,5,60
 "s1303","Movie","Chef",2014,"R","R","Certified-Fresh",87,189,"Upright",85,59852,"Male",8,11,73
-"s1426","Movie","Clouds of Sils Maria",2014,"R","R","Certified-Fresh",90,173,"Upright",65,11389,"Male",3,7,43
 "s1558","Movie","Cut Bank",2014,"R","R","Rotten",37,38,"Spilled",29,2187,"Male",5,7,71
 "s1806","Movie","Dolphin Tale 2",2014,"PG","PG","Fresh",66,87,"Upright",72,28066,"Male",6,10,60
 "s1905","Movie","Earth to Echo",2014,"PG","PG","Rotten",50,125,"Spilled",47,33968,"Male",2,4,50
-"s2387","Movie","Get Santa",2014,"PG","PG","Fresh",79,29,"Spilled",53,1177,"Male",7,8,88
 "s2455","Movie","God's Not Dead",2014,"PG","PG","Rotten",12,25,"Upright",75,41386,"Male",4,7,57
 "s2482","Movie","Good Kill",2014,"R","R","Certified-Fresh",75,124,"Spilled",49,8946,"Male",5,7,71
-"s2489","Movie","Good People",2014,"R","R","Rotten",12,33,"Spilled",22,4745,"Male",7,10,70
 "s2852","Movie","How to Train Your Dragon 2",2014,"PG","PG","Certified-Fresh",91,186,"Upright",90,188572,"Male",8,11,73
-"s2936","Movie","Iceman",2014,"R","R","Rotten",20,5,"Spilled",27,407,"Male",3,3,100
 "s2958","Movie","Imperial Dreams",2014,"TV-MA","NR","Fresh",92,12,"Upright",83,634,"Male",4,6,67
 "s3158","Movie","Jersey Boys",2014,"R","R","Rotten",51,220,"Upright",62,25505,"Male",5,6,83
-"s3287","Movie","Kahlil Gibran's The Prophet",2014,"PG","PG","Fresh",65,72,"Upright",75,2314,"Male",5,7,71
 "s3384","Movie","Kill the Messenger",2014,"R","R","Certified-Fresh",77,128,"Upright",69,16615,"Male",8,11,73
-"s3568","Movie","Left Behind",2014,"PG-13","PG-13","Rotten",1,68,"Spilled",38,20635,"Male",4,8,50
 "s3624","Movie","Life After Beth",2014,"R","R","Rotten",44,95,"Spilled",30,7100,"Male",5,9,56
 "s3687","Movie","Lizzie Borden Took an Ax",2014,"TV-14","NR","Rotten",40,15,"Spilled",34,437,"Male",4,8,50
-"s3787","Movie","Love, Rosie",2014,"R","R","Rotten",32,56,"Upright",63,9447,"Male",3,7,43
 "s3903","Movie","Manglehorn",2014,"PG-13","PG-13","Rotten",51,85,"Spilled",24,1560,"Male",2,3,67
-"s3924","Movie","Maps to the Stars",2014,"R","R","Fresh",61,158,"Spilled",44,10559,"Male",2,8,25
 "s4056","TV Show","Metallica: Some Kind of Monster",2014,"TV-MA","R","Certified-Fresh",89,123,"Upright",83,23676,"Male",3,3,100
-"s4140","Movie","Miss Julie",2014,"PG-13","PG-13","Rotten",52,54,"Spilled",25,635,"Male",1,6,17
-"s4140","Movie","Miss Julie",2014,"PG-13","R","Rotten",39,23,"Spilled",52,1006,"Male",1,6,17
-"s4204","Movie","Monsters: Dark Continent",2014,"R","R","Rotten",17,35,"Spilled",16,3725,"Male",4,5,80
 "s4254","Movie","Mr. Peabody & Sherman",2014,"PG","PG","Certified-Fresh",81,137,"Upright",73,73286,"Male",7,11,64
 "s4284","Movie","Muppets Most Wanted",2014,"PG","PG","Certified-Fresh",80,199,"Spilled",58,65051,"Male",7,8,88
 "s4470","Movie","Nightcrawler",2014,"R","R","Certified-Fresh",95,271,"Upright",85,86158,"Male",6,9,67
 "s4560","Movie","Obvious Child",2014,"R","R","Certified-Fresh",90,165,"Upright",72,16202,"Male",4,10,40
-"s4870","Movie","Pizza",2014,"TV-14","PG-13","Rotten",31,13,"Spilled",51,12440,"Male",1,2,50
-"s5181","Movie","Revenge of the Green Dragons",2014,"R","R","Rotten",15,26,"Spilled",31,1113,"Male",4,7,57
 "s5449","Movie","Search Party",2014,"R","R","Rotten",11,19,"Spilled",31,1603,"Male",4,7,57
-"s5520","Movie","Seventh Son",2014,"PG-13","PG-13","Rotten",12,119,"Spilled",34,53638,"Male",7,11,64
-"s5648","Movie","Skin Trade",2014,"R","R","Rotten",25,16,"Spilled",30,526,"Male",7,8,88
-"s5716","Movie","Son of a Gun",2014,"R","R","Fresh",62,76,"Upright",63,6363,"Male",4,5,80
 "s5825","Movie","Stonehearst Asylum",2014,"PG-13","PG-13","Rotten",54,56,"Spilled",49,5105,"Male",7,10,70
-"s6198","Movie","The Captive",2014,"R","R","Rotten",30,54,"Spilled",36,161,"Male",5,10,50
-"s6371","Movie","The Forgotten",2014,"TV-MA","PG-13","Rotten",32,174,"Spilled",36,183748,"Male",2,3,67
-"s6473","Movie","The Hundred-Foot Journey",2014,"PG","PG","Fresh",67,147,"Upright",81,32459,"Male",3,5,60
-"s6714","Movie","The Nut Job",2014,"PG","PG","Rotten",13,96,"Spilled",43,38864,"Male",6,9,67
 "s6723","Movie","The One I Love",2014,"R","R","Certified-Fresh",82,93,"Upright",76,10135,"Male",2,3,67
 "s6759","Movie","The Pirate Fairy",2014,"G","G","Fresh",81,21,"Upright",70,3351,"Male",7,15,47
-"s6776","Movie","The Prince",2014,"R","R","Rotten",0,10,"Spilled",23,3120,"Male",6,8,75
-"s6836","Movie","The Rover",2014,"R","R","Fresh",66,168,"Spilled",51,11707,"Male",5,7,71
-"s6848","Movie","The Salvation",2014,"R","R","Fresh",72,79,"Upright",62,5342,"Male",5,6,83
 "s6870","Movie","The Signal",2014,"PG-13","PG-13","Fresh",61,90,"Spilled",38,14733,"Male",3,10,30
 "s6870","Movie","The Signal",2014,"PG-13","R","Rotten",59,70,"Spilled",58,9740,"Male",3,10,30
-"s6925","Movie","The Theory of Everything",2014,"PG-13","PG-13","Certified-Fresh",80,270,"Upright",84,75918,"Male",4,6,67
-"s6989","Movie","The Water Diviner",2014,"R","R","Fresh",61,150,"Upright",60,13449,"Male",5,6,83
-"s7187","Movie","Transcendence",2014,"PG-13","PG-13","Rotten",19,228,"Spilled",37,64331,"Male",5,7,71
-"s7197","Movie","Trash",2014,"R","R","Fresh",66,44,"Upright",70,4038,"Male",4,5,80
 "s7276","Movie","Tusk",2014,"R","R","Rotten",45,131,"Spilled",36,12341,"Male",5,5,100
-"s7347","Movie","Unfriended",2014,"R","R","Fresh",62,185,"Spilled",36,30213,"Male",1,4,25
 "s7642","Movie","Wish I Was Here",2014,"R","R","Rotten",47,129,"Spilled",59,17437,"Male",7,10,70
 "s80","Movie","20 Feet From Stardom",2013,"PG-13","PG-13","Certified-Fresh",99,126,"Upright",82,13510,"Male",4,9,44
 "s184","Movie","A Haunted House",2013,"R","R","Rotten",9,53,"Spilled",51,91785,"Male",8,10,80
 "s216","Movie","A Perfect Man",2013,"R","R","Rotten",20,5,"Spilled",23,316,"Male",3,6,50
-"s288","Movie","About Time",2013,"R","R","Fresh",68,158,"Upright",81,57874,"Male",5,10,50
-"s314","Movie","Adore",2013,"R","R","Rotten",33,75,"Spilled",41,5642,"Male",4,7,57
 "s998","Movie","Blue Jasmine",2013,"PG-13","PG-13","Certified-Fresh",91,228,"Upright",77,49099,"Male",7,10,70
-"s1002","Movie","Blue Ruin",2013,"R","R","Certified-Fresh",96,142,"Upright",79,19655,"Male",1,2,50
-"s1060","Movie","Boss",2013,"TV-14","NR","Rotten",0,5,"Spilled",50,718,"Male",6,7,86
-"s1312","Movie","Chennai Express",2013,"TV-14","NR","Rotten",50,16,"Spilled",53,2460,"Male",1,3,33
-"s1424","Movie","Closed Circuit",2013,"R","R","Rotten",43,134,"Spilled",31,10964,"Male",7,10,70
 "s1428","Movie","Cloudy with a Chance of Meatballs 2",2013,"PG","PG","Fresh",70,121,"Upright",66,123893,"Male",7,8,88
 "s1482","Movie","Concussion",2013,"R","PG-13","Rotten",59,201,"Upright",74,32775,"Male",1,10,10
 "s1482","Movie","Concussion",2013,"R","R","Certified-Fresh",75,59,"Spilled",58,1910,"Male",1,10,10
 "s1584","Movie","Dallas Buyers Club",2013,"R","R","Certified-Fresh",93,257,"Upright",91,92788,"Male",4,6,67
 "s1619","Movie","Dark Skies",2013,"PG-13","PG-13","Rotten",41,93,"Spilled",49,29217,"Male",4,6,67
-"s2005","Movie","Enemy",2013,"R","R","Certified-Fresh",70,118,"Upright",63,26314,"Male",3,6,50
 "s2304","Movie","Fruitvale Station",2013,"R","R","Certified-Fresh",94,212,"Upright",87,39225,"Male",4,6,67
 "s2414","Movie","Gimme Shelter",2013,"PG-13","PG-13","Rotten",29,77,"Upright",63,8200,"Male",1,14,7
 "s2414","Movie","Gimme Shelter",2013,"PG-13","R","Fresh",93,29,"Upright",91,6412,"Male",1,14,7
-"s2501","Movie","Gori Tere Pyaar Mein",2013,"TV-14","NR","Rotten",44,9,"Spilled",26,532,"Male",2,5,40
-"s2515","TV Show","Grand Hotel",2013,"TV-PG","NR","Certified-Fresh",86,42,"Upright",77,7014,"Male",4,7,57
 "s2701","Movie","Her",2013,"R","R","Certified-Fresh",95,278,"Upright",82,101535,"Male",3,8,38
-"s2808","Movie","Horns",2013,"R","R","Rotten",41,124,"Spilled",49,16826,"Male",5,9,56
-"s3097","Movie","Jack and the Cuckoo-Clock Heart",2013,"PG","PG","Fresh",77,13,"Upright",66,762,"Male",3,4,75
 "s3567","Movie","Lee Daniels' The Butler",2013,"PG-13","PG-13","Fresh",72,197,"Upright",78,79307,"Male",13,17,76
-"s3697","Movie","Locke",2013,"R","R","Certified-Fresh",91,215,"Upright",72,28024,"Male",5,7,71
-"s3836","Movie","Machete Kills",2013,"R","R","Rotten",29,123,"Spilled",35,36525,"Male",8,15,53
-"s3896","Movie","Man of Tai Chi",2013,"R","R","Fresh",70,67,"Spilled",50,12540,"Male",2,2,100
 "s4245","Movie","Movie 43",2013,"R","R","Rotten",4,89,"Spilled",24,35680,"Male",25,36,69
 "s4465","Movie","Night Moves",2013,"R","R","Certified-Fresh",86,152,"Spilled",42,12236,"Male",5,16,31
 "s4465","Movie","Night Moves",2013,"R","R","Fresh",83,18,"Upright",71,3367,"Male",5,16,31
 "s4608","Movie","Olympus Has Fallen",2013,"R","R","Rotten",49,197,"Upright",66,148655,"Male",8,12,67
 "s4643","Movie","One Direction: This Is Us",2013,"PG","PG","Fresh",63,93,"Upright",79,31241,"Male",5,5,100
-"s4661","Movie","Only God Forgives",2013,"R","R","Rotten",41,165,"Spilled",37,26406,"Male",6,7,86
-"s5417","Movie","Saving Mr. Banks",2013,"PG-13","PG-13","Certified-Fresh",79,260,"Upright",84,111547,"Male",10,19,53
 "s5430","Movie","Scary Movie 5",2013,"PG-13","PG-13","Rotten",4,52,"Spilled",38,236208,"Male",3,8,38
 "s5581","Movie","Short Term 12",2013,"R","R","Certified-Fresh",98,173,"Upright",92,21495,"Male",3,7,43
-"s5685","Movie","Snowpiercer",2013,"R","R","Certified-Fresh",94,253,"Upright",72,59558,"Male",8,11,73
 "s5742","TV Show","Spartacus",2013,"TV-MA","PG-13","Certified-Fresh",93,61,"Upright",87,78097,"Male",7,9,78
-"s5797","Movie","Starred Up",2013,"TV-MA","NR","Certified-Fresh",99,114,"Upright",84,16890,"Male",5,5,100
-"s6094","Movie","The Art of the Steal",2013,"R","R","Rotten",44,50,"Spilled",39,5885,"Male",6,7,86
-"s6147","Movie","The Bling Ring",2013,"R","R","Rotten",59,204,"Spilled",33,31670,"Male",2,6,33
-"s6218","Movie","The Christmas Candle",2013,"PG","PG","Rotten",21,24,"Upright",75,4422,"Male",4,6,67
-"s6242","Movie","The Congress",2013,"TV-MA","NR","Certified-Fresh",73,107,"Spilled",53,7962,"Male",7,10,70
 "s6243","Movie","The Conjuring",2013,"R","R","Certified-Fresh",86,223,"Upright",83,159386,"Male",2,8,25
 "s6253","Movie","The Croods",2013,"PG","PG","Fresh",71,143,"Upright",77,193687,"Male",4,7,57
-"s6343","Movie","The Family",2013,"R","R","Rotten",28,137,"Spilled",41,51272,"Male",6,8,75
 "s6378","Movie","The Frozen Ground",2013,"R","R","Fresh",61,57,"Spilled",50,15595,"Male",5,8,62
-"s6414","Movie","The Grandmaster",2013,"PG-13","PG-13","Certified-Fresh",78,138,"Spilled",58,17705,"Male",3,5,60
-"s6427","Movie","The Green Inferno",2013,"R","R","Rotten",38,98,"Spilled",29,15222,"Male",4,9,44
-"s6882","Movie","The Smurfs 2",2013,"PG","PG","Rotten",14,95,"Spilled",56,73544,"Male",10,12,83
 "s6891","Movie","The Spectacular Now",2013,"R","R","Certified-Fresh",91,169,"Upright",76,38587,"Male",5,9,56
-"s6899","Movie","The Square",2013,"TV-MA","R","Certified-Fresh",85,214,"Upright",70,4082,"Male",2,4,50
-"s6899","Movie","The Square",2013,"TV-MA","R","Certified-Fresh",86,85,"Upright",70,3651,"Male",2,4,50
 "s7271","Movie","Turbo",2013,"PG","PG","Fresh",66,113,"Upright",65,89573,"Male",11,13,85
 "s7674","Movie","Would You Rather",2013,"TV-MA","NR","Rotten",59,22,"Spilled",36,2924,"Male",9,12,75
 "s177","Movie","A Glimpse Inside the Mind of Charles Swan III",2012,"R","R","Rotten",16,56,"Spilled",26,3137,"Male",4,8,50
 "s241","Movie","A Thousand Words",2012,"PG-13","PG-13","Rotten",0,58,"Spilled",47,74930,"Male",5,8,62
 "s299","Movie","Act of Valor",2012,"R","R","Rotten",27,142,"Upright",72,80446,"Male",5,6,83
-"s333","Movie","Aftershock",2012,"R","R","Rotten",38,55,"Spilled",24,7060,"Male",4,8,50
 "s614","Movie","Atlas Shrugged: Part II",2012,"PG-13","PG-13","Rotten",4,23,"Upright",60,12870,"Male",7,9,78
-"s615","Movie","ATM",2012,"TV-14","R","Rotten",12,26,"Spilled",23,10064,"Male",2,2,100
-"s754","Movie","Barfi!",2012,"TV-14","NR","Fresh",86,14,"Upright",86,4905,"Male",2,3,67
-"s906","Movie","Big Miracle",2012,"PG","PG","Certified-Fresh",75,104,"Upright",64,38931,"Male",7,10,70
 "s1313","Movie","Chernobyl Diaries",2012,"R","R","Rotten",19,89,"Spilled",28,141913,"Male",6,9,67
-"s1425","Movie","Cloud Atlas",2012,"R","R","Fresh",67,282,"Upright",66,187692,"Male",6,8,75
 "s1788","Movie","Django Unchained",2012,"R","R","Certified-Fresh",87,288,"Upright",91,429231,"Male",11,15,73
 "s2003","Movie","End of Watch",2012,"R","R","Certified-Fresh",85,179,"Upright",86,85487,"Male",4,9,44
-"s2224","Movie","For Greater Glory",2012,"R","R","Rotten",20,49,"Upright",77,28138,"Male",6,8,75
-"s2256","Movie","Frances Ha",2012,"R","R","Certified-Fresh",92,180,"Upright",77,20211,"Male",5,14,36
-"s2418","Movie","Ginger & Rosa",2012,"PG-13","PG-13","Certified-Fresh",78,114,"Spilled",50,6672,"Male",3,7,43
 "s2756","Movie","Hit & Run",2012,"R","R","Rotten",48,136,"Spilled",49,30755,"Male",7,10,70
-"s2832","Movie","House at the End of the Street",2012,"PG-13","PG-13","Rotten",13,67,"Spilled",41,57401,"Male",4,10,40
 "s3203","Movie","John Carter",2012,"PG-13","PG-13","Rotten",52,236,"Upright",60,114636,"Male",22,28,79
-"s3216","Movie","Joker",2012,"TV-PG","R","Fresh",68,574,"",88,66303,"Male",5,6,83
 "s3393","Movie","Killing Them Softly",2012,"R","R","Certified-Fresh",73,229,"Spilled",44,121513,"Male",11,11,100
 "s3550","Movie","Lawless",2012,"R","R","Fresh",66,217,"Upright",74,108183,"Male",8,10,80
-"s3604","Movie","Les Misérables",2012,"PG-13","PG-13","Fresh",69,255,"Upright",79,265259,"Male",6,9,67
-"s3647","Movie","Lincoln",2012,"PG-13","PG-13","Certified-Fresh",89,282,"Upright",81,245855,"Male",13,14,93
-"s3701","Movie","Lockout",2012,"PG-13","PG-13","Rotten",38,138,"Spilled",46,164484,"Male",5,6,83
-"s4048","TV Show","Merlin",2012,"TV-PG","NR","Fresh",82,11,"Upright",73,55650,"Male",5,7,71
-"s4126","Movie","Mirror Mirror",2012,"PG","PG","Rotten",50,197,"Spilled",45,146207,"Male",10,13,77
 "s4270","Movie","Mud",2012,"PG-13","PG-13","Certified-Fresh",97,181,"Upright",80,87830,"Male",7,9,78
 "s4771","Movie","ParaNorman",2012,"PG","PG","Certified-Fresh",89,183,"Upright",72,83093,"Male",7,13,54
 "s4882","Movie","Playing for Keeps",2012,"PG-13","PG-13","Rotten",4,91,"Spilled",41,20513,"Male",4,9,44
-"s5011","Movie","Pusher",2012,"R","NR","Fresh",83,18,"Upright",85,7817,"Male",5,12,42
-"s5011","Movie","Pusher",2012,"R","R","Rotten",48,48,"Spilled",34,3712,"Male",5,12,42
-"s5030","Movie","Quartet",2012,"PG-13","PG-13","Certified-Fresh",80,145,"Upright",66,11335,"Male",5,16,31
-"s5030","Movie","Quartet",2012,"PG-13","R","Rotten",44,16,"Spilled",32,112,"Male",5,16,31
 "s5148","Movie","Reincarnated",2012,"R","R","Rotten",28,29,"Spilled",41,492,"Male",2,2,100
 "s5341","Movie","Safety Not Guaranteed",2012,"R","R","Certified-Fresh",91,150,"Upright",80,46913,"Male",4,8,50
-"s5540","Movie","Shanghai",2012,"TV-14","R","Rotten",4,24,"Spilled",36,4415,"Male",3,5,60
-"s5607","Movie","Silent Hill: Revelation",2012,"R","R","Rotten",10,60,"Spilled",35,42313,"Male",4,8,50
 "s5611","Movie","Silver Linings Playbook",2012,"R","R","Certified-Fresh",92,256,"Upright",86,260499,"Male",7,10,70
-"s5615","Movie","Simon Killer",2012,"TV-MA","NR","Certified-Fresh",77,61,"Spilled",51,1159,"Male",2,3,67
-"s5771","Movie","Spring Breakers",2012,"R","R","Fresh",67,193,"Spilled",38,62346,"Male",1,7,14
-"s5969","Movie","Talaash",2012,"TV-14","NR","Fresh",81,21,"Upright",64,1848,"Male",2,5,40
 "s6294","Movie","The Devil Inside",2012,"R","R","Rotten",6,90,"Spilled",22,45193,"Male",1,4,25
-"s6481","Movie","The Impossible",2012,"PG-13","PG-13","Certified-Fresh",81,201,"Upright",84,49231,"Male",3,5,60
 "s6647","Movie","The Master",2012,"R","R","Certified-Fresh",85,253,"Upright",61,50579,"Male",6,10,60
 "s6753","Movie","The Perks of Being a Wallflower",2012,"PG-13","PG-13","Certified-Fresh",86,166,"Upright",89,138915,"Male",5,11,45
-"s6761","Movie","The Pirates! Band of Misfits",2012,"PG","PG","Certified-Fresh",86,153,"Upright",60,85877,"Male",14,17,82
-"s6849","Movie","The Sapphires",2012,"PG-13","PG-13","Certified-Fresh",91,137,"Upright",76,13301,"Male",2,4,50
-"s7346","Movie","Unfinished Song",2012,"PG-13","PG-13","Fresh",65,100,"Upright",68,4634,"Male",4,7,57
 "s105","Movie","30 Minutes or Less",2011,"R","R","Rotten",45,164,"Spilled",40,47024,"Male",6,8,75
 "s123","Movie","50/50",2011,"R","R","Certified-Fresh",93,199,"Upright",88,86803,"Male",6,11,55
-"s225","Movie","A Separation",2011,"PG-13","PG-13","Certified-Fresh",99,176,"Upright",92,22864,"Male",3,5,60
-"s272","Movie","Aarakshan",2011,"TV-14","NR","Rotten",57,7,"Spilled",50,682,"Male",5,7,71
-"s563","Movie","Apollo 18",2011,"PG-13","PG-13","Rotten",23,74,"Spilled",23,42470,"Male",5,5,100
 "s588","Movie","Arthur",2011,"PG-13","PG","Fresh",88,33,"Upright",77,33549,"Male",4,16,25
 "s588","Movie","Arthur",2011,"PG-13","PG-13","Rotten",27,192,"Spilled",44,45552,"Male",4,16,25
-"s589","Movie","Arthur Christmas",2011,"PG","PG","Certified-Fresh",92,168,"Upright",76,40514,"Male",23,35,66
 "s819","Movie","Being Elmo: A Puppeteer's Journey",2011,"PG","PG","Certified-Fresh",95,78,"Upright",87,10140,"Male",1,2,50
-"s1691","Movie","Delhi Belly",2011,"TV-MA","NR","Fresh",88,17,"Upright",82,4416,"Male",4,6,67
-"s1809","Movie","Don 2",2011,"TV-14","PG","Fresh",69,13,"Upright",72,4552,"Male",4,6,67
-"s2497","Movie","Goon",2011,"R","R","Certified-Fresh",81,106,"Upright",71,22797,"Male",8,9,89
-"s2663","Movie","Haywire",2011,"R","R","Certified-Fresh",80,194,"Spilled",41,43328,"Male",8,9,89
 "s2794","Movie","Honey 2",2011,"PG-13","PG-13","Rotten",10,21,"Spilled",53,4609,"Male",2,8,25
 "s2802","Movie","Hop",2011,"PG","PG","Rotten",24,139,"Spilled",53,107400,"Male",6,10,60
-"s2858","Movie","Hugo",2011,"PG","PG","Certified-Fresh",93,227,"Upright",78,82865,"Male",14,18,78
 "s2910","Movie","I Don't Know How She Does It",2011,"PG-13","PG-13","Rotten",17,113,"Spilled",32,23430,"Male",5,12,42
 "s3244","Movie","Jumping the Broom",2011,"PG-13","PG-13","Rotten",58,85,"Spilled",58,19552,"Male",7,14,50
 "s3257","Movie","Justin Bieber: Never Say Never",2011,"G","G","Fresh",65,107,"Upright",65,62206,"Male",4,5,80
 "s3383","Movie","Kill the Irishman",2011,"R","R","Fresh",62,52,"Upright",67,9519,"Male",8,10,80
-"s4067","Movie","Michael",2011,"TV-MA","NR","Certified-Fresh",80,40,"Upright",67,2189,"Male",1,4,25
-"s4067","Movie","Michael",2011,"TV-MA","PG","Rotten",34,41,"Spilled",45,119566,"Male",1,4,25
-"s4367","Movie","My Week with Marilyn",2011,"R","R","Certified-Fresh",83,185,"Upright",71,34835,"Male",8,13,62
 "s4695","Movie","Our Idiot Brother",2011,"R","R","Fresh",70,142,"Spilled",51,40733,"Male",5,11,45
 "s5013","Movie","Puss in Boots",2011,"PG","PG","Certified-Fresh",86,154,"Upright",67,78977,"Male",5,8,62
 "s5099","Movie","Rango",2011,"PG","PG","Certified-Fresh",88,222,"Upright",69,120191,"Male",8,10,80
-"s5114","Movie","Ready",2011,"TV-PG","NR","Rotten",30,10,"Spilled",47,1465,"Male",6,6,100
-"s5119","Movie","Real Steel",2011,"PG-13","PG-13","Fresh",60,233,"Upright",73,211934,"Male",7,10,70
 "s5452","Movie","Season of the Witch",2011,"PG-13","PG-13","Rotten",11,124,"Spilled",30,79868,"Male",7,8,88
 "s5728","Movie","Soul Surfer",2011,"PG","PG","Rotten",45,106,"Upright",75,41684,"Male",12,17,71
-"s5961","Movie","Take Me Home Tonight",2011,"R","R","Rotten",28,114,"Spilled",42,37016,"Male",5,9,56
-"s6070","Movie","The Adventures of Tintin",2011,"PG","PG","Certified-Fresh",74,232,"Upright",74,77487,"Male",7,7,100
-"s6096","Movie","The Artist",2011,"PG-13","PG-13","Certified-Fresh",95,317,"Upright",87,58629,"Male",7,11,64
-"s6397","Movie","The Girl with the Dragon Tattoo",2011,"R","R","Certified-Fresh",85,190,"Upright",87,51027,"Male",5,18,28
-"s6397","Movie","The Girl with the Dragon Tattoo",2011,"R","R","Certified-Fresh",86,249,"Upright",86,119013,"Male",5,18,28
 "s6426","Movie","The Green Hornet",2011,"PG-13","PG-13","Rotten",45,238,"Spilled",43,116412,"Male",9,10,90
 "s6448","Movie","The Help",2011,"PG-13","PG-13","Certified-Fresh",76,227,"Upright",89,107868,"Male",11,27,41
-"s6482","TV Show","The In-Laws",2011,"TV-14","PG-13","Fresh",88,24,"Upright",83,4831,"Male",1,4,25
-"s6482","TV Show","The In-Laws",2011,"TV-14","PG-13","Rotten",33,136,"Spilled",40,15746,"Male",1,4,25
-"s6501","Movie","The Intouchables",2011,"R","R","Certified-Fresh",75,126,"Upright",93,45398,"Male",1,6,17
-"s6510","Movie","The Iron Lady",2011,"PG-13","PG-13","Rotten",52,234,"Spilled",51,97180,"Male",8,11,73
 "s6693","Movie","The Muppets",2011,"PG","PG","Certified-Fresh",95,228,"Upright",80,89767,"Male",7,9,78
-"s6717","TV Show","The Oath",2011,"TV-14","NR","Fresh",91,23,"Upright",79,432,"Male",1,2,50
-"s6717","TV Show","The Oath",2011,"TV-14","R","Fresh",63,91,"Spilled",40,449,"Male",1,2,50
 "s6834","Movie","The Roommate",2011,"PG-13","PG-13","Rotten",3,86,"Spilled",27,43407,"Male",4,11,36
-"s6881","Movie","The Smurfs",2011,"PG","PG","Rotten",21,119,"Spilled",44,70863,"Male",11,13,85
-"s7352","Movie","Unknown",2011,"PG-13","PG-13","Rotten",54,204,"Spilled",55,75847,"Male",6,8,75
-"s7450","Movie","W.E.",2011,"R","R","Rotten",12,113,"Spilled",48,5077,"Male",6,9,67
-"s7479","Movie","War Horse",2011,"PG-13","PG-13","Certified-Fresh",75,237,"Upright",74,69714,"Male",12,12,100
 "s7737","Movie","Young Adult",2011,"R","R","Certified-Fresh",80,195,"Spilled",49,35181,"Male",3,9,33
-"s7770","Movie","Zindagi Na Milegi Dobara",2011,"TV-14","NR","Fresh",92,12,"Upright",86,3889,"Male",4,8,50
-"s69","Movie","14 Blades",2010,"R","R","Fresh",69,13,"Spilled",52,2457,"Male",3,4,75
-"s301","Movie","Action Replayy",2010,"TV-PG","NR","Rotten",0,5,"Spilled",27,399,"Male",5,7,71
-"s623","Movie","Aurora",2010,"TV-MA","NR","Fresh",77,30,"Spilled",57,660,"Male",1,2,50
 "s1004","Movie","Blue Valentine",2010,"R","R","Certified-Fresh",87,209,"Upright",77,59213,"Male",5,8,62
-"s1087","Movie","Break Ke Baad",2010,"TV-14","NR","Rotten",17,6,"Spilled",33,1115,"Male",2,6,33
 "s1142","Movie","Burlesque",2010,"PG-13","PG-13","Rotten",37,175,"Upright",64,66137,"Male",5,10,50
-"s1248","Movie","Cats & Dogs: The Revenge of Kitty Galore",2010,"PG","PG","Rotten",13,99,"Spilled",38,70153,"Male",10,12,83
-"s1409","Movie","Clash of the Titans",2010,"PG-13","PG","Fresh",68,44,"Upright",70,56833,"Male",6,18,33
-"s1409","Movie","Clash of the Titans",2010,"PG-13","PG-13","Rotten",27,264,"Spilled",40,283929,"Male",6,18,33
 "s1669","Movie","Death at a Funeral",2010,"R","R","Fresh",62,132,"Upright",79,65073,"Male",11,30,37
 "s1669","Movie","Death at a Funeral",2010,"R","R","Rotten",43,138,"Spilled",45,103012,"Male",11,30,37
 "s1767","Movie","Dinner for Schmucks",2010,"PG-13","PG-13","Rotten",42,190,"Spilled",42,119531,"Male",8,10,80
-"s1812","Movie","Don't Be Afraid of the Dark",2010,"R","NR","Fresh",71,7,"Spilled",57,901,"Male",4,7,57
 "s1913","Movie","Easy A",2010,"PG-13","PG-13","Certified-Fresh",85,190,"Upright",77,129018,"Male",5,10,50
 "s1915","Movie","Eat Pray Love",2010,"PG-13","PG-13","Rotten",36,203,"Spilled",42,100439,"Male",5,8,62
 "s2222","Movie","For Colored Girls",2010,"R","R","Rotten",32,109,"Upright",73,29011,"Male",5,14,36
-"s2296","Movie","From Paris with Love",2010,"R","R","Rotten",38,161,"Spilled",54,155707,"Male",5,7,71
 "s2383","Movie","Get Him to the Greek",2010,"R","R","Certified-Fresh",72,200,"Upright",62,213775,"Male",4,7,57
-"s2562","Movie","Guzaarish",2010,"TV-14","NR","Fresh",67,9,"Upright",72,1810,"Male",2,4,50
 "s2919","Movie","I Will Follow",2010,"TV-14","NR","Fresh",82,11,"Upright",66,484,"Male",2,6,33
-"s2980","Movie","Inception",2010,"PG-13","PG-13","Certified-Fresh",87,357,"Upright",91,571078,"Male",10,12,83
-"s3020","Movie","Insidious",2010,"PG-13","PG-13","Fresh",66,176,"Upright",62,130807,"Male",6,9,67
 "s3391","Movie","Killers",2010,"PG-13","NR","Fresh",73,15,"Upright",65,2205,"Male",5,20,25
 "s3391","Movie","Killers",2010,"PG-13","PG-13","Rotten",10,108,"Spilled",41,139460,"Male",5,20,25
-"s3544","Movie","Last Night",2010,"R","R","Certified-Fresh",84,50,"Upright",85,7727,"Male",4,14,29
-"s3544","Movie","Last Night",2010,"R","R","Rotten",53,68,"Spilled",46,14295,"Male",4,14,29
-"s3558","Movie","Leap Year",2010,"PG","PG","Rotten",23,139,"Spilled",47,132046,"Male",7,9,78
-"s3571","Movie","Legend of the Guardians: The Owls of Ga'Hoole",2010,"PG","PG","Rotten",52,132,"Upright",63,70788,"Male",6,10,60
 "s3578","Movie","Legion",2010,"R","R","Rotten",19,105,"Spilled",31,312758,"Male",10,14,71
-"s4814","Movie","Peepli Live",2010,"TV-MA","NR","Fresh",86,28,"Upright",73,2795,"Male",3,3,100
-"s5048","Movie","Raajneeti",2010,"TV-14","NR","Rotten",13,8,"Upright",65,2066,"Male",5,7,71
 "s5159","Movie","Remember Me",2010,"PG-13","PG-13","Rotten",27,139,"Upright",69,411657,"Male",5,8,62
-"s5167","Movie","Resident Evil: Afterlife",2010,"R","R","Rotten",22,105,"Spilled",48,128318,"Male",5,8,62
-"s5391","Movie","Sarah's Key",2010,"PG-13","PG-13","Certified-Fresh",72,117,"Upright",82,9384,"Male",4,7,57
-"s5441","Movie","Scott Pilgrim vs. the World",2010,"PG-13","PG-13","Certified-Fresh",82,271,"Upright",84,141600,"Male",6,12,50
-"s5493","Movie","Senna",2010,"PG-13","PG-13","Certified-Fresh",93,122,"Upright",95,17969,"Male",3,3,100
 "s5521","Movie","Sex and the City 2",2010,"R","R","Rotten",16,217,"Spilled",43,324282,"Male",7,11,64
 "s5558","Movie","She's Out of My League",2010,"R","R","Rotten",58,132,"Spilled",59,106277,"Male",6,9,67
 "s5561","Movie","Shelter",2010,"R","R","Fresh",60,20,"Upright",85,3982,"Male",1,4,25
 "s5658","Movie","Skyline",2010,"PG-13","PG-13","Rotten",16,83,"Spilled",18,67279,"Male",6,10,60
 "s5967","Movie","Takers",2010,"PG-13","PG-13","Rotten",28,114,"Upright",62,125511,"Male",9,11,82
-"s6017","Movie","Tees Maar Khan",2010,"TV-PG","NR","Rotten",11,9,"Spilled",18,2007,"Male",2,3,67
 "s6156","Movie","The Book of Eli",2010,"R","R","Rotten",47,205,"Upright",64,350712,"Male",6,9,67
 "s6163","Movie","The Bounty Hunter",2010,"PG-13","PG-13","Rotten",12,148,"Spilled",51,263966,"Male",8,12,67
 "s6235","Movie","The Company Men",2010,"R","R","Fresh",67,169,"Spilled",55,33914,"Male",6,9,67
 "s6349","Movie","The Fighter",2010,"R","R","Certified-Fresh",90,250,"Upright",89,121498,"Male",4,9,44
-"s6484","TV Show","The Inbetweeners",2010,"TV-MA","R","Rotten",53,51,"Upright",70,19783,"Male",5,6,83
-"s6521","TV Show","The Jungle Book",2010,"TV-Y7","PG","Certified-Fresh",88,40,"Upright",82,715040,"Male",1,4,25
-"s6521","TV Show","The Jungle Book",2010,"TV-Y7","PG","Certified-Fresh",94,323,"Upright",86,94647,"Male",1,4,25
-"s6524","Movie","The Karate Kid",2010,"PG","PG","Certified-Fresh",89,44,"Upright",82,316502,"Male",2,6,33
-"s6524","Movie","The Karate Kid",2010,"PG","PG","Fresh",66,209,"Upright",67,283086,"Male",2,6,33
-"s6534","Movie","The King's Speech",2010,"R","PG-13","Certified-Fresh",94,296,"Upright",92,144575,"Male",7,11,64
 "s6551","Movie","The Last Airbender",2010,"PG","PG","Rotten",5,191,"Spilled",30,322458,"Male",9,12,75
-"s6558","Movie","The Last Exorcism",2010,"PG-13","PG-13","Fresh",72,162,"Spilled",35,73372,"Male",4,8,50
 "s6730","Movie","The Other Guys",2010,"PG-13","PG-13","Certified-Fresh",78,207,"Upright",60,160676,"Male",7,10,70
 "s6842","Movie","The Runaways",2010,"R","R","Fresh",69,189,"Spilled",55,86191,"Male",3,10,30
 "s6885","Movie","The Social Network",2010,"PG-13","PG-13","Certified-Fresh",96,321,"Upright",86,204126,"Male",7,9,78
 "s6897","Movie","The Spy Next Door",2010,"PG","PG","Rotten",12,90,"Spilled",40,106272,"Male",5,8,62
-"s6934","Movie","The Tourist",2010,"PG-13","PG-13","Rotten",20,171,"Spilled",42,94934,"Male",7,8,88
-"s7262","Movie","Tucker and Dale vs. Evil",2010,"R","R","Certified-Fresh",85,113,"Upright",84,25606,"Male",5,7,71
 "s7639","Movie","Winter's Bone",2010,"R","R","Certified-Fresh",94,174,"Upright",76,51756,"Male",3,7,43
 "s73","Movie","17 Again",2009,"PG-13","PG-13","Rotten",56,148,"Upright",67,466035,"Male",5,10,50
 "s4","Movie","9",2009,"PG-13","PG-13","Rotten",57,184,"Spilled",56,282166,"Male",7,8,88
-"s227","Movie","A Serious Man",2009,"R","R","Certified-Fresh",90,223,"Upright",68,63118,"Male",8,11,73
 "s230","Movie","A Single Man",2009,"R","R","Certified-Fresh",85,192,"Upright",81,58244,"Male",6,10,60
-"s522","Movie","Angels & Demons",2009,"PG-13","PG-13","Rotten",37,259,"Spilled",57,531765,"Male",8,9,89
-"s927","Movie","Billu",2009,"TV-PG","PG","Fresh",60,5,"Spilled",44,3770,"Male",6,7,86
 "s1112","Movie","Brooklyn's Finest",2009,"R","R","Rotten",45,152,"Spilled",46,101105,"Male",7,10,70
 "s1229","Movie","Carriers",2009,"PG-13","PG-13","Fresh",66,38,"Spilled",39,93949,"Male",4,7,57
-"s1233","Movie","Case 39",2009,"R","R","Rotten",21,76,"Spilled",39,67796,"Male",6,9,67
-"s1346","Movie","Chloe",2009,"R","R","Rotten",51,163,"Spilled",39,30602,"Male",3,7,43
 "s1397","Movie","Cirque du Freak: The Vampire's Assistant",2009,"PG-13","PG-13","Rotten",38,140,"Spilled",42,495160,"Male",11,15,73
 "s1503","Movie","Coraline",2009,"PG","PG","Certified-Fresh",90,268,"Upright",73,384726,"Male",4,8,50
-"s1690","Movie","Delhi 6",2009,"TV-14","NR","Rotten",36,11,"Spilled",41,43373,"Male",4,7,57
-"s1784","Movie","District 9",2009,"R","R","Certified-Fresh",90,312,"Upright",82,1178535,"Male",6,8,75
 "s2287","Movie","Friday the 13th",2009,"R","R","Fresh",64,56,"Upright",61,229175,"Male",8,22,36
 "s2287","Movie","Friday the 13th",2009,"R","R","Rotten",26,174,"Spilled",46,221519,"Male",8,22,36
 "s2324","Movie","G-Force",2009,"PG","PG","Rotten",22,127,"Spilled",39,964669,"Male",11,14,79
 "s2480","Movie","Good Hair",2009,"PG-13","PG-13","Certified-Fresh",95,83,"Upright",69,49238,"Male",2,6,33
-"s2827","Movie","Hotel for Dogs",2009,"PG","PG","Rotten",46,122,"Spilled",54,165616,"Male",7,11,64
-"s2951","Movie","Imagine That",2009,"PG","PG","Rotten",40,119,"Spilled",40,263836,"Male",6,9,67
-"s2998","Movie","Inglourious Basterds",2009,"R","R","Certified-Fresh",89,329,"Upright",88,775878,"Male",8,10,80
 "s3043","Movie","Invictus",2009,"PG-13","PG-13","Certified-Fresh",77,244,"Upright",75,211936,"Male",7,10,70
-"s3054","TV Show","Iris",2009,"TV-14","PG-13","Certified-Fresh",98,99,"Upright",80,6331,"Male",2,4,50
-"s3054","TV Show","Iris",2009,"TV-14","R","Certified-Fresh",79,110,"Upright",73,9394,"Male",2,4,50
 "s3238","Movie","Julie & Julia",2009,"PG-13","PG-13","Certified-Fresh",77,226,"Upright",70,363508,"Male",2,8,25
-"s3427","Movie","Knowing",2009,"PG-13","PG-13","Rotten",33,183,"Spilled",42,431688,"Male",3,7,43
-"s3809","Movie","Luck by Chance",2009,"TV-14","NR","Fresh",80,15,"Upright",67,7180,"Male",4,8,50
 "s4074","Movie","Middle Men",2009,"R","R","Rotten",40,53,"Spilled",56,19282,"Male",8,10,80
-"s4222","Movie","Moon",2009,"R","R","Certified-Fresh",90,193,"Upright",89,100799,"Male",6,8,75
 "s4356","Movie","My Sister's Keeper",2009,"PG-13","PG-13","Rotten",48,137,"Upright",72,365345,"Male",5,10,50
-"s4478","Movie","Ninja Assassin",2009,"R","R","Rotten",26,116,"Spilled",54,189795,"Male",7,8,88
-"s4545","Movie","Nowhere Boy",2009,"R","R","Certified-Fresh",80,147,"Upright",74,41244,"Male",6,9,67
 "s4800","Movie","Paul Blart: Mall Cop",2009,"PG","PG","Rotten",34,116,"Spilled",43,393200,"Male",7,10,70
-"s4875","Movie","Planet 51",2009,"PG","PG","Rotten",23,109,"Spilled",40,357061,"Male",7,8,88
 "s5055","Movie","Race to Witch Mountain",2009,"PG","PG","Rotten",43,155,"Spilled",44,348199,"Male",21,28,75
-"s5564","Movie","Sherlock Holmes",2009,"PG-13","PG-13","Fresh",69,245,"Upright",77,769381,"Male",8,11,73
-"s5701","Movie","Solomon Kane",2009,"R","R","Fresh",67,48,"Spilled",49,25122,"Male",5,7,71
-"s6027","Movie","Terminator Salvation",2009,"PG-13","PG-13","Rotten",33,280,"Spilled",54,885079,"Male",4,9,44
 "s6164","Movie","The Box",2009,"PG-13","PG-13","Rotten",44,155,"Spilled",24,359098,"Male",4,8,50
 "s6351","Movie","The Final Destination",2009,"R","R","Rotten",28,100,"Spilled",35,603795,"Male",5,9,56
 "s6407","Movie","The Goods: Live Hard, Sell Hard",2009,"R","R","Rotten",27,102,"Spilled",37,74196,"Male",12,14,86
-"s6480","Movie","The Imaginarium of Doctor Parnassus",2009,"PG-13","PG-13","Fresh",64,197,"Upright",60,295757,"Male",7,8,88
 "s6492","Movie","The Informant!",2009,"R","R","Certified-Fresh",79,231,"Spilled",44,359272,"Male",8,9,89
 "s6502","Movie","The Invention of Lying",2009,"PG-13","PG-13","Rotten",56,188,"Spilled",39,667296,"Male",5,9,56
-"s6659","Movie","The Men Who Stare at Goats",2009,"R","R","Rotten",50,216,"Spilled",39,239085,"Male",10,11,91
 "s6780","Movie","The Princess and the Frog",2009,"G","G","Certified-Fresh",85,198,"Upright",74,261226,"Male",22,30,73
 "s6932","Movie","The Time Traveler's Wife",2009,"PG-13","PG-13","Rotten",38,159,"Spilled",59,982892,"Male",5,9,56
 "s6957","Movie","The Ugly Truth",2009,"R","R","Rotten",14,174,"Upright",60,1399310,"Male",6,11,55
 "s7368","Movie","Up in the Air",2009,"R","R","Certified-Fresh",91,285,"Upright",79,228473,"Male",7,11,64
 "s7779","Movie","Zombieland",2009,"R","R","Certified-Fresh",89,255,"Upright",86,643354,"Male",4,7,57
-"s51","Movie","10,000 B.C.",2008,"PG-13","PG-13","Rotten",8,149,"Spilled",37,411140,"Male",5,7,71
 "s5","Movie","21",2008,"PG-13","PG-13","Rotten",35,170,"Upright",66,367852,"Male",9,12,75
 "s332","Movie","Afterschool",2008,"TV-MA","NR","Certified-Fresh",80,44,"Spilled",48,1604,"Male",7,10,70
 "s803","Movie","Bedtime Stories",2008,"PG","PG","Rotten",27,111,"Spilled",55,216519,"Male",13,24,54
 "s1031","Movie","Bolt",2008,"PG","PG","Certified-Fresh",89,187,"Upright",74,315295,"Male",14,17,82
 "s1429","Movie","Cloverfield",2008,"PG-13","PG-13","Certified-Fresh",77,210,"Upright",68,420231,"Male",5,8,62
 "s1686","Movie","Defiance",2008,"R","R","Rotten",58,186,"Upright",72,251337,"Male",10,14,71
-"s1832","Movie","Dostana",2008,"TV-14","R","Fresh",87,15,"Upright",68,4448,"Male",3,4,75
 "s1837","Movie","Doubt",2008,"PG-13","PG-13","Certified-Fresh",80,217,"Upright",78,162497,"Male",1,9,11
-"s2203","Movie","Flash of Genius",2008,"PG-13","PG-13","Fresh",61,108,"Spilled",55,6032,"Male",10,11,91
-"s2249","Movie","Four Christmases",2008,"PG-13","PG-13","Rotten",25,145,"Spilled",47,254567,"Male",6,10,60
 "s2303","Movie","Frozen River",2008,"R","R","Certified-Fresh",88,135,"Upright",74,85868,"Male",5,6,83
 "s2389","Movie","Get Smart",2008,"PG-13","PG-13","Rotten",50,222,"Upright",67,451258,"Male",10,11,91
-"s2471","Movie","Golmaal Returns",2008,"TV-MA","NR","Rotten",0,6,"Spilled",33,1843,"Male",4,6,67
-"s2511","Movie","Gran Torino",2008,"R","R","Certified-Fresh",81,234,"Upright",90,332468,"Male",5,8,62
 "s2631","Movie","Harold & Kumar Escape from Guantanamo Bay",2008,"R","R","Rotten",52,136,"Upright",60,377894,"Male",7,10,70
-"s2943","Movie","Igor",2008,"PG","PG","Rotten",39,93,"Spilled",38,82504,"Male",5,7,71
 "s2991","Movie","Indiana Jones and the Kingdom of the Crystal Skull",2008,"PG-13","PG-13","Certified-Fresh",78,274,"Spilled",54,1320715,"Male",6,8,75
-"s3007","Movie","Inkheart",2008,"PG","PG","Rotten",39,144,"Spilled",45,166709,"Male",6,10,60
-"s3048","Movie","Ip Man",2008,"R","R","Fresh",85,27,"Upright",93,27629,"Male",3,4,75
-"s3196","Movie","Jodhaa Akbar",2008,"TV-14","PG-13","Fresh",75,16,"Upright",78,17555,"Male",4,6,67
 "s3840","Movie","Mad Money",2008,"PG-13","PG-13","Rotten",22,106,"Spilled",48,135238,"Male",8,12,67
 "s3844","Movie","Madagascar: Escape 2 Africa",2008,"PG","PG","Fresh",64,157,"Upright",66,366236,"Male",8,10,80
 "s4102","Movie","Milk",2008,"R","R","Certified-Fresh",93,244,"Upright",89,178019,"Male",10,11,91
-"s4474","Movie","Nights in Rodanthe",2008,"PG-13","PG-13","Rotten",31,134,"Spilled",52,103675,"Male",5,10,50
 "s4862","Movie","Pineapple Express",2008,"R","R","Fresh",68,203,"Upright",73,302423,"Male",7,10,70
-"s4990","Movie","Prom Night",2008,"PG-13","PG-13","Rotten",7,67,"Spilled",38,269878,"Male",7,26,27
-"s4990","Movie","Prom Night",2008,"PG-13","R","Rotten",48,23,"Spilled",35,20131,"Male",7,26,27
-"s5029","Movie","Quantum of Solace",2008,"PG-13","PG-13","Fresh",65,294,"Spilled",58,431900,"Male",7,10,70
-"s5053","Movie","Race",2008,"TV-14","PG-13","Fresh",62,156,"Upright",77,14981,"Male",3,6,50
 "s5056","Movie","Rachel Getting Married",2008,"R","R","Certified-Fresh",84,202,"Upright",62,37858,"Male",4,8,50
-"s5189","Movie","Revolutionary Road",2008,"R","R","Fresh",67,212,"Upright",71,106938,"Male",7,11,64
 "s5208","Movie","Righteous Kill",2008,"R","R","Rotten",18,146,"Spilled",37,90444,"Male",6,8,75
 "s5516","Movie","Seven Pounds",2008,"PG-13","PG-13","Rotten",26,194,"Upright",75,636605,"Male",8,14,57
 "s5524","Movie","Sex Drive",2008,"R","R","Rotten",45,110,"Spilled",58,74319,"Male",8,11,73
 "s5676","Movie","Smart People",2008,"R","R","Rotten",49,150,"Spilled",39,102377,"Male",5,9,56
 "s5810","Movie","Step Brothers",2008,"R","R","Rotten",55,205,"Upright",69,365915,"Male",5,8,62
-"s6365","Movie","The Forbidden Kingdom",2008,"PG-13","PG-13","Fresh",64,130,"Upright",60,326729,"Male",6,8,75
 "s6383","TV Show","The Game",2008,"TV-14","R","Fresh",74,58,"Upright",84,141823,"Male",2,5,40
 "s6442","Movie","The Haunting of Molly Hartley",2008,"PG-13","PG-13","Rotten",2,41,"Spilled",18,62312,"Male",4,11,36
 "s6615","Movie","The Longshots",2008,"PG","PG","Rotten",41,71,"Upright",61,22657,"Male",6,9,67
-"s6623","Movie","The Love Guru",2008,"PG-13","PG-13","Rotten",14,176,"Spilled",33,240560,"Male",6,9,67
 "s6893","Movie","The Spiderwick Chronicles",2008,"PG","PG","Certified-Fresh",80,147,"Upright",63,355118,"Male",6,9,67
 "s7184","Movie","Traitor",2008,"PG-13","PG-13","Fresh",65,169,"Upright",64,64213,"Male",7,9,78
 "s7393","Movie","Vantage Point",2008,"PG-13","PG-13","Rotten",34,158,"Spilled",57,373541,"Male",6,9,67
-"s7620","Movie","Wild Child",2008,"PG-13","PG-13","Rotten",41,27,"Upright",61,17496,"Male",2,7,29
-"s7706","Movie","Yes Man",2008,"PG-13","PG-13","Rotten",46,156,"Upright",66,317657,"Male",6,10,60
 "s7759","Movie","Zack and Miri Make a Porno",2008,"R","R","Fresh",66,200,"Upright",66,237090,"Male",10,14,71
-"s298","Movie","Across the Universe",2007,"PG-13","PG-13","Rotten",53,179,"Upright",82,333633,"Male",4,7,57
-"s802","Movie","Becoming Jane",2007,"PG-13","PG","Rotten",58,139,"Upright",74,135506,"Male",4,7,57
-"s804","Movie","Bee Movie",2007,"PG","PG","Rotten",50,174,"Spilled",53,388469,"Male",8,10,80
-"s892","Movie","Bhool Bhulaiyaa",2007,"TV-14","NR","Rotten",20,5,"Upright",72,4959,"Male",7,10,70
 "s964","Movie","Black Snake Moan",2007,"R","R","Fresh",66,162,"Upright",69,413565,"Male",4,8,50
 "s1450","Movie","Code Name: The Cleaner",2007,"PG-13","PG-13","Rotten",4,84,"Spilled",38,38623,"Male",5,7,71
 "s2038","Movie","Evan Almighty",2007,"PG","PG","Rotten",23,195,"Spilled",52,839640,"Male",8,10,80
-"s2253","Movie","Fracture",2007,"R","R","Certified-Fresh",71,174,"Upright",73,383172,"Male",7,10,70
 "s2270","Movie","Fred Claus",2007,"PG","PG","Rotten",21,143,"Spilled",45,371516,"Male",5,9,56
-"s2400","Movie","Ghost Rider",2007,"PG-13","PG-13","Rotten",26,140,"Spilled",48,730923,"Male",7,9,78
-"s2559","Movie","Guru",2007,"TV-PG","NR","Fresh",83,12,"Upright",84,7770,"Male",5,7,71
-"s2579","Movie","Hairspray",2007,"PG","PG","Certified-Fresh",91,221,"Upright",84,763521,"Male",6,24,25
-"s2579","Movie","Hairspray",2007,"PG","PG","Certified-Fresh",98,42,"Upright",80,64156,"Male",6,24,25
 "s2824","Movie","Hot Rod",2007,"PG-13","PG-13","Rotten",39,118,"Upright",64,304639,"Male",8,10,80
 "s3035","Movie","Into the Wild",2007,"R","R","Certified-Fresh",83,198,"Upright",89,179452,"Male",5,9,56
 "s4261","Movie","Mr. Woodcock",2007,"PG-13","PG-13","Rotten",14,111,"Spilled",32,246601,"Male",5,9,56
 "s4457","Movie","Next",2007,"PG-13","PG-13","Rotten",28,130,"Spilled",53,339643,"Male",8,10,80
 "s4495","Movie","No Reservations",2007,"PG","PG","Rotten",42,162,"Upright",62,394551,"Male",2,7,29
 "s4565","Movie","Ocean's Thirteen",2007,"PG-13","PG-13","Fresh",70,199,"Upright",75,1532643,"Male",8,9,89
-"s4609","Movie","Om Shanti Om",2007,"TV-14","PG-13","Fresh",76,17,"Upright",77,27197,"Male",4,6,67
 "s4721","Movie","P.S. I Love You",2007,"PG-13","PG-13","Rotten",25,104,"Upright",80,254211,"Male",5,10,50
 "s4768","Movie","Paranormal Activity",2007,"R","R","Certified-Fresh",83,204,"Spilled",57,273989,"Male",3,6,50
 "s4829","Movie","Perfect Stranger",2007,"R","R","Rotten",10,142,"Spilled",51,336528,"Male",5,9,56
 "s5754","Movie","Spider-Man 3",2007,"PG-13","PG-13","Fresh",62,261,"Spilled",51,2265043,"Male",9,14,64
-"s5795","Movie","Stardust",2007,"PG-13","PG-13","Certified-Fresh",76,193,"Upright",86,468457,"Male",7,11,64
 "s5907","Movie","Superbad",2007,"R","R","Certified-Fresh",88,209,"Upright",87,634613,"Male",7,9,78
 "s5919","Movie","Surf's Up",2007,"PG","PG","Certified-Fresh",79,147,"Upright",70,631245,"Male",8,9,89
-"s5938","Movie","Sweeney Todd: The Demon Barber of Fleet Street",2007,"R","R","Certified-Fresh",86,229,"Upright",81,1696053,"Male",5,7,71
-"s6014","Movie","Teenage Mutant Ninja Turtles",2007,"PG","PG-13","Rotten",21,160,"Spilled",50,132054,"Male",8,10,80
 "s6172","Movie","The Brave One",2007,"R","R","Rotten",43,185,"Upright",64,274408,"Male",4,9,44
 "s6185","Movie","The Bucket List",2007,"PG-13","PG-13","Rotten",41,175,"Upright",77,271579,"Male",6,8,75
 "s6321","Movie","The Dukes of Hazzard: The Beginning",2007,"R","R","Rotten",20,5,"Spilled",47,11570,"Male",8,10,80
 "s6446","Movie","The Heartbreak Kid",2007,"R","R","Rotten",28,158,"Spilled",37,315366,"Male",6,9,67
 "s6517","Movie","The Jane Austen Book Club",2007,"PG-13","PG-13","Fresh",66,116,"Upright",67,26998,"Male",4,11,36
-"s6990","Movie","The Water Horse: Legend of the Deep",2007,"PG","PG","Fresh",74,90,"Upright",62,48690,"Male",6,6,100
 "s7039","Movie","There Will Be Blood",2007,"R","R","Certified-Fresh",92,236,"Upright",86,255192,"Male",7,8,88
 "s7775","Movie","Zodiac",2007,"R","R","Certified-Fresh",89,253,"Upright",77,494309,"Male",9,10,90
-"s72","Movie","16 Blocks",2006,"PG-13","PG-13","Rotten",56,162,"Spilled",57,163966,"Male",8,8,100
 "s418","Movie","All the Boys Love Mandy Lane",2006,"R","R","Rotten",45,67,"Spilled",31,27847,"Male",5,9,56
-"s667","Movie","Babel",2006,"R","R","Fresh",69,200,"Upright",77,377310,"Male",7,10,70
-"s974","TV Show","Bleach",2006,"TV-14","NR","Fresh",67,6,"Upright",77,800,"Male",4,6,67
-"s1039","Movie","Bon Cop, Bad Cop",2006,"TV-MA","R","Fresh",78,9,"Upright",82,20404,"Male",5,7,71
-"s1235","Movie","Casino Royale",2006,"PG-13","G","Rotten",25,40,"Spilled",34,33192,"Male",4,12,33
-"s1235","Movie","Casino Royale",2006,"PG-13","PG-13","Certified-Fresh",95,257,"Upright",89,703669,"Male",4,12,33
 "s1417","Movie","Click",2006,"PG-13","PG-13","Rotten",34,174,"Upright",66,874835,"Male",7,10,70
 "s1998","Movie","Employee of the Month",2006,"PG-13","PG-13","Rotten",20,92,"Spilled",53,422040,"Male",9,20,45
 "s1998","Movie","Employee of the Month",2006,"PG-13","R","Rotten",11,9,"Spilled",52,10533,"Male",9,20,45
-"s2166","Movie","Final Destination 3",2006,"R","R","Rotten",43,116,"Spilled",57,538678,"Male",4,10,40
-"s3281","Movie","Kabhi Alvida Naa Kehna",2006,"TV-14","NR","Rotten",58,12,"Upright",68,15692,"Male",3,5,60
 "s3517","Movie","Lady in the Water",2006,"PG-13","PG-13","Rotten",25,213,"Spilled",49,419598,"Male",6,10,60
 "s4200","Movie","Monster House",2006,"PG","PG","Certified-Fresh",75,162,"Upright",63,199638,"Male",8,11,73
-"s4383","Movie","Nacho Libre",2006,"PG","PG","Rotten",40,166,"Spilled",54,417327,"Male",2,3,67
 "s4653","TV Show","One on One",2006,"TV-14","PG","Fresh",88,8,"Upright",75,527,"Male",2,3,67
 "s4664","Movie","Open Season",2006,"PG","PG","Rotten",48,101,"Spilled",57,468633,"Male",6,9,67
-"s4750","Movie","Pan's Labyrinth",2006,"R","R","Certified-Fresh",95,236,"Upright",91,636638,"Male",3,6,50
-"s4820","Movie","Penelope",2006,"PG","PG-13","Rotten",54,127,"Upright",73,157030,"Male",3,4,75
 "s4916","Movie","Poseidon",2006,"PG-13","PG-13","Rotten",33,203,"Spilled",43,342101,"Male",5,9,56
 "s5911","Movie","Superman Returns",2006,"PG-13","PG-13","Certified-Fresh",75,267,"Upright",61,517038,"Male",6,9,67
 "s6177","Movie","The Break-Up",2006,"PG-13","PG-13","Rotten",34,192,"Spilled",46,450347,"Male",7,11,64
-"s6263","Movie","The Da Vinci Code",2006,"PG-13","PG-13","Rotten",26,231,"Spilled",57,761430,"Male",8,9,89
-"s6289","Movie","The Departed",2006,"R","R","Certified-Fresh",91,280,"Upright",94,737806,"Male",9,10,90
 "s6543","Movie","The Lake House",2006,"PG","PG","Rotten",35,156,"Upright",73,429951,"Male",4,8,50
-"s6607","Movie","The Lives of Others",2006,"R","R","Certified-Fresh",93,161,"Upright",96,121677,"Male",7,8,88
-"s6758","Movie","The Pink Panther",2006,"PG","NR","Fresh",89,35,"Upright",78,57498,"Male",8,20,40
-"s6758","Movie","The Pink Panther",2006,"PG","PG","Rotten",21,142,"Spilled",51,516683,"Male",8,20,40
 "s6791","Movie","The Pursuit of Happyness",2006,"PG-13","PG-13","Fresh",67,176,"Upright",87,563450,"Male",5,7,71
-"s7179","Movie","Trailer Park Boys: The Movie",2006,"R","R","Rotten",57,23,"Upright",78,12632,"Male",10,11,91
 "s7315","Movie","Unaccompanied Minors",2006,"PG","PG","Rotten",29,90,"Spilled",53,45489,"Male",6,10,60
 "s7668","Movie","World Trade Center",2006,"PG-13","PG-13","Fresh",67,233,"Upright",60,363593,"Male",9,12,75
 "s7782","Movie","Zoom",2006,"PG","PG","Rotten",4,68,"Spilled",33,11369,"Male",6,9,67
 "s1098","Movie","Brick",2005,"R","R","Certified-Fresh",80,142,"Upright",86,105728,"Male",5,8,62
-"s1280","Movie","Charlie and the Chocolate Factory",2005,"PG","PG","Certified-Fresh",83,231,"Spilled",51,32495606,"Male",10,14,71
 "s1326","Movie","Chicken Little",2005,"G","G","Rotten",37,164,"Spilled",47,470707,"Male",10,12,83
-"s1439","Movie","Coach Carter",2005,"PG-13","PG-13","Fresh",64,150,"Upright",85,406740,"Male",6,9,67
-"s1825","Movie","Doom",2005,"R","R","Rotten",19,138,"Spilled",34,333593,"Male",8,9,89
 "s2757","Movie","Hitch",2005,"PG-13","PG-13","Fresh",69,188,"Upright",62,32624083,"Male",5,9,56
 "s2879","Movie","Hustle & Flow",2005,"R","R","Certified-Fresh",83,160,"Upright",83,120178,"Male",5,9,56
-"s3004","Movie","Initial D",2005,"TV-14","NR","Rotten",33,6,"Upright",72,17344,"Male",5,6,83
 "s3245","Movie","Junebug",2005,"R","R","Certified-Fresh",86,136,"Upright",73,46871,"Male",7,12,58
-"s3250","Movie","Just Friends",2005,"PG-13","PG-13","Rotten",43,108,"Upright",71,420575,"Male",6,10,60
-"s3400","Movie","King's Ransom",2005,"PG-13","PG-13","Rotten",2,50,"Spilled",32,6270,"Male",4,9,44
-"s4203","Movie","Monster-in-Law",2005,"PG-13","PG-13","Rotten",18,170,"Spilled",55,433347,"Male",4,9,44
-"s4485","Movie","No Direction Home: Bob Dylan",2005,"TV-MA","NR","Fresh",88,17,"Upright",95,9595,"Male",4,6,67
-"s4739","Movie","Paheli",2005,"TV-PG","G","Rotten",57,7,"Upright",66,7250,"Male",4,7,57
-"s5300","Movie","Rumor Has It",2005,"PG-13","PG-13","Rotten",19,113,"Spilled",41,420144,"Male",6,9,67
 "s6082","Movie","The Amityville Horror",2005,"R","R","Rotten",23,163,"Spilled",52,360757,"Male",5,20,25
 "s6082","Movie","The Amityville Horror",2005,"R","R","Rotten",27,44,"Spilled",52,86899,"Male",5,20,25
-"s6184","Movie","The Brothers Grimm",2005,"PG-13","PG-13","Rotten",38,183,"Spilled",39,373932,"Male",8,10,80
-"s6280","Movie","The Death of Mr. Lazarescu",2005,"R","R","Certified-Fresh",93,75,"Upright",82,4929,"Male",3,3,100
 "s6320","Movie","The Dukes of Hazzard",2005,"PG-13","PG-13","Rotten",14,170,"Spilled",47,409871,"Male",7,8,88
-"s6424","Movie","The Great Raid",2005,"R","R","Rotten",38,122,"Upright",70,16827,"Male",11,12,92
 "s6900","Movie","The Squid and the Whale",2005,"R","R","Certified-Fresh",92,154,"Upright",81,79037,"Male",6,9,67
-"s7380","Movie","V for Vendetta",2005,"R","R","Certified-Fresh",73,251,"Upright",90,904181,"Male",8,11,73
 "s7746","Movie","Yours, Mine and Ours",2005,"PG","NR","Rotten",50,12,"Upright",80,57777,"Male",5,8,62
 "s122","Movie","50 First Dates",2004,"PG-13","PG-13","Rotten",45,176,"Upright",65,32700188,"Male",6,10,60
-"s164","Movie","A Cinderella Story",2004,"PG","PG","Rotten",12,104,"Spilled",53,31659732,"Male",5,14,36
-"s951","Movie","Black Friday",2004,"TV-MA","NR","Fresh",89,9,"Upright",92,3662,"Male",4,4,100
-"s1518","Movie","Crash",2004,"R","R","Certified-Fresh",74,241,"Upright",88,442331,"Male",9,13,69
-"s2632","Movie","Harold & Kumar Go to White Castle",2004,"R","R","Fresh",74,148,"Upright",80,324289,"Male",8,9,89
 "s2692","Movie","Hellboy",2004,"PG-13","PG-13","Certified-Fresh",81,203,"Upright",66,458988,"Male",8,18,44
 "s2692","Movie","Hellboy",2004,"PG-13","R","Rotten",18,215,"Spilled",49,4665,"Male",8,18,44
-"s3465","Movie","Kung Fu Hustle",2004,"R","R","Certified-Fresh",90,188,"Upright",89,228026,"Male",2,2,100
-"s3552","Movie","Layer Cake",2004,"R","R","Certified-Fresh",80,141,"Upright",84,147973,"Male",9,10,90
-"s4120","Movie","Miracle",2004,"PG","PG","Certified-Fresh",81,165,"Upright",90,57068,"Male",9,12,75
 "s4425","Movie","National Treasure",2004,"PG","PG","Rotten",46,179,"Upright",76,924124,"Male",6,7,86
 "s4454","Movie","New York Minute",2004,"PG","PG","Rotten",11,119,"Spilled",47,84036,"Male",6,10,60
 "s4566","Movie","Ocean's Twelve",2004,"PG-13","PG-13","Rotten",55,185,"Upright",60,672964,"Male",7,9,78
-"s5592","Movie","Shutter",2004,"TV-MA","PG-13","Rotten",9,66,"Spilled",33,241178,"Male",3,16,19
-"s5592","Movie","Shutter",2004,"TV-MA","R","Rotten",59,27,"Upright",77,15910,"Male",3,16,19
 "s5667","Movie","Sleepover",2004,"PG","PG","Rotten",15,101,"Spilled",54,87021,"Male",3,10,30
 "s5799","Movie","Starsky & Hutch",2004,"PG-13","PG-13","Fresh",62,193,"Spilled",49,383792,"Male",6,9,67
-"s5933","Movie","Swades",2004,"TV-PG","NR","Fresh",83,6,"Upright",91,8896,"Male",2,3,67
-"s6737","TV Show","The Outsiders",2004,"TV-MA","PG","Fresh",63,40,"Upright",82,138400,"Male",1,2,50
-"s6754","Movie","The Phantom of the Opera",2004,"PG-13","PG-13","Rotten",33,171,"Upright",84,412132,"Male",5,18,28
-"s6754","Movie","The Phantom of the Opera",2004,"PG-13","R","Rotten",38,13,"Spilled",53,49310,"Male",5,18,28
 "s6770","Movie","The Polar Express",2004,"G","G","Rotten",56,208,"Upright",63,242291,"Male",5,8,62
-"s6777","Movie","The Prince & Me",2004,"PG","PG","Rotten",28,123,"Spilled",59,193846,"Male",5,9,56
-"s7593","Movie","Whisky",2004,"TV-MA","NR","Fresh",100,16,"Upright",75,2809,"Male",1,2,50
 "s523","Movie","Anger Management",2003,"PG-13","PG-13","Rotten",42,194,"Upright",60,745851,"Male",8,12,67
 "s689","Movie","Bad Boys II",2003,"R","R","Rotten",23,184,"Upright",78,501951,"Male",8,10,80
 "s1579","Movie","Daddy Day Care",2003,"PG","PG","Rotten",27,132,"Spilled",48,472605,"Male",5,11,45
 "s1842","Movie","Dr. Seuss' The Cat in the Hat",2003,"PG","PG","Rotten",9,161,"Spilled",51,292,"Male",5,8,62
 "s1894","Movie","Dumb and Dumberer: When Harry Met Lloyd",2003,"PG-13","PG-13","Rotten",10,119,"Spilled",23,258935,"Male",6,9,67
-"s2165","Movie","Final Destination 2",2003,"R","R","Rotten",48,111,"Spilled",58,449641,"Male",3,8,38
-"s2506","Movie","Gothika",2003,"R","R","Rotten",15,169,"Spilled",45,397764,"Male",5,8,62
-"s3291","Movie","Kal Ho Naa Ho",2003,"TV-14","NR","Fresh",70,10,"Upright",92,30823,"Male",2,6,33
 "s4026","Movie","Melvin Goes to Dinner",2003,"R","R","Fresh",100,11,"Upright",80,2750,"Male",4,8,50
 "s4173","Movie","Mona Lisa Smile",2003,"PG-13","PG-13","Rotten",34,152,"Upright",60,208232,"Male",3,10,30
-"s4375","Movie","Mystic River",2003,"R","R","Certified-Fresh",88,206,"Upright",89,203535,"Male",7,10,70
 "s5323","Movie","S.W.A.T.",2003,"PG-13","PG-13","Rotten",48,168,"Spilled",52,273563,"Male",12,13,92
 "s5710","Movie","Something's Gotta Give",2003,"PG-13","PG-13","Fresh",72,171,"Upright",69,208025,"Male",4,8,50
 "s6005","Movie","Tears of the Sun",2003,"R","R","Rotten",33,155,"Upright",69,119745,"Male",8,9,89
-"s6617","Movie","The Lord of the Rings: The Return of the King",2003,"PG-13","PG-13","Certified-Fresh",93,275,"Upright",86,34679773,"Male",10,12,83
 "s6650","Movie","The Matrix Reloaded",2003,"R","R","Certified-Fresh",73,245,"Upright",72,942742,"Male",7,12,58
 "s6651","Movie","The Matrix Revolutions",2003,"R","R","Rotten",35,216,"Upright",60,792201,"Male",6,11,55
-"s7546","Movie","What a Girl Wants",2003,"PG","PG","Rotten",35,108,"Upright",62,453652,"Male",3,7,43
 "s251","Movie","A Walk to Remember",2002,"PG","PG","Rotten",27,103,"Upright",78,31402117,"Male",4,7,57
-"s287","Movie","About a Boy",2002,"PG-13","PG-13","Certified-Fresh",93,187,"Spilled",55,31164074,"Male",3,9,33
 "s626","Movie","Austin Powers in Goldmember",2002,"PG-13","PG-13","Rotten",53,187,"Spilled",44,32935203,"Male",7,8,88
-"s904","Movie","Big Fat Liar",2002,"PG","PG","Rotten",44,94,"Spilled",44,400127,"Male",6,10,60
-"s1243","Movie","Catch Me If You Can",2002,"PG-13","PG-13","Certified-Fresh",96,202,"Upright",89,749099,"Male",7,9,78
-"s1752","Movie","Die Another Day",2002,"PG-13","PG-13","Rotten",57,221,"Spilled",41,430311,"Male",9,13,69
 "s2019","Movie","Equilibrium",2002,"R","R","Rotten",41,91,"Upright",81,268171,"Male",7,7,100
-"s2352","Movie","Gangs of New York",2002,"R","R","Certified-Fresh",73,211,"Upright",81,294323,"Male",8,9,89
-"s2564","TV Show","H",2002,"TV-MA","R","Fresh",80,5,"Spilled",52,1819,"Male",2,2,100
-"s3263","Movie","K-19: The Widowmaker",2002,"PG-13","PG-13","Fresh",61,171,"Spilled",52,45798,"Male",9,9,100
 "s4033","Movie","Men in Black II",2002,"PG-13","PG-13","Rotten",39,198,"Spilled",45,926060,"Male",8,10,80
 "s4251","Movie","Mr. Deeds",2002,"PG-13","PG-13","Rotten",22,156,"Spilled",59,738396,"Male",8,10,80
 "s4742","Movie","Paid in Full",2002,"R","R","Rotten",53,43,"Upright",93,20675,"Male",5,9,56
 "s4754","Movie","Panic Room",2002,"R","R","Certified-Fresh",75,186,"Upright",63,235911,"Male",5,8,62
-"s5077","Movie","Raising Victor Vargas",2002,"R","R","Certified-Fresh",96,110,"Upright",83,5984,"Male",2,5,40
 "s5775","Movie","Spy Kids 2: The Island of Lost Dreams",2002,"PG","PG","Certified-Fresh",75,136,"Spilled",39,126296,"Male",8,12,67
 "s5859","Movie","Stuart Little 2",2002,"PG","PG","Certified-Fresh",81,124,"Spilled",41,179720,"Male",6,8,75
-"s6618","Movie","The Lord of the Rings: The Two Towers",2002,"PG-13","PG-13","Certified-Fresh",95,255,"Upright",95,1341428,"Male",10,12,83
 "s6823","Movie","The Ring",2002,"PG-13","PG-13","Fresh",71,207,"Spilled",48,32459459,"Male",3,10,30
-"s6931","Movie","The Time Machine",2002,"PG-13","G","Fresh",76,37,"Upright",79,19477,"Male",6,18,33
-"s6931","Movie","The Time Machine",2002,"PG-13","PG-13","Rotten",29,153,"Spilled",37,171780,"Male",6,18,33
 "s6952","Movie","The Tuxedo",2002,"PG-13","PG-13","Rotten",21,140,"Spilled",30,220696,"Male",6,9,67
-"s432","Movie","Along Came a Spider",2001,"R","R","Rotten",32,126,"Spilled",53,174204,"Male",7,11,64
 "s518","Movie","Angel Eyes",2001,"R","R","Rotten",33,132,"Spilled",46,66154,"Male",4,7,57
-"s600","Movie","Asoka",2001,"R","R","Fresh",100,10,"Upright",69,9394,"Male",3,5,60
-"s952","Movie","Black Hawk Down",2001,"R","R","Certified-Fresh",76,173,"Upright",88,473094,"Male",20,20,100
 "s994","Movie","Blow",2001,"R","R","Rotten",55,141,"Upright",87,384877,"Male",7,10,70
 "s2054","Movie","Evolution",2001,"PG-13","NR","Certified-Fresh",83,63,"Spilled",44,2500,"Male",9,20,45
 "s2054","Movie","Evolution",2001,"PG-13","PG-13","Rotten",43,138,"Spilled",48,259038,"Male",9,20,45
 "s2065","Movie","Exit Wounds",2001,"R","R","Rotten",33,66,"Spilled",45,51466,"Male",9,11,82
-"s2503","Movie","Gosford Park",2001,"R","R","Certified-Fresh",86,160,"Upright",78,48527,"Male",12,19,63
 "s2678","Movie","Heartbreakers",2001,"PG-13","PG-13","Rotten",53,122,"Spilled",51,71303,"Male",6,10,60
 "s3131","Movie","Jay and Silent Bob Strike Back",2001,"R","R","Rotten",52,153,"Upright",75,304234,"Male",6,9,67
-"s3283","Movie","Kabhi Khushi Kabhie Gham",2001,"TV-14","NR","Fresh",100,8,"Upright",88,28886,"Male",4,9,44
 "s3315","Movie","Kate & Leopold",2001,"PG-13","PG-13","Rotten",50,129,"Upright",62,189869,"Male",8,10,80
 "s5774","Movie","Spy Kids",2001,"PG","PG","Certified-Fresh",93,128,"Spilled",46,427435,"Male",7,10,70
 "s5949","Movie","Swordfish",2001,"R","R","Rotten",25,138,"Spilled",59,244611,"Male",7,10,70
-"s6852","Movie","The Score",2001,"R","R","Certified-Fresh",73,128,"Upright",67,60119,"Male",6,7,86
 "s7160","Movie","Tortilla Soup",2001,"PG-13","PG-13","Certified-Fresh",74,72,"Upright",71,5188,"Male",3,8,38
 "s95","Movie","28 Days",2000,"PG-13","PG-13","Rotten",33,85,"Spilled",50,319745,"Male",5,10,50
-"s474","Movie","American Psycho",2000,"R","R","Fresh",69,150,"Upright",85,304536,"Male",6,12,50
-"s928","Movie","Billy Elliot",2000,"R","R","Certified-Fresh",85,118,"Upright",89,280591,"Male",5,7,71
 "s1257","Movie","Center Stage",2000,"PG-13","PG-13","Rotten",42,81,"Upright",82,104272,"Male",1,6,17
-"s1281","Movie","Charlie's Angels",2000,"PG-13","PG-13","Fresh",68,146,"Spilled",45,729182,"Male",8,24,33
-"s1281","Movie","Charlie's Angels",2000,"PG-13","PG-13","Rotten",52,227,"",78,2620,"Male",8,24,33
-"s1547","Movie","Crouching Tiger, Hidden Dragon",2000,"PG-13","PG-13","Certified-Fresh",97,157,"Upright",86,427386,"Male",1,3,33
 "s2164","Movie","Final Destination",2000,"R","R","Rotten",35,95,"Upright",68,483542,"Male",7,10,70
 "s2840","Movie","How the Grinch Stole Christmas",2000,"PG","NR","Fresh",100,25,"Upright",98,93,"Male",5,9,56
 "s3667","Movie","Little Nicky",2000,"PG-13","PG-13","Rotten",22,115,"Spilled",56,460366,"Male",8,9,89
@@ -1300,26 +666,19 @@
 "s5444","Movie","Scream 3",2000,"R","R","Rotten",39,122,"Spilled",37,404832,"Male",7,13,54
 "s5683","Movie","Snow Day",2000,"PG","PG","Rotten",29,66,"Spilled",27,49562,"Male",5,9,56
 "s5733","Movie","Space Cowboys",2000,"PG-13","PG-13","Certified-Fresh",78,119,"Spilled",53,72948,"Male",9,12,75
-"s6095","Movie","The Art of War",2000,"R","R","Rotten",16,81,"Spilled",36,26611,"Male",6,9,67
 "s6362","Movie","The Flintstones in Viva Rock Vegas",2000,"PG","PG","Rotten",25,72,"Spilled",20,44092,"Male",4,7,57
 "s6727","Movie","The Original Kings of Comedy",2000,"R","R","Certified-Fresh",83,103,"Upright",80,17874,"Male",3,3,100
 "s7559","Movie","What Lies Beneath",2000,"PG-13","PG-13","Rotten",46,125,"Spilled",58,278987,"Male",4,11,36
-"s7588","Movie","Where the Money Is",2000,"PG-13","PG-13","Rotten",48,79,"Spilled",36,2009,"Male",4,8,50
 "s456","Movie","American Beauty",1999,"R","R","Certified-Fresh",87,190,"Upright",93,660578,"Male",6,10,60
 "s628","Movie","Austin Powers: The Spy Who Shagged Me",1999,"PG-13","PG-13","Rotten",52,90,"Upright",71,942294,"Male",7,10,70
 "s902","Movie","Big Daddy",1999,"PG-13","PG-13","Rotten",39,94,"Upright",74,1052217,"Male",7,10,70
-"s1003","Movie","Blue Streak",1999,"PG-13","PG-13","Rotten",36,69,"Upright",65,201576,"Male",9,10,90
-"s1834","Movie","Double Jeopardy",1999,"R","R","Rotten",27,86,"Upright",61,178212,"Male",5,8,62
 "s3861","Movie","Magnolia",1999,"R","R","Certified-Fresh",83,147,"Upright",89,192966,"Male",11,15,73
-"s3917","Movie","Mansfield Park",1999,"PG-13","PG-13","Certified-Fresh",77,70,"Upright",77,22013,"Male",5,9,56
 "s5303","Movie","Runaway Bride",1999,"PG","PG","Rotten",46,87,"Spilled",53,437985,"Male",7,12,58
-"s5858","Movie","Stuart Little",1999,"PG","PG","Fresh",67,97,"Spilled",41,495303,"Male",4,5,80
 "s5915","Movie","Superstar",1999,"PG-13","PG-13","Rotten",32,74,"Upright",60,64797,"Male",6,10,60
 "s5989","Movie","Tarzan",1999,"G","G","Certified-Fresh",89,105,"Upright",75,370288,"Male",5,14,36
 "s5989","Movie","Tarzan",1999,"G","PG","Rotten",20,30,"Spilled",33,3661,"Male",5,14,36
 "s6649","Movie","The Matrix",1999,"R","R","Certified-Fresh",88,154,"Upright",85,33324202,"Male",7,10,70
 "s6921","Movie","The Talented Mr. Ripley",1999,"R","R","Certified-Fresh",83,133,"Upright",80,131708,"Male",7,10,70
-"s7016","Movie","The World Is Not Enough",1999,"PG-13","PG-13","Rotten",52,143,"Spilled",49,210342,"Male",4,8,50
 "s7624","Movie","Wild Wild West",1999,"PG-13","PG-13","Rotten",17,131,"Spilled",28,464323,"Male",5,9,56
 "s211","Movie","A Night at the Roxbury",1998,"PG-13","PG-13","Rotten",11,55,"Upright",69,362857,"Male",6,10,60
 "s467","Movie","American History X",1998,"R","R","Certified-Fresh",83,86,"Upright",96,479824,"Male",8,10,80
@@ -1329,14 +688,9 @@
 "s2098","Movie","Fallen",1998,"R","PG-13","Rotten",7,14,"Upright",66,1962,"Male",8,18,44
 "s2098","Movie","Fallen",1998,"R","R","Rotten",40,57,"Upright",72,51975,"Male",8,18,44
 "s2136","Movie","Fear and Loathing in Las Vegas",1998,"R","R","Rotten",49,69,"Upright",89,279333,"Male",11,15,73
-"s2671","Movie","Head On",1998,"TV-MA","NR","Fresh",63,24,"Upright",68,2687,"Male",5,7,71
-"s3475","Movie","Kurt & Courtney",1998,"R","R","Fresh",62,55,"Spilled",44,6463,"Male",1,2,50
-"s3696","Movie","Lock, Stock and Two Smoking Barrels",1998,"R","R","Certified-Fresh",75,65,"Upright",93,308166,"Male",9,9,100
 "s5289","Movie","Rounders",1998,"R","R","Fresh",65,80,"Upright",87,78238,"Male",8,9,89
 "s5438","Movie","Scooby-Doo on Zombie Island",1998,"TV-PG","NR","Fresh",86,7,"Upright",78,43859,"Male",4,7,57
 "s5674","Movie","Small Soldiers",1998,"PG-13","PG-13","Rotten",48,44,"Spilled",45,123482,"Male",7,8,88
-"s5696","Movie","Soldier",1998,"TV-14","R","Rotten",13,53,"Spilled",44,44298,"Male",1,3,33
-"s6645","Movie","The Mask of Zorro",1998,"PG-13","PG-13","Certified-Fresh",82,73,"Upright",72,375313,"Male",9,10,90
 "s6840","Movie","The Rugrats Movie",1998,"G","G","Rotten",59,51,"Spilled",50,73681,"Male",6,14,43
 "s6991","Movie","The Waterboy",1998,"PG-13","PG-13","Rotten",34,76,"Upright",71,910804,"Male",6,8,75
 "s593","Movie","As Good as It Gets",1997,"PG-13","PG-13","Certified-Fresh",85,79,"Upright",86,378698,"Male",4,8,50
@@ -1344,10 +698,7 @@
 "s1289","Movie","Chasing Amy",1997,"R","R","Certified-Fresh",87,85,"Upright",83,197083,"Male",5,6,83
 "s1605","Movie","Dante's Peak",1997,"PG-13","PG-13","Rotten",26,31,"Spilled",38,238773,"Male",6,10,60
 "s1824","Movie","Donnie Brasco",1997,"R","R","Certified-Fresh",88,57,"Upright",89,204164,"Male",9,10,90
-"s2044","Movie","Event Horizon",1997,"R","R","Rotten",28,76,"Upright",61,67933,"Male",6,8,75
 "s2477","Movie","Good Burger",1997,"PG","PG","Rotten",32,38,"Upright",63,55295,"Male",6,8,75
-"s2708","Movie","Hero",1997,"TV-MA","PG-13","Certified-Fresh",95,208,"Upright",87,249427,"Male",1,2,50
-"s2708","Movie","Hero",1997,"TV-MA","PG-13","Fresh",67,21,"Spilled",50,16898,"Male",1,2,50
 "s2842","Movie","How to Be a Player",1997,"R","R","Rotten",11,9,"Upright",76,6950,"Male",5,8,62
 "s3104","Movie","Jackie Brown",1997,"R","R","Certified-Fresh",87,84,"Upright",85,215362,"Male",7,10,70
 "s3764","Movie","Love Jones",1997,"R","R","Fresh",73,15,"Upright",97,25712,"Male",5,7,71
@@ -1355,8 +706,6 @@
 "s4178","Movie","Money Talks",1997,"R","R","Rotten",16,19,"Upright",71,38975,"Male",5,8,62
 "s5443","Movie","Scream 2",1997,"R","R","Certified-Fresh",81,78,"Spilled",57,412628,"Male",8,18,44
 "s6745","Movie","The Peacemaker",1997,"R","R","Rotten",43,35,"Spilled",39,45616,"Male",6,7,86
-"s6801","Movie","The Rainmaker",1997,"PG-13","PG-13","Certified-Fresh",82,49,"Upright",77,39460,"Male",6,10,60
-"s7143","Movie","Tomorrow Never Dies",1997,"PG-13","PG-13","Rotten",57,89,"Spilled",53,231067,"Male",6,9,67
 "s795","Movie","Beavis and Butt-head Do America",1996,"PG-13","PG-13","Fresh",72,53,"Upright",69,301847,"Male",5,7,71
 "s1850","Movie","Dragonheart",1996,"PG-13","PG-13","Rotten",50,30,"Upright",60,326626,"Male",6,8,75
 "s3405","Movie","Kingpin",1996,"PG-13","PG-13","Rotten",50,38,"Upright",69,81301,"Male",6,8,75
@@ -1366,21 +715,16 @@
 "s6246","Movie","The Craft",1996,"R","R","Rotten",56,57,"Upright",65,259910,"Male",4,10,40
 "s6356","Movie","The First Wives Club",1996,"PG","PG","Rotten",50,72,"Upright",68,62646,"Male",5,13,38
 "s6945","Movie","The Trigger Effect",1996,"R","R","Fresh",75,24,"Spilled",43,2473,"Male",5,6,83
-"s7183","Movie","Trainspotting",1996,"R","R","Certified-Fresh",91,85,"Upright",93,313724,"Male",7,12,58
 "s688","Movie","Bad Boys",1995,"R","R","Fresh",89,19,"Upright",81,61585,"Male",7,18,39
 "s688","Movie","Bad Boys",1995,"R","R","Rotten",42,64,"Upright",78,660862,"Male",7,18,39
 "s709","Movie","Balto",1995,"G","G","Rotten",54,24,"Upright",70,71758,"Male",7,8,88
-"s2466","Movie","GoldenEye",1995,"PG-13","PG-13","Certified-Fresh",78,79,"Upright",83,285644,"Male",10,15,67
 "s2848","Movie","How to Make an American Quilt",1995,"PG-13","PG-13","Fresh",61,33,"Upright",63,11399,"Male",6,17,35
 "s3077","Movie","It Takes Two",1995,"PG","PG","Rotten",8,24,"Upright",60,135219,"Male",2,6,33
 "s3368","Movie","Kicking and Screaming",1995,"R","R","Rotten",57,37,"Upright",76,8633,"Male",6,8,75
 "s4543","Movie","Now and Then",1995,"PG-13","PG-13","Rotten",32,19,"Upright",82,76152,"Male",1,10,10
-"s5299","Movie","Rumble in the Bronx",1995,"R","R","Certified-Fresh",80,55,"Upright",65,59597,"Male",3,4,75
 "s6081","Movie","The American President",1995,"PG-13","PG-13","Certified-Fresh",91,56,"Upright",77,55066,"Male",7,13,54
 "s6490","Movie","The Indian in the Cupboard",1995,"PG","PG","Fresh",73,22,"Spilled",40,60743,"Male",7,9,78
 "s7120","Movie","To Wong Foo, Thanks for Everything! Julie Newmar",1995,"PG-13","PG-13","Rotten",39,38,"Upright",71,50676,"Male",7,14,50
-"s7209","Movie","Tremors 2: Aftershocks",1995,"PG-13","PG-13","Rotten",56,9,"Spilled",46,56839,"Male",4,5,80
-"s2252","Movie","Four Weddings and a Funeral",1994,"R","R","Certified-Fresh",96,69,"Upright",74,185024,"Male",8,13,62
 "s5003","Movie","Pulp Fiction",1994,"R","R","Certified-Fresh",92,106,"Upright",96,1127813,"Male",8,12,67
 "s6254","Movie","The Crow",1994,"R","R","Certified-Fresh",83,58,"Upright",90,377274,"Male",8,12,67
 "s6361","Movie","The Flintstones",1994,"PG","PG","Rotten",22,46,"Spilled",24,261112,"Male",6,9,67
@@ -1388,32 +732,20 @@
 "s6829","Movie","The River Wild",1994,"PG-13","PG-13","Rotten",56,32,"Spilled",51,46933,"Male",6,9,67
 "s7682","Movie","Wyatt Earp",1994,"PG-13","PG-13","Rotten",44,27,"Upright",61,50200,"Male",10,12,83
 "s167","Movie","A Dangerous Woman",1993,"R","R","Rotten",50,12,"Spilled",31,1238,"Male",4,9,44
-"s2276","Movie","Free Willy",1993,"PG","PG","Fresh",68,31,"Spilled",50,721093,"Male",7,10,70
-"s4423","Movie","National Lampoon's Loaded Weapon 1",1993,"PG-13","PG-13","Rotten",23,35,"Spilled",49,43768,"Male",6,7,86
 "s4845","Movie","Philadelphia",1993,"PG-13","PG-13","Certified-Fresh",80,56,"Upright",89,183357,"Male",8,9,89
 "s5431","Movie","Schindler's List",1993,"R","R","Certified-Fresh",97,100,"Upright",97,411608,"Male",6,8,75
 "s5450","Movie","Searching for Bobby Fischer",1993,"PG","PG","Certified-Fresh",100,44,"Upright",86,22622,"Male",8,10,80
 "s5669","Movie","Sliver",1993,"R","R","Rotten",11,27,"Spilled",28,17522,"Male",4,10,40
 "s6746","Movie","The Pelican Brief",1993,"PG-13","PG-13","Rotten",53,53,"Upright",61,75639,"Male",9,10,90
 "s7571","Movie","What's Eating Gilbert Grape",1993,"PG-13","PG-13","Certified-Fresh",90,49,"Upright",89,301721,"Male",5,10,50
-"s759","Movie","Basic Instinct",1992,"R","R","Rotten",53,64,"Upright",63,132019,"Male",7,11,64
 "s796","Movie","Bebe's Kids",1992,"PG-13","PG-13","Rotten",30,10,"Upright",74,10118,"Male",3,7,43
-"s1201","Movie","Candyman",1992,"R","R","Fresh",75,68,"Upright",62,134252,"Male",5,8,62
-"s2854","Movie","Howards End",1992,"PG","PG","Certified-Fresh",94,66,"Upright",82,13673,"Male",3,8,38
 "s4787","Movie","Passenger 57",1992,"R","R","Rotten",24,25,"Spilled",38,56276,"Male",7,9,78
 "s4795","Movie","Patriot Games",1992,"R","R","Fresh",73,41,"Upright",73,70710,"Male",7,10,70
-"s5847","Movie","Strictly Ballroom",1992,"PG","PG","Certified-Fresh",93,43,"Upright",87,43325,"Male",5,7,71
-"s6257","Movie","The Crying Game",1992,"R","R","Certified-Fresh",94,67,"Upright",78,31834,"Male",5,6,83
 "s2800","Movie","Hook",1991,"PG","PG","Rotten",29,65,"Upright",76,731223,"Male",5,9,56
 "s4321","Movie","My Girl",1991,"PG-13","PG-13","Rotten",53,17,"Upright",77,394678,"Male",4,7,57
 "s6553","Movie","The Last Boy Scout",1991,"R","R","Rotten",47,36,"Upright",68,60243,"Male",5,8,62
-"s6697","Movie","The Naked Gun 2 1/2: The Smell of Fear",1991,"PG-13","PG-13","Rotten",56,41,"Upright",65,123146,"Male",5,7,71
 "s2494","Movie","GoodFellas",1990,"R","R","Certified-Fresh",96,100,"Upright",97,429632,"Male",9,9,100
-"s5043","Movie","Quigley Down Under",1990,"PG-13","PG-13","Rotten",59,17,"Upright",74,20715,"Male",8,9,89
 "s5250","Movie","Rocky V",1990,"PG-13","PG-13","Rotten",29,35,"Spilled",31,268209,"Male",7,8,88
-"s6016","Movie","Teenage Mutant Ninja Turtles: The Movie",1990,"PG","PG","Rotten",40,52,"Upright",81,252136,"Male",9,10,90
-"s7163","Movie","Total Recall",1990,"R","PG-13","Rotten",31,234,"Spilled",47,116791,"Male",7,20,35
-"s7163","Movie","Total Recall",1990,"R","R","Certified-Fresh",82,71,"Upright",78,244625,"Male",7,20,35
 "s7208","Movie","Tremors",1990,"PG-13","PG-13","Certified-Fresh",86,44,"Upright",75,240153,"Male",7,12,58
 "s1576","Movie","Dad",1989,"PG","PG","Fresh",60,10,"Upright",60,4768,"Male",9,12,75
 "s2992","Movie","Indiana Jones and the Last Crusade",1989,"PG-13","PG-13","Certified-Fresh",88,72,"Upright",94,768536,"Male",9,10,90
@@ -1430,24 +762,18 @@
 "s3488","Movie","La Bamba",1987,"PG-13","PG-13","Certified-Fresh",91,43,"Upright",78,52251,"Male",5,8,62
 "s486","Movie","An American Tail",1986,"G","G","Fresh",71,28,"Upright",71,257273,"Male",6,9,67
 "s2151","Movie","Ferris Bueller's Day Off",1986,"PG-13","PG-13","Certified-Fresh",81,67,"Upright",92,728750,"Male",7,11,64
-"s4880","Movie","Platoon",1986,"R","R","Certified-Fresh",88,67,"Upright",93,239850,"Male",10,10,100
 "s5249","Movie","Rocky IV",1985,"PG","PG","Rotten",40,48,"Upright",79,352586,"Male",4,6,67
 "s2994","Movie","Indiana Jones and the Temple of Doom",1984,"PG","PG","Certified-Fresh",84,69,"Upright",81,716843,"Male",3,4,75
 "s5135","Movie","Red Dawn",1984,"PG-13","PG-13","Rotten",15,143,"Spilled",51,66686,"Male",7,18,39
 "s5135","Movie","Red Dawn",1984,"PG-13","PG-13","Rotten",46,24,"Upright",65,49159,"Male",7,18,39
 "s6699","Movie","The Natural",1984,"PG","PG","Certified-Fresh",81,43,"Upright",88,37791,"Male",6,9,67
 "s5248","Movie","Rocky III",1982,"PG","PG","Fresh",63,38,"Upright",74,345523,"Male",7,8,88
-"s6267","Movie","The Dark Crystal",1982,"PG","PG","Certified-Fresh",79,47,"Upright",81,176393,"Male",3,6,50
 "s5849","Movie","Stripes",1981,"R","R","Fresh",86,36,"Upright",79,53088,"Male",8,10,80
 "s6338","Movie","The Evil Dead",1981,"TV-MA","R","Certified-Fresh",95,62,"Upright",84,202827,"Male",3,6,50
 "s4910","Movie","Popeye",1980,"PG","PG","Fresh",61,33,"Spilled",39,56157,"Male",7,8,88
 "s5064","Movie","Raging Bull",1980,"R","R","Certified-Fresh",93,74,"Upright",93,131407,"Male",6,8,75
-"s3838","Movie","Mad Max",1979,"R","R","Certified-Fresh",90,62,"Upright",70,142135,"Male",4,5,80
-"s4219","Movie","Monty Python's Life of Brian",1979,"R","R","Certified-Fresh",95,65,"Upright",93,258905,"Male",5,6,83
 "s5247","Movie","Rocky II",1979,"PG","PG","Fresh",71,31,"Upright",82,346329,"Male",7,9,78
 "s2523","Movie","Grease",1978,"PG","PG","Certified-Fresh",75,73,"Upright",87,1161351,"Male",6,14,43
-"s154","Movie","A Bridge Too Far",1977,"PG","PG","Fresh",64,25,"Upright",86,43268,"Male",12,13,92
-"s1578","TV Show","Dad's Army",1977,"TV-PG","NR","Rotten",31,35,"Spilled",36,4110,"Male",4,4,100
 "s6199","Movie","The Car",1977,"PG","R","Rotten",28,18,"Spilled",52,6012,"Male",5,8,62
 "s1227","Movie","Carrie",1976,"R","NR","Fresh",83,6,"Spilled",59,517,"Male",5,48,10
 "s1227","Movie","Carrie",1976,"R","NR","Rotten",20,10,"Spilled",50,77581,"Male",5,48,10
@@ -1459,35 +785,25 @@
 "s5739","Movie","Sparkle",1976,"PG","PG","Rotten",10,10,"Upright",90,4581,"Male",3,18,17
 "s5739","Movie","Sparkle",1976,"PG","PG-13","Rotten",56,94,"Spilled",44,886,"Male",3,18,17
 "s5995","Movie","Taxi Driver",1976,"R","R","Certified-Fresh",96,92,"Upright",93,260593,"Male",7,9,78
-"s4208","Movie","Monty Python and the Holy Grail",1975,"PG","PG","Certified-Fresh",97,78,"Upright",95,644753,"Male",5,7,71
 "s393","Movie","Alice Doesn't Live Here Anymore",1974,"PG","PG","Fresh",88,33,"Upright",82,9844,"Male",5,10,50
 "s6614","Movie","The Longest Yard",1974,"R","PG-13","Rotten",31,169,"Upright",62,32774364,"Male",8,18,44
 "s6614","Movie","The Longest Yard",1974,"R","R","Fresh",79,34,"Upright",75,81341,"Male",8,18,44
 "s6924","Movie","The Texas Chainsaw Massacre",1974,"R","R","Rotten",37,156,"Spilled",58,400615,"Male",6,7,86
-"s1017","Movie","Bobby",1973,"TV-14","R","Rotten",47,176,"Upright",72,45038,"Male",3,7,43
 "s1284","Movie","Charlotte's Web",1973,"G","G","Certified-Fresh",78,148,"Upright",62,379988,"Male",7,22,32
 "s1284","Movie","Charlotte's Web",1973,"G","G","Fresh",77,22,"Upright",67,227184,"Male",7,22,32
 "s1415","Movie","Cleopatra Jones",1973,"PG","R","Fresh",79,14,"Spilled",45,2674,"Male",1,4,25
-"s2014","Movie","Enter the Dragon",1973,"R","R","Certified-Fresh",94,53,"Upright",92,105328,"Male",4,4,100
 "s4009","Movie","Mean Streets",1973,"R","R","Certified-Fresh",95,62,"Upright",84,54816,"Male",6,6,100
 "s5908","Movie","Superfly",1972,"R","R","Fresh",92,26,"Upright",70,5556,"Male",3,6,50
 "s5908","Movie","Superfly",1972,"R","R","Rotten",50,101,"Spilled",46,873,"Male",3,6,50
-"s166","Movie","A Clockwork Orange",1971,"R","R","Certified-Fresh",88,64,"Upright",93,436890,"Male",4,5,80
 "s2153","Movie","Fiddler on the Roof",1971,"G","G","Certified-Fresh",83,41,"Upright",92,52560,"Male",3,7,43
-"s4971","Movie","Prince",1969,"TV-PG","NR","Fresh",71,21,"Spilled",55,177,"Male",2,4,50
 "s7243","Movie","True Grit",1969,"G","G","Certified-Fresh",89,53,"Upright",84,26169,"Male",7,16,44
 "s7243","Movie","True Grit",1969,"G","PG-13","Certified-Fresh",96,272,"Upright",85,158268,"Male",7,16,44
-"s1345","Movie","Chitty Chitty Bang Bang",1968,"G","G","Fresh",67,27,"Upright",71,340329,"Male",8,10,80
-"s4636","Movie","Once Upon a Time in the West",1968,"PG-13","PG-13","Certified-Fresh",95,64,"Upright",95,65809,"Male",9,10,90
 "s5286","Movie","Rosemary's Baby",1968,"R","R","Certified-Fresh",96,72,"Upright",87,73837,"Male",6,9,67
 "s5786","TV Show","Star Trek",1968,"TV-14","PG-13","Certified-Fresh",94,353,"Upright",91,747806,"Male",4,6,67
 "s1042","Movie","Bonnie and Clyde",1967,"R","R","Certified-Fresh",88,64,"Upright",88,56566,"Male",5,8,62
 "s1498","Movie","Cool Hand Luke",1967,"TV-14","PG","Certified-Fresh",100,51,"Upright",95,63694,"Male",9,10,90
 "s7610","Movie","Who's That Knocking at My Door?",1967,"R","R","Fresh",70,20,"Upright",61,5166,"Male",2,5,40
-"s1794","Movie","Doctor Zhivago",1965,"PG-13","PG-13","Certified-Fresh",84,49,"Upright",88,45777,"Male",4,6,67
 "s6222","Movie","The Cincinnati Kid",1965,"TV-14","G","Fresh",82,22,"Upright",78,6002,"Male",8,11,73
-"s3708","Movie","Lolita",1962,"R","NR","Fresh",91,43,"Upright",84,46005,"Male",4,16,25
-"s3708","Movie","Lolita",1962,"R","R","Fresh",68,25,"Upright",75,22582,"Male",4,16,25
 "s4301","Movie","Mutiny on the Bounty",1962,"TV-PG","NR","Certified-Fresh",93,41,"Upright",83,8061,"Male",5,10,50
 "s4301","Movie","Mutiny on the Bounty",1962,"TV-PG","NR","Fresh",68,19,"Upright",73,4471,"Male",5,10,50
 "s1153","Movie","Butterfield 8",1960,"TV-14","NR","Rotten",47,19,"Spilled",57,4072,"Male",3,8,38
