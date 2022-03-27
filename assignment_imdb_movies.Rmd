@@ -115,7 +115,7 @@ summary(lm)
 ```
 
 ```{r}
-lm = lm(score ~ runtime + female_indicator + grp, movies_dataset)
+lm = lm(score ~ runtime + female_indicator + gender_ratio, movies_dataset)
 summary(lm)
 ```
 
