@@ -1,8 +1,10 @@
 ---
-title: "Lab 2: What Makes a Product Successful? Fall 2021"
+title: 'Lab 2: What Makes a Product Successful? Fall 2021'
 author: 'w203: Statistics for Data Science'
 date: "November 1, 2021"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
