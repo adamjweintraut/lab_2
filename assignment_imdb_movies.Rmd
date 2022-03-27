@@ -38,27 +38,37 @@ library(tidyr)
 #     net_profit = gross - budget
 #   )
 # 
+# movies_cast_gender <- movies_cast_gender %>% 
+#   mutate(male_indicator = case_when(
+#     gender == 1 ~ 0,
+#     gender == 2 ~ 1
+#   )) %>%
+#   mutate(female_indicator = case_when(
+#     gender == 1 ~ 1,
+#     gender == 2 ~ 0
+#   ))
+# 
 # write.csv(movies_cast_gender,"datasets/movies_cast_gender.csv", row.names = FALSE)
 
 movies_cast_gender <- read.csv("datasets/movies_cast_gender.csv")
 
+movies_dataset <- movies_cast_gender[, c("score", "year","votes","budget","gross", "net_profit", 
+                                        "runtime", "gender", "genre_", "rating_", "director_", 
+                                        "writer_", "star_", "country_", "company_", 
+                                        "female_indicator", "male_indicator")]
 
-movies <- movies_cast_gender[, c("score", "year","votes","budget","gross", "net_profit", 
-                                 "runtime", "gender", "genre_", "rating_", "director_", 
-                                 "writer_", "star_", "country_", "company_")]
+NROW(movies_dataset)
 
-NROW(movies)
+movies_dataset <- movies_dataset[!is.na(movies_dataset$score), ]
+movies_dataset <- movies_dataset[!is.na(movies_dataset$year), ]
+movies_dataset <- movies_dataset[!is.na(movies_dataset$votes), ]
+movies_dataset <- movies_dataset[!is.na(movies_dataset$budget), ]
+movies_dataset <- movies_dataset[!is.na(movies_dataset$gross), ]
+movies_dataset <- movies_dataset[!is.na(movies_dataset$runtime), ]
 
-movies <- movies[!is.na(movies$score), ]
-movies <- movies[!is.na(movies$year), ]
-movies <- movies[!is.na(movies$votes), ]
-movies <- movies[!is.na(movies$budget), ]
-movies <- movies[!is.na(movies$gross), ]
-movies <- movies[!is.na(movies$runtime), ]
+NROW(movies_dataset)
 
-NROW(movies)
-
-movies_cor <- cor(movies)
+movies_cor <- cor(movies_dataset)
 movies_cor
 
 library(reshape2)
@@ -75,6 +85,27 @@ ggplot(data = melted_movies_cor, aes(x=Var1, y=Var2, fill=value)) +
 # lm = lm(danceability ~ valence, spotify_songs)
 # summary(lm)
 
+```
+
+```{r}
+
+# ggplot(data=movies_dataset, aes(x=gender, y=score)) +
+#     geom_point()+
+#     geom_smooth(method='lm', formula=y~x)
+
+lm = lm(score ~ runtime , movies_dataset)
+summary(lm)
+```
+```{r}
+
+lm = lm(score ~ runtime + male_indicator, movies_dataset)
+summary(lm)
+
+```
+
+```{r}
+lm = lm(score ~ runtime + female_indicator, movies_dataset)
+summary(lm)
 ```
 
 # Introduction 
