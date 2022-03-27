@@ -33,15 +33,19 @@ library(tidyr)
 # movies_cast_gender$country_ <- as.numeric(factor(movies_cast_gender$country))
 # movies_cast_gender$company_ <- as.numeric(factor(movies_cast_gender$company))
 # 
+# movies_cast_gender <- movies_cast_gender %>%
+#   mutate(
+#     net_profit = gross - budget
+#   )
+# 
 # write.csv(movies_cast_gender,"datasets/movies_cast_gender.csv", row.names = FALSE)
-
 
 movies_cast_gender <- read.csv("datasets/movies_cast_gender.csv")
 
 
-movies <- movies_cast_gender[, c("score", "year","votes","budget","gross","runtime",
-                                 "gender", "genre_", "rating_", "director_", "writer_", 
-                                 "star_", "country_", "company_")]
+movies <- movies_cast_gender[, c("score", "year","votes","budget","gross", "net_profit", 
+                                 "runtime", "gender", "genre_", "rating_", "director_", 
+                                 "writer_", "star_", "country_", "company_")]
 
 NROW(movies)
 
