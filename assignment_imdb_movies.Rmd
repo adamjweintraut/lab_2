@@ -52,10 +52,23 @@ library(tidyr)
 
 movies_cast_gender <- read.csv("datasets/movies_cast_gender.csv")
 
+rt_movies_gender_ratio <- read.csv("datasets/rt_movies_gender_ratio.csv")
+
+rt_movies_gender_ratio <- rt_movies_gender_ratio[, c("movie_title", "gender_rato_percentage")]
+
+rt_movies_gender_ratio <- rt_movies_gender_ratio %>%
+  mutate(
+    grp = gender_rato_percentage
+  )
+
+movies_cast_gender <- inner_join(movies_cast_gender, rt_movies_gender_ratio, by = c("name" = "movie_title"))
+
+NROW(movies_cast_gender)
+
 movies_dataset <- movies_cast_gender[, c("score", "year","votes","budget","gross", "net_profit", 
-                                        "runtime", "gender", "genre_", "rating_", "director_", 
-                                        "writer_", "star_", "country_", "company_", 
-                                        "female_indicator", "male_indicator")]
+                                        "runtime", "gender", "grp", "genre_", "rating_", "director_", 
+                                        "writer_", "star_", "country_", "company_",
+                                        "male_indicator", "female_indicator")]
 
 NROW(movies_dataset)
 
@@ -76,14 +89,7 @@ melted_movies_cor <- melt(movies_cor)
 
 library(ggplot2)
 ggplot(data = melted_movies_cor, aes(x=Var1, y=Var2, fill=value)) +
-  geom_tile()
-
-# ggplot(data=spotify_songs, aes(danceability, valence))+
-#     geom_point()+
-#     geom_smooth(method='lm', formula=y~x)
-# 
-# lm = lm(danceability ~ valence, spotify_songs)
-# summary(lm)
+  geom_tile() + theme(axis.text.x = element_text(angle = 90, vjust = 1, hjust=1))
 
 ```
 
@@ -105,6 +111,11 @@ summary(lm)
 
 ```{r}
 lm = lm(score ~ runtime + female_indicator, movies_dataset)
+summary(lm)
+```
+
+```{r}
+lm = lm(score ~ runtime + female_indicator + grp, movies_dataset)
 summary(lm)
 ```
 

@@ -243,8 +243,8 @@ netflix_gender_ratio <- read.csv("datasets/netflix_gender_ratio.csv")
 # rt_movies_gender_ratio <- rt_movies_gender_ratio[rt_movies_gender_ratio$rating !="UR" & rt_movies_gender_ratio$rating !="NR" ,]
 # ## Only need one ratio
 # rt_movies_gender_ratio <- rt_movies_gender_ratio[rt_movies_gender_ratio$gender == 'Male',]
-# ## More than 1 cast member
-# rt_movies_gender_ratio <- rt_movies_gender_ratio[rt_movies_gender_ratio$num_of_casts > 1,]
+# # ## More than 1 cast member
+# # rt_movies_gender_ratio <- rt_movies_gender_ratio[rt_movies_gender_ratio$num_of_casts > 1,]
 # write.csv(rt_movies_gender_ratio,"datasets/rt_movies_gender_ratio.csv", row.names = FALSE)
 
 rt_movies_gender_ratio <- read.csv("datasets/rt_movies_gender_ratio.csv")
