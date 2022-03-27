@@ -58,7 +58,7 @@ rt_movies_gender_ratio <- rt_movies_gender_ratio[, c("movie_title", "gender_rato
 
 rt_movies_gender_ratio <- rt_movies_gender_ratio %>%
   mutate(
-    grp = gender_rato_percentage
+    g_ratio = gender_rato_percentage
   )
 
 movies_cast_gender <- inner_join(movies_cast_gender, rt_movies_gender_ratio, by = c("name" = "movie_title"))
@@ -66,7 +66,7 @@ movies_cast_gender <- inner_join(movies_cast_gender, rt_movies_gender_ratio, by 
 NROW(movies_cast_gender)
 
 movies_dataset <- movies_cast_gender[, c("score", "year","votes","budget","gross", "net_profit", 
-                                        "runtime", "gender", "grp", "genre_", "rating_", "director_", 
+                                        "runtime", "gender", "g_ratio", "genre_", "rating_", "director_", 
                                         "writer_", "star_", "country_", "company_",
                                         "male_indicator", "female_indicator")]
 
