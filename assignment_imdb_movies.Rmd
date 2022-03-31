@@ -40,7 +40,7 @@ library(tidyr)
 #     net_profit = gross - budget
 #   )
 # 
-# movies_cast_gender <- movies_cast_gender %>% 
+# movies_cast_gender <- movies_cast_gender %>%
 #   mutate(male_indicator = case_when(
 #     gender == 1 ~ 0,
 #     gender == 2 ~ 1
@@ -56,10 +56,17 @@ movies_cast_gender <- read.csv("datasets/movies_cast_gender.csv")
 
 NROW(movies_cast_gender)
 
-movies_dataset <- movies_cast_gender[, c("score", "year","votes","budget","gross", "net_profit", 
-                                        "runtime", "gender", "genre_", "rating_", "director_", 
+movies_cast_gender <- movies_cast_gender %>%
+  mutate(gender_str = case_when(
+    gender == 1 ~ "female",
+    gender == 2 ~ "male"
+  ))
+
+movies_dataset <- movies_cast_gender[, c("score", "year","votes","budget","gross", "net_profit",
+                                        "runtime", "gender", "genre_", "rating_", "director_",
                                         "writer_", "star_", "country_", "company_",
-                                        "male_indicator", "female_indicator")]
+                                        "female_indicator")]
+
 
 NROW(movies_dataset)
 
@@ -83,6 +90,28 @@ ggplot(data = melted_movies_cor, aes(x=Var1, y=Var2, fill=value)) +
   geom_tile() + theme(axis.text.x = element_text(angle = 90, vjust = 1, hjust=1))
 
 ```
+```{r}
+hist(movies_dataset$score)
+hist(movies_dataset$votes)
+hist(movies_dataset$budget)
+hist(movies_dataset$gross)
+hist(movies_dataset$net_profit)
+hist(movies_dataset$runtime)
+hist(movies_dataset$gender)
+hist(movies_dataset$country_)
+
+count(movies_cast_gender, gender_str)
+count(movies_cast_gender, genre)
+count(movies_cast_gender, rating)
+
+movies_cast_gender %>% group_by(director) %>% summarise(count_directors = n()) %>% arrange(desc(count_directors))
+movies_cast_gender %>% group_by(writer) %>% summarise(count_writers = n()) %>% arrange(desc(count_writers))
+movies_cast_gender %>% group_by(star) %>% summarise(count_stars = n()) %>% arrange(desc(count_stars))
+movies_cast_gender %>% group_by(country) %>% summarise(count_country = n()) %>% arrange(desc(count_country))
+movies_cast_gender %>% group_by(company) %>% summarise(count_company = n()) %>% arrange(desc(count_company))
+
+```
+
 
 ```{r}
 
