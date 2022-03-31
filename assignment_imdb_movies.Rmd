@@ -92,19 +92,19 @@ ggplot(data = melted_movies_cor, aes(x=Var1, y=Var2, fill=value)) +
 ```
 ```{r}
 hist(movies_dataset$score)
-hist(movies_dataset$votes)
-hist(movies_dataset$budget)
+# hist(movies_dataset$votes)
+# hist(movies_dataset$budget)
 hist(movies_dataset$gross)
-hist(movies_dataset$net_profit)
+# hist(movies_dataset$net_profit)
 hist(movies_dataset$runtime)
 hist(movies_dataset$gender)
-hist(movies_dataset$country_)
+# hist(movies_dataset$country_)
 
-count(movies_cast_gender, gender_str)
-count(movies_cast_gender, genre)
-count(movies_cast_gender, rating)
+movies_cast_gender %>% group_by(gender, gender_str) %>% summarise(count_genders = n()) %>% arrange(desc(count_genders))
+movies_cast_gender %>% group_by(genre, genre_) %>% summarise(count_genres = n()) %>% arrange(desc(count_genres))
+movies_cast_gender %>% group_by(rating, rating_) %>% summarise(count_rating = n()) %>% arrange(desc(count_rating))
 
-movies_cast_gender %>% group_by(director) %>% summarise(count_directors = n()) %>% arrange(desc(count_directors))
+movies_cast_gender %>% group_by(director, director_) %>% summarise(count_directors = n()) %>% arrange(desc(count_directors))
 movies_cast_gender %>% group_by(writer) %>% summarise(count_writers = n()) %>% arrange(desc(count_writers))
 movies_cast_gender %>% group_by(star) %>% summarise(count_stars = n()) %>% arrange(desc(count_stars))
 movies_cast_gender %>% group_by(country) %>% summarise(count_country = n()) %>% arrange(desc(count_country))
