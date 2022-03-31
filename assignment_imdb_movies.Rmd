@@ -54,21 +54,10 @@ library(tidyr)
 
 movies_cast_gender <- read.csv("datasets/movies_cast_gender.csv")
 
-rt_movies_gender_ratio <- read.csv("datasets/rt_movies_gender_ratio.csv")
-
-rt_movies_gender_ratio <- rt_movies_gender_ratio[, c("movie_title", "gender_rato_percentage")]
-
-rt_movies_gender_ratio <- rt_movies_gender_ratio %>%
-  mutate(
-    gender_ratio = gender_rato_percentage
-  )
-
-movies_cast_gender <- inner_join(movies_cast_gender, rt_movies_gender_ratio, by = c("name" = "movie_title"))
-
 NROW(movies_cast_gender)
 
 movies_dataset <- movies_cast_gender[, c("score", "year","votes","budget","gross", "net_profit", 
-                                        "runtime", "gender", "gender_ratio", "genre_", "rating_", "director_", 
+                                        "runtime", "gender", "genre_", "rating_", "director_", 
                                         "writer_", "star_", "country_", "company_",
                                         "male_indicator", "female_indicator")]
 
@@ -113,11 +102,6 @@ summary(lm)
 
 ```{r}
 lm = lm(score ~ runtime + female_indicator, movies_dataset)
-summary(lm)
-```
-
-```{r}
-lm = lm(score ~ runtime + female_indicator + gender_ratio, movies_dataset)
 summary(lm)
 ```
 
