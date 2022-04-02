@@ -96,7 +96,7 @@ hist(movies_dataset$score)
 # hist(movies_dataset$budget)
 hist(movies_dataset$gross)
 # hist(movies_dataset$net_profit)
-hist(movies_dataset$runtime)
+hist(log(movies_dataset$runtime))
 hist(movies_dataset$gender)
 # hist(movies_dataset$country_)
 
@@ -112,6 +112,36 @@ movies_cast_gender %>% group_by(company) %>% summarise(count_company = n()) %>% 
 
 ```
 
+```{r}
+ggplot(movies_dataset, aes(x = runtime, y = gross)) + 
+  geom_point() + geom_smooth(method = "lm")
+
+# movies_dataset_runtime <- movies_dataset[movies_dataset$runtime < 150,]
+# ggplot(movies_dataset_runtime, aes(x = runtime, y = gross)) + 
+#   geom_point() + geom_smooth(method = "lm")
+
+ggplot(movies_dataset, aes(x = log(runtime), y = gross)) + 
+  geom_point() + geom_smooth(method = "lm")
+
+```
+```{r}
+
+#https://learn.datascience.berkeley.edu/ap/courses/556/sections/0c4128e8-08ad-402c-a8c3-e8697aba5feb/coursework/module/e020785d-fac3-4b68-b12b-2f2640585648/segment/15592769-61a7-46be-b54a-c5667c43f4a8
+#indicator: female -> gross
+# 
+# lm = lm(gross ~ runtime, movies_dataset)
+# summary(lm)
+
+lm = lm(log(gross) ~ runtime, movies_dataset)
+summary(lm)
+
+lm = lm(log(gross) ~ runtime + female_indicator, movies_dataset)
+summary(lm)
+
+```
+
+
+
 
 ```{r}
 
@@ -119,14 +149,8 @@ movies_cast_gender %>% group_by(company) %>% summarise(count_company = n()) %>% 
 #     geom_point()+
 #     geom_smooth(method='lm', formula=y~x)
 
-lm = lm(score ~ runtime , movies_dataset)
+lm = lm(score ~ runtime, movies_dataset)
 summary(lm)
-```
-```{r}
-
-lm = lm(score ~ runtime + male_indicator, movies_dataset)
-summary(lm)
-
 ```
 
 ```{r}
