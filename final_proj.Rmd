@@ -18,7 +18,14 @@ knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
 library(ggplot2)
 library(tidyr)
-library(scales) 
+library(scales)
+library(stargazer)
+
+get_robust_se <- function(model) { 
+    require(sandwich)
+    
+    sqrt(diag(sandwich::vcovHC(model)))
+  }
 
 ```
 
@@ -77,7 +84,7 @@ This dataset has the gender info for movie actors. The source has instructions o
 
 With this two datasets, we then perform an inner-join on them by their movie lead actor name to generate a single dataset that has all the movie info plus lead actor's gender info.
 
-Before we perform our analysis, we also clean up the data by removing all the entries that have empty values for the fields that we are interested (score, budget, gross, runtime). The final dataset has over 5000 rows of movie data.
+Before we perform our analysis, we also clean up the data by removing all the entries that have empty values for the fields that we are interested (budget, gross, runtime). The final dataset has over 5000 rows of movie data.
 
 ## 2a. Data Characteristics
 In this section we take a look at the data characteristics for our variables that we are interested and see if there is any need to perform cleanup or transformation before we build our models.\
@@ -136,7 +143,7 @@ In this histogram that shows the number of Male versus Female Lead Actor. The va
 ```
 
 
-
+\newpage
 
 # 3. A Model Building Process
 
@@ -144,7 +151,24 @@ You will next build a set of models to investigate your research question, docum
 
 1. *What do you want to measure*? Make sure you identify one, or a few, variables that will allow you to derive conclusions relevant to your research question, and include those variables in all model specifications. How are the variables that you will be modeling distributed? Provide enough context and information about your data for your audience to understand whatever model results you will eventually present. 
 
-
+In order to answer our research question, we first build our first model with 'Gross earnings' as our outcome variable and 'Female Indicator' as our feature variable. A female indictor is a binary flag and hs the value 0 or 1. When it is '1', it means that the lead actor of that movie is a female. We generate this indicator by processing the 'gender' data in the dataset and add a new column in the data to store the resulting indicator.
+\
+Moreover, since the Gross earning is highly skewed, we also apply Log transformation to it in our first model. So the model becomes this:
+\
+\
+_Log(Gross) = Female_indicator_
+\
+\
+Here is the model table:
+``` {r warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+lm = lm(log(gross) ~ female_indicator, movies_dataset)
+stargazer(
+  lm,
+  header=FALSE,
+  type='latex',
+  se = list(get_robust_se(lm))
+  )
+```
 
 
 
