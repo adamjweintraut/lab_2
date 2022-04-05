@@ -17,7 +17,31 @@ knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
 library(ggplot2)
 library(tidyr)
+library(scales) 
 
+```
+
+```{r warning=FALSE, message=FALSE, echo=FALSE}
+
+movies_cast_gender <- read.csv("datasets/movies_cast_gender.csv")
+
+movies_cast_gender <- movies_cast_gender %>%
+  mutate(gender_str = case_when(
+    gender == 1 ~ "female",
+    gender == 2 ~ "male"
+  ))
+
+movies_dataset <- movies_cast_gender[, c("score", "year","votes","budget","gross", "net_profit",
+                                        "runtime", "gender", "genre_", "rating_", "director_",
+                                        "writer_", "star_", "country_", "company_",
+                                        "female_indicator")]
+
+movies_dataset <- movies_dataset[!is.na(movies_dataset$score), ]
+movies_dataset <- movies_dataset[!is.na(movies_dataset$year), ]
+movies_dataset <- movies_dataset[!is.na(movies_dataset$votes), ]
+movies_dataset <- movies_dataset[!is.na(movies_dataset$budget), ]
+movies_dataset <- movies_dataset[!is.na(movies_dataset$gross), ]
+movies_dataset <- movies_dataset[!is.na(movies_dataset$runtime), ]
 ```
 
 # 1. Introduction
@@ -46,66 +70,60 @@ With this two datasets, we then perform an inner-join on them by their movie lea
 
 Before we perform our analysis, we also clean up the data by removing all the entries that have empty values for the fields that we are interested (score, budget, gross, runtime). The final dataset has over 5000 rows of movie data.
 
-```{r warning=FALSE, message=FALSE, echo=FALSE}
+## 2a. Data Characteristics
+In this section we will take a look at the data characteristics for our variables that we are interested and see if there is any need to perform cleanup or transformation before we build our models.\
+\
 
-# movies <- read.csv("datasets/movies.csv")
-# 
-# cast_gender <- read.csv("datasets/cast_gender.csv")
-# 
-# movies_cast_gender <- inner_join(movies, cast_gender, by = c("star" = "name"))
-# 
-# movies_cast_gender$genre_ <- as.numeric(factor(movies_cast_gender$genre))
-# movies_cast_gender$rating_ <- as.numeric(factor(movies_cast_gender$rating))
-# movies_cast_gender$director_ <- as.numeric(factor(movies_cast_gender$director))
-# movies_cast_gender$writer_ <- as.numeric(factor(movies_cast_gender$writer))
-# movies_cast_gender$star_ <- as.numeric(factor(movies_cast_gender$star))
-# movies_cast_gender$country_ <- as.numeric(factor(movies_cast_gender$country))
-# movies_cast_gender$company_ <- as.numeric(factor(movies_cast_gender$company))
-# 
-# movies_cast_gender <- movies_cast_gender %>%
-#   mutate(
-#     net_profit = gross - budget
-#   )
-# 
-# movies_cast_gender <- movies_cast_gender %>%
-#   mutate(male_indicator = case_when(
-#     gender == 1 ~ 0,
-#     gender == 2 ~ 1
-#   )) %>%
-#   mutate(female_indicator = case_when(
-#     gender == 1 ~ 1,
-#     gender == 2 ~ 0
-#   ))
-# 
-# write.csv(movies_cast_gender,"datasets/movies_cast_gender.csv", row.names = FALSE)
+```{r , out.width="70%", warning=FALSE, message=FALSE, echo=FALSE}
+ggplot(movies_dataset, aes(score)) + 
+  geom_histogram(position="dodge", alpha=0.8, binwidth = 0.5) +
+  ggtitle("Distribution of IMDb scores")
 
-movies_cast_gender <- read.csv("datasets/movies_cast_gender.csv")
-
-movies_cast_gender <- movies_cast_gender %>%
-  mutate(gender_str = case_when(
-    gender == 1 ~ "female",
-    gender == 2 ~ "male"
-  ))
-
-movies_dataset <- movies_cast_gender[, c("score", "year","votes","budget","gross", "net_profit",
-                                        "runtime", "gender", "genre_", "rating_", "director_",
-                                        "writer_", "star_", "country_", "company_",
-                                        "female_indicator")]
-
-movies_dataset <- movies_dataset[!is.na(movies_dataset$score), ]
-movies_dataset <- movies_dataset[!is.na(movies_dataset$year), ]
-movies_dataset <- movies_dataset[!is.na(movies_dataset$votes), ]
-movies_dataset <- movies_dataset[!is.na(movies_dataset$budget), ]
-movies_dataset <- movies_dataset[!is.na(movies_dataset$gross), ]
-movies_dataset <- movies_dataset[!is.na(movies_dataset$runtime), ]
-
-
+mean_score <- round(mean(movies_dataset$score), 2)
 ```
+\
+The IMDb scores looks like a normal distribution, with its mean at around `r mean_score`
+\
+```{r , out.width="70%", warning=FALSE, message=FALSE, echo=FALSE}
+ggplot(movies_dataset, aes(budget)) + 
+  geom_histogram(position="dodge", alpha=0.8) +
+  ggtitle("Distribution of Movie Budgets")+
+  scale_x_continuous(labels = comma)
+```
+\
+Movie Budget is highly skewed to the left which means most movies have relatively low budget, and there are only a few movies that have really high budget.
+\
+```{r , out.width="70%", warning=FALSE, message=FALSE, echo=FALSE}
+ggplot(movies_dataset, aes(gross)) + 
+  geom_histogram(position="dodge", alpha=0.8) +
+  ggtitle("Distribution of Movie Gross Earnings")+
+  scale_x_continuous(labels = comma)
+```
+\
+Movie Gross Earnings has similar characteristics as the budget, also highly skewed to the low end.
+\
+```{r , out.width="70%", warning=FALSE, message=FALSE, echo=FALSE}
+ggplot(movies_dataset, aes(runtime)) + 
+  geom_histogram(position="dodge", alpha=0.8) +
+  ggtitle("Distribution of Movie Runtime")+
+  scale_x_continuous(labels = comma)
+```
+\
+Most movies have runtime under 150 minutes.
+\
+
 ```{r warning=FALSE, message=FALSE, echo=FALSE}
-# hist(movies_dataset$score)
-# hist(movies_dataset$budget)
-# hist(movies_dataset$gross)
-# hist(log(movies_dataset$runtime))
+ggplot(movies_dataset, aes(gender)) + 
+  geom_histogram(position="dodge", alpha=0.8, binwidth = 0.5) +
+  ggtitle("Lead Actor's Gender")
+```
+\
+In this histogram that shows the number of Male versus Female Lead Actor. The value "2.0" represent 'Male', and you can see that there are much more Male lead actors in our movie dataset.
+\
+
+
+```{r warning=FALSE, message=FALSE, echo=FALSE}
+
 # hist(movies_dataset$gender)
 # 
 # movies_cast_gender %>% group_by(gender, gender_str) %>% summarise(count_genders = n()) %>% arrange(desc(count_genders))
