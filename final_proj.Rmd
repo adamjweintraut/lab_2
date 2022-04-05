@@ -55,21 +55,24 @@ movies_dataset <- movies_dataset[!is.na(movies_dataset$runtime), ]
 # 1. Introduction
 
 ## 1.1 Motivation
-Movies have been in existence since 1888. Since then, watching movies has been one of our favorite pastimes. Movies are a form of blending visual and sound communication to tell a vivid story. The movie entertainment industry is a high profile multi-billion-dollar global industry.
+Movies have been in existence since 1888. Since then, watching movies has been one of our favorite pastimes. Movies are a form of blending visual and sound communication to tell a vivid story. 
+
+The movie entertainment industry is a high profile multi-billion-dollar global industry. The movie industry has exponentially grown over the past decades. With this growth there has come a windfall of revenue generating profits. As technology evolves and enhances the viewing experience, you can watch movies from various devices. People can enjoy movies in the comfort of their homes or while traveling. 
 
 The ability to predict movie revenue can be a very insightful opportunity. With the predicted revenue information, movie makers can intelligently plan their movie budget. Movie budget line items including star salaries, production, and distribution costs can be smartly negotiated and set. 
 
-The success or failure of a movie depends on a variety of different factors: star cast, cast gender, budget, and title. With the breadth of data available today, making accurate revenue predictions is extremely difficult. However, we do have many data science tools and methodologies at our disposal to help in attempting to make movie revenue predictions. 
-
 \newpage
 ## 1.2 Research Question
+
+The success or failure of a movie depends on a variety of different factors: star cast, cast gender, budget, and title. With the breadth of data available today, making accurate revenue predictions is extremely difficult. However, we do have many data science tools and methodologies at our disposal to help in attempting to make movie revenue predictions. 
 
 Our research question is:\
 \
 _How the Lead actor's gender affect a movie's gross revenue?_
 \
 \
-We have an hypothesis that a male lead actor will bring more gross revenue for a movie overall. In our research project we designed three linear regression models to predict the movie revenue. We joined various movies dataset to extract the following features, cast gender, budget, runtime and title. After data cleaning, data processing and focusing on the action genre we can focus on 1618 movies for analysis. (TODO add analysis success criteria)  
+
+In this study we will explore the relationship between the following features, cast gender, budget, runtime and title. First, to harness the power of the regression testing harness we engineered three linear regression models to predict the movie revenue. Second, we engineer the model using various data features. We iterated over different features including the following extracted features, cast gender, budget, runtime and title. Third, we collected various types of datasets from different freely open sources. We then joined and sanitized the data for inspections and prediction modeling. 
 
 # 2. Description of the Data and Research Design
 
