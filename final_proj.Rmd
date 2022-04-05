@@ -147,11 +147,26 @@ In this histogram that shows the number of Male versus Female Lead Actor. The va
 
 # 3. A Model Building Process
 
-You will next build a set of models to investigate your research question, documenting your decisions. Here are some things to keep in mind during your model building process:
+```{r warning=FALSE, message=FALSE, echo=FALSE}
+# You will next build a set of models to investigate your research question, documenting your decisions. Here are some things to keep in mind during your model building process:
+# 
+# 1. *What do you want to measure*? Make sure you identify one, or a few, variables that will allow you to derive conclusions relevant to your research question, and include those variables in all model specifications. How are the variables that you will be modeling distributed? Provide enough context and information about your data for your audience to understand whatever model results you will eventually present. 
+# 2. What [covariates](https://en.wikipedia.org/wiki/Dependent_and_independent_variables#Statistics_synonyms) help you achieve your modeling goals? Are there problematic covariates?  either due to *collinearity*, or because they will absorb some of a causal effect you want to measure?
+# 3. What *transformations*, if any, should you apply to each variable? These transformations might reveal linearities in the data, make our results relevant, or help us meet model assumptions.
+# 4. Are your choices supported by exploratory data analysis (*EDA*)? You will likely start with some general EDA to *detect anomalies* (missing values, top-coded variables, etc.). From then on, your EDA should be interspersed with your model building. Use visual tools to *guide* your decisions. You can also leverage statistical *tests* to help assess whether variables, or groups of variables, are improving model fit.
+# 
+# At the same time, it is important to remember that you are not trying to create one perfect model. You will create several specifications, giving the reader a sense of how robust (or sensitive) your results are to modeling choices, and to show that you're not just cherry-picking the specification that leads to the largest effects.
+# 
+# At a minimum, you need to estimate at least three model specifications: 
+# 
+# The first model you include should include *only the key variables* you want to measure. These variables might be transformed, as determined by your EDA, but the model should include the absolute minimum number of covariates (usually zero or one covariate that is so crucial it would be unreasonable to omit it).
+# 
+# Additional models should each be defensible, and should continue to tell the story of how product features contribute to product success. This might mean including additional right-hand side features to remove omitted variable bias identified by your casual theory; or, instead, it might mean estimating a model that examines a related concept of success, or a model that investigates a heterogeneous effect. These models, and your modeling process should be defensible, incremental, and clearly explained at all points.
+# 
+# Your goal is to choose models that encircle the space of reasonable modeling choices, and to give an overall understanding of how these choices impact results.
+```
 
-1. *What do you want to measure*? Make sure you identify one, or a few, variables that will allow you to derive conclusions relevant to your research question, and include those variables in all model specifications. How are the variables that you will be modeling distributed? Provide enough context and information about your data for your audience to understand whatever model results you will eventually present. 
-
-In order to answer our research question, we first build our first model with 'Gross earnings' as our outcome variable and 'Female Indicator' as our feature variable. A female indictor is a binary flag and hs the value 0 or 1. When it is '1', it means that the lead actor of that movie is a female. We generate this indicator by processing the 'gender' data in the dataset and add a new column in the data to store the resulting indicator.
+In order to answer our research question, we build our first model with 'Gross earnings' as our outcome variable and 'Female Indicator' as our feature variable. A female indictor is a binary flag and has the value 0 or 1. When it is '1', it means that the lead actor of that movie is a female. We generate this indicator by processing the 'gender' data in the dataset and add a new column in the data to store the resulting indicator.
 \
 Moreover, since the Gross earning is highly skewed, we also apply Log transformation to it in our first model. So the model becomes this:
 \
@@ -178,19 +193,6 @@ stargazer(
 
 
 
-2. What [covariates](https://en.wikipedia.org/wiki/Dependent_and_independent_variables#Statistics_synonyms) help you achieve your modeling goals? Are there problematic covariates?  either due to *collinearity*, or because they will absorb some of a causal effect you want to measure?
-3. What *transformations*, if any, should you apply to each variable? These transformations might reveal linearities in the data, make our results relevant, or help us meet model assumptions.
-4. Are your choices supported by exploratory data analysis (*EDA*)? You will likely start with some general EDA to *detect anomalies* (missing values, top-coded variables, etc.). From then on, your EDA should be interspersed with your model building. Use visual tools to *guide* your decisions. You can also leverage statistical *tests* to help assess whether variables, or groups of variables, are improving model fit.
-
-At the same time, it is important to remember that you are not trying to create one perfect model. You will create several specifications, giving the reader a sense of how robust (or sensitive) your results are to modeling choices, and to show that you're not just cherry-picking the specification that leads to the largest effects.
-
-At a minimum, you need to estimate at least three model specifications: 
-
-The first model you include should include *only the key variables* you want to measure. These variables might be transformed, as determined by your EDA, but the model should include the absolute minimum number of covariates (usually zero or one covariate that is so crucial it would be unreasonable to omit it).
-
-Additional models should each be defensible, and should continue to tell the story of how product features contribute to product success. This might mean including additional right-hand side features to remove omitted variable bias identified by your casual theory; or, instead, it might mean estimating a model that examines a related concept of success, or a model that investigates a heterogeneous effect. These models, and your modeling process should be defensible, incremental, and clearly explained at all points.
-
-Your goal is to choose models that encircle the space of reasonable modeling choices, and to give an overall understanding of how these choices impact results.
 
 # 4. Results
 
