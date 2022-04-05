@@ -73,7 +73,9 @@ We have an hypothesis that a male lead actor will bring more gross revenue for a
 
 # 2. Description of the Data and Research Design
 
-After you have presented the introduction and the concepts that are under investigation, what data are you going to use to answer the questions? What type of research design are you using? What type of models are you going to estimate, and what goals do you have for these models?  
+```{r , out.width="70%", warning=FALSE, message=FALSE, echo=FALSE}
+# After you have presented the introduction and the concepts that are under investigation, what data are you going to use to answer the questions? What type of research design are you using? What type of models are you going to estimate, and what goals do you have for these models?  
+```  
 
 We use two datasets for our analysis:
 
