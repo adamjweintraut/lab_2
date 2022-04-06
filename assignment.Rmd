@@ -123,6 +123,10 @@ ggplot(movies_dataset, aes(x = runtime, y = gross)) +
 ggplot(movies_dataset, aes(x = log(runtime), y = gross)) + 
   geom_point() + geom_smooth(method = "lm")
 
+
+ggplot(movies_dataset, aes(x = log(budget), y = log(gross))) + 
+  geom_point() + geom_smooth(method = "lm")
+
 ```
 ```{r}
 

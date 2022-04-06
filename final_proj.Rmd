@@ -173,7 +173,7 @@ In this histogram that shows the number of Male versus Female Lead Actor. The va
 ```
 
 ## 3.1 Base Model: Female indicator and Gross Earnings
-In order to answer our research question, we build our first model with 'Gross earnings' as our outcome variable and 'Female Indicator' as our feature variable. A female indictor is a binary flag and has the value 0 or 1. When it is '1', it means that the lead actor of that movie is a female. We generate this indicator by processing the 'gender' data in the dataset and add a new column in the data to store the resulting indicator.
+In order to answer our research question, we build our first model with 'Gross earnings' as our outcome variable and 'Female Indicator' as our feature variable. A female indicator is a binary flag which has the value of 0 or 1. When it is '1', it means that the lead actor of that movie is a female. We generate this indicator by processing the 'gender' data and add a new column in the dataset to store the resulting indicator.
 \
 Moreover, since the Gross earning is highly skewed, we also apply Log transformation to it in our first model. So the model becomes this:
 \
@@ -192,17 +192,30 @@ stargazer(
   )
 ```
 
-We see that the p-value of the "Female_indictor" is less than 0.05 which means there is evidence that female gender has effects on "Log(Gross)". The coefficient is a negative value, meaning that a movie with a female lead actor actually brings less gross earnings than a movie with a male lead actor. The coefficient value of -0.20 means that it will be 20% less on gross if a movie uses a female lead actor. The adjusted R-squared is 0.002 which is low, meaning that at this point the model doesn't fit the data really well. The next model we will focus on improving the R-square by introducing other covariates that can help explain more of the model.
+We see that the p-value of the "Female_indictor" is less than 0.01 which means there is significant evidence that female gender has effects on "Log(Gross)". The coefficient is a negative value, meaning that a movie with a female lead actor actually brings less gross earnings than a movie with a male lead actor. The coefficient value of -0.20 means that it will be 20% less on gross if a movie uses a female lead actor. The adjusted R-squared is 0.002 which is low, meaning that at this point the model doesn't fit the data really well. The next model we will focus on improving the R-square by introducing other covariates that can help explain more of the model.
 
 \newpage
 
-## 3.2 Second Model: Adding Movie Runtime
-
-
-
-
-
-
+## 3.2 Second Model: Adding Movie Budget
+For the second model we are trying to improve the fitness of the model by introducing a feature variable that has a strong correlation with our outcome varable which is gross earnings. From our EDA we generated a correlation heatmap to show the correlations between variables. We identify that the 'budget' variable has the strongest correlation with gross earnings. This also makes sense in reality, since a bigger budge movies are expected to have higher gross earnings in order to generate profits for the production companies. Of course big budget doesn't guarantee a big payout. Success of a movie still depends on other factors, like the story itself.
+\
+The Budget data is also highly skewed, so we apply Log transformation to it in our second model as well:
+\
+\
+_Log(Gross) = Female_indicator + Log(Budget)_
+\
+\
+Here are the statistics:
+``` {r warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+lm = lm(log(gross) ~ female_indicator + log(budget), movies_dataset)
+stargazer(
+  lm,
+  header=FALSE,
+  type='latex',
+  se = list(get_robust_se(lm))
+  )
+```
+After introducing the budget into our model, we see that both Female_indicator and Budget have a very low p-value less that 0.01. This indicates that both of these feature variables are statistically significant in determining the gross earnings of a movie. Interestingly, the coefficient of the female_indicator is now a positive value, meaning that a movie with a female lead actor actually brings in more money (about 12% more) than a movie with male lead actor. Most importantly, the R-square has hugely improved, to almost 50%.
 
 
 
