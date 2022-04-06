@@ -39,8 +39,8 @@ movies_cast_gender <- movies_cast_gender %>%
     gender == 2 ~ "male"
   ))
 
-movies_dataset <- movies_cast_gender[, c("score", "year","votes","budget","gross", "net_profit",
-                                        "runtime", "gender", "genre_", "rating_", "director_",
+movies_dataset <- movies_cast_gender[, c("name", "score", "year","votes","budget","gross", "net_profit",
+                                        "runtime", "gender", "genre", "genre_", "rating_", "director_",
                                         "writer_", "star_", "country_", "company_",
                                         "female_indicator")]
 
@@ -50,6 +50,15 @@ movies_dataset <- movies_dataset[!is.na(movies_dataset$votes), ]
 movies_dataset <- movies_dataset[!is.na(movies_dataset$budget), ]
 movies_dataset <- movies_dataset[!is.na(movies_dataset$gross), ]
 movies_dataset <- movies_dataset[!is.na(movies_dataset$runtime), ]
+
+#filter only the Action genre
+# movies_dataset <- movies_dataset[movies_dataset$genre == "Action", ]
+
+movies_title_sim <- read.csv("datasets/movie_title_sim_all.csv")
+
+movies_title_sim <- movies_title_sim[, c("name", "title_unique_score")]
+
+movies_dataset <- inner_join(movies_dataset, movies_title_sim, by = c("name" = "name"))
 ```
 
 # 1. Introduction
@@ -132,6 +141,18 @@ ggplot(movies_dataset, aes(gender)) +
 ```
 \
 In this histogram that shows the number of Male versus Female Lead Actor. The value "2.0" represent 'Male', and you can see that there are much more Male lead actors in our movie dataset.
+\
+
+```{r warning=FALSE, message=FALSE, echo=FALSE}
+
+ggplot(movies_dataset, aes(title_unique_score)) + 
+  geom_histogram(position="dodge", alpha=0.8) +
+  ggtitle("Distribution of Movie Title Unique Score")+
+  scale_x_continuous(labels = comma)
+
+```
+\
+The title unique score is skewed to the low end.
 \
 
 
@@ -217,6 +238,37 @@ stargazer(
 ```
 After introducing the budget into our model, we see that both Female_indicator and Budget have a very low p-value less that 0.01. This indicates that both of these feature variables are statistically significant in determining the gross earnings of a movie. Interestingly, the coefficient of the female_indicator is now a positive value, meaning that a movie with a female lead actor actually brings in more money (about 12% more) than a movie with male lead actor. Most importantly, the R-square has hugely improved, to almost 50%.
 
+
+\newpage
+
+## 3.3 Third Model: Adding Title Uniqueness
+We are also interested to find out if the movie title has effects on gross earning. First, we build a simple model that uses only 'title_unique_score' as the feature variable against gross earnings.
+
+``` {r warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+# lm = lm(log(gross) ~ female_indicator + log(budget) + log(title_unique_score), movies_dataset)
+
+lm = lm(log(gross) ~ log(title_unique_score), movies_dataset)
+stargazer(
+  lm,
+  header=FALSE,
+  type='latex',
+  se = list(get_robust_se(lm))
+  )
+```
+The title uniqueness score has a very low p-value less that 0.01. It seems that title uniqueness does affect the gross earning. The coefficient of the 'Log(title_unique_score)' is positive, meaning a high score will help increase gross earnings. The R-square value is very low, which indicates that this model doesn't fit well with the data.
+
+So we will introduce this new feature into our 3rd model:
+
+``` {r warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+lm = lm(log(gross) ~ female_indicator + log(budget) + log(title_unique_score), movies_dataset)
+stargazer(
+  lm,
+  header=FALSE,
+  type='latex',
+  se = list(get_robust_se(lm))
+  )
+```
+Based on the new statistics, it seems that this feature doesn't really make much difference on our model. Coefficients of the other feature variables don't change much, so as the R-square value.
 
 
 # 4. Results

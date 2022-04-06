@@ -1,3 +1,4 @@
 # don't include large datasets, zip file makes up for it
 **/large_datasets/*.csv
 !**/large_datasets/*.zip
+.DS_Store
