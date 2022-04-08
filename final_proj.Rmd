@@ -79,9 +79,8 @@ Our research question is:\
 \
 _How the Lead actor's gender affect a movie's gross revenue?_
 \
-\
 
-In this study we will explore the relationship between the following features, cast gender, budget, runtime and title. First, to harness the power of the regression testing harness we engineered three linear regression models to predict the movie revenue. Second, we engineer the model using various data features. We iterated over different features including the following extracted features, cast gender, budget, runtime and title. Third, we collected various types of datasets from different freely open sources. We then joined and sanitized the data for inspections and prediction modeling. 
+In this study we will explore the relationship between the following features, cast gender, budget, and title. First, to harness the power of the regression testing harness we engineered three linear regression models to predict the movie revenue. Second, we engineer the model using various data features. We iterated over different features including the following extracted features, cast gender, budget, and title. Third, we collected various types of datasets from different freely open sources. We then joined and sanitized the data for inspections and prediction modeling. 
 
 # 2. Description of the Data and Research Design
 
@@ -92,14 +91,14 @@ In this study we will explore the relationship between the following features, c
 We use two datasets for our analysis:
 
 **IMDb dataset** ([url](https://www.kaggle.com/datasets/danielgrijalvas/movies)):
-For this dataset, the data that we are interested in are the movie title, budget, gross, and runtime. Budget and Gross are in US dollar. Movie Runtime is in minutes.
+For this dataset, the data that we are interested in are the movie title, budget, and gross. Budget and Gross are in US dollar.
 
 **Movie roles by gender** ([url](https://www.kaggle.com/code/martinellis/exploration-of-movie-roles-by-gender/notebook)):
 This dataset has the gender info for movie actors. The source has instructions on how to execute R code to parse the original data file, which has data in JSON format, and convert it into CSV format that can be imported to R studio. The values of gender is either a value of 2 for "Male", or 1 for "Female".
 
 With this two datasets, we then perform an inner-join on them by their movie lead actor name to generate a single dataset that has all the movie info plus lead actor's gender info.
 
-Before we perform our analysis, we also clean up the data by removing all the entries that have empty values for the fields that we are interested (budget, gross, runtime). The final dataset has over 5000 rows of movie data.
+Before we perform our analysis, we also clean up the data by removing all the entries that have empty values for the fields that we are interested (budget, gross). The final dataset has over 5000 rows of movie data.
 
 ## 2a. Data Characteristics
 In this section we take a look at the data characteristics for our variables that we are interested and see if there is any need to perform cleanup or transformation before we build our models.\
@@ -124,14 +123,14 @@ ggplot(movies_dataset, aes(gross)) +
 Movie Gross Earnings has similar characteristics as the budget, also highly skewed to the low end.
 \
 ```{r , out.width="70%", warning=FALSE, message=FALSE, echo=FALSE}
-ggplot(movies_dataset, aes(runtime)) + 
-  geom_histogram(position="dodge", alpha=0.8) +
-  ggtitle("Distribution of Movie Runtime")+
-  scale_x_continuous(labels = comma)
+# ggplot(movies_dataset, aes(runtime)) + 
+#   geom_histogram(position="dodge", alpha=0.8) +
+#   ggtitle("Distribution of Movie Runtime")+
+#   scale_x_continuous(labels = comma)
+# \
+# Most movies have runtime under 150 minutes.
+# \
 ```
-\
-Most movies have runtime under 150 minutes.
-\
 
 ```{r , out.width="70%", warning=FALSE, message=FALSE, echo=FALSE}
 ggplot(movies_dataset, aes(gender)) + 
