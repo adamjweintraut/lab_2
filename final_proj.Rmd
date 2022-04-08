@@ -216,17 +216,6 @@ _Log(Gross) = Female_indicator + Log(Budget)_
 ## 3.3 Third Model: Adding Title Uniqueness
 We are also interested to find out if the movie title has effects on gross earning. First, we build a simple model that uses only 'title_unique_score' as the feature variable against gross earnings.
 
-``` {r warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
-# lm = lm(log(gross) ~ female_indicator + log(budget) + log(title_unique_score), movies_dataset)
-
-# model_3a = lm(log(gross) ~ log(title_unique_score), movies_dataset)
-# stargazer(
-#   model_3a,
-#   header=FALSE,
-#   type='latex',
-#   se = list(get_robust_se(model_3a))
-#   )
-```
 The title uniqueness score has a very low p-value less that 0.01. It seems that title uniqueness does affect the gross earning. The coefficient of the 'Log(title_unique_score)' is positive, meaning a high score will help increase gross earnings. The R-square value is very low, which indicates that this model doesn't fit well with the data.
 
 So we will introduce this new feature into our 3rd model:
@@ -235,15 +224,6 @@ So we will introduce this new feature into our 3rd model:
 _Log(Gross) = Female_indicator + Log(Budget) + Log(Title_Unqiue_Score)_
 \
 
-``` {r warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
-# model_3 = lm(log(gross) ~ female_indicator + log(budget) + log(title_unique_score), movies_dataset)
-# stargazer(
-#   model_3,
-#   header=FALSE,
-#   type='latex',
-#   se = list(get_robust_se(model_3))
-#   )
-```
 
 \newpage
 
@@ -271,6 +251,8 @@ After introducing the budget into our second model, we see that both Female_indi
 
 For our third model, it seems that this feature doesn't really make much difference on our model. Coefficients of the other feature variables don't change much, so as the R-square value.
 
+Based on these statistics, we see that using a female lead actor in a movie does help bringing more gross earnings in a significant way. The effect on gross earnings is about 11-12%, which is substantial.
+
 
 ```{r warning=FALSE, message=FALSE, echo=FALSE,}
 # You should display all of your model specifications in a regression table, using a package like [`stargazer`](https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf) to format your output. It should be easy for the reader to find the coefficients that represent key effects near the top of the regression table, and scan horizontally to see how they change from specification to specification. Make sure that you display the most appropriate standard errors in your table.
@@ -279,11 +261,33 @@ For our third model, it seems that this feature doesn't really make much differe
 ```
 
 
-
-
 # 5. Limitations of your Model 
 
-## 5a. Statistical limitations of your model
+## 5.1 Large-Sample Assumptions
+Since our analysis is based on a dataset with more than 5000 entries, we can use the large-sample assumptions.
+
+### 5.1.1 Independent and Identically Distributed (I.I.D.)
+Our dataset doesn't satisfy the IID assumption. Our dataset has movies between year 1980 and 2020 scraped from IMDb. For movies that are actually in the same series, like 'Star Wars' or "Mission Impossible", their data will not be independent.
+
+### 5.1.2 Unique BLP Exists
+We want to make sure that no variables are perfectly collinear with any one of the other variables.
+
+```{r warning=FALSE, message=FALSE, echo=FALSE,}
+
+
+movies_dataset_model <- movies_dataset[, c("gross", "budget", "female_indicator", "title_unique_score")]
+
+movies_cor <- cor(movies_dataset_model)
+movies_cor
+
+library(reshape2)
+melted_movies_cor <- melt(movies_cor)
+# 
+# library(ggplot2)
+# ggplot(data = melted_movies_cor, aes(x=Var1, y=Var2, fill=value)) +
+#   geom_tile() + theme(axis.text.x = element_text(angle = 90, vjust = 1, hjust=1))
+```
+
 
 ```{r warning=FALSE, message=FALSE, echo=FALSE,}
 # As a team, evaluate all of the large sample model assumptions. However, you do not necessarily want to discuss every assumption in your report. Instead, highlight any assumption that might pose significant problems for your analysis. For any violations that you identify, describe the statistical consequences. If you are able to identify any strategies to mitigate the consequences, explain these strategies. 

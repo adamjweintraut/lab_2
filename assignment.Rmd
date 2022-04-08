@@ -79,15 +79,15 @@ movies_dataset <- movies_dataset[!is.na(movies_dataset$runtime), ]
 
 NROW(movies_dataset)
 
-# movies_cor <- cor(movies_dataset)
-# movies_cor
-# 
-# library(reshape2)
-# melted_movies_cor <- melt(movies_cor)
-# 
-# library(ggplot2)
-# ggplot(data = melted_movies_cor, aes(x=Var1, y=Var2, fill=value)) +
-#   geom_tile() + theme(axis.text.x = element_text(angle = 90, vjust = 1, hjust=1))
+movies_cor <- cor(movies_dataset)
+movies_cor
+
+library(reshape2)
+melted_movies_cor <- melt(movies_cor)
+
+library(ggplot2)
+ggplot(data = melted_movies_cor, aes(x=Var1, y=Var2, fill=value)) +
+  geom_tile() + theme(axis.text.x = element_text(angle = 90, vjust = 1, hjust=1))
 
 ```
 ```{r}
