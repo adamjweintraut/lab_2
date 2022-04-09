@@ -327,10 +327,9 @@ Our EDA shows that these variables have low correlation with Gross earnings, so 
 
 There are other variables not available in our dataset that might have causal effects on a movie's gross earnings.
 
-
-
-
-
+* Film distribution platforms
+* In theater duration
+* 
 
 
 # 6. Conclusion
