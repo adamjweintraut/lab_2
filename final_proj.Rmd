@@ -330,6 +330,7 @@ There are other variables not available in our dataset that might have causal ef
 * Film distribution platforms
 * In theater duration
 * Story of the movie
+* Acting skills of the cast
 
 
 # 6. Conclusion
