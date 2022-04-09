@@ -271,6 +271,8 @@ Our dataset doesn't satisfy the IID assumption. Our dataset has movies between y
 ### 5.1.2 Unique BLP Exists
 We want to make sure that no variables are perfectly collinear with any one of the other variables. From the correlation heatmap below, we can see that perfect collinearity only happens at the diagonal of the matrix which has all 1's and no where else. Also, while building our model, R didn't drop any variables considered to cause perfect collinearity with any other variables.
 
+\
+\
 ```{r warning=FALSE, message=FALSE, echo=FALSE,}
 
 movies_dataset_model <- movies_dataset[, c("gross", "budget", "female_indicator", "title_unique_score")]
@@ -287,7 +289,8 @@ ggplot(data = melted_movies_cor, aes(x=Var1, y=Var2, fill=value)) +
   geom_tile() + 
   scale_fill_gradient(low = "grey", high = "black") +
   geom_text(aes(Var2, Var1, label = value), color = "white", size = 6) +
-  theme(axis.text.x = element_text(angle = 90, vjust = 1, hjust=1))
+  theme(axis.text.x = element_text(angle = 90, vjust = 1, hjust=1), axis.title.x=element_blank(), axis.title.y=element_blank()) + 
+  ggtitle("Correlation Heatmap")
 ```
 
 
