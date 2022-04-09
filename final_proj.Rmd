@@ -285,7 +285,7 @@ melted_movies_cor <- melt(movies_cor)
 library(ggplot2)
 ggplot(data = melted_movies_cor, aes(x=Var1, y=Var2, fill=value)) +
   geom_tile() + 
-  # scale_fill_gradient(low = "white", high = "blue") +
+  scale_fill_gradient(low = "grey", high = "black") +
   geom_text(aes(Var2, Var1, label = value), color = "white", size = 6) +
   theme(axis.text.x = element_text(angle = 90, vjust = 1, hjust=1))
 ```
