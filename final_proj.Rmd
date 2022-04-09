@@ -305,13 +305,33 @@ ggplot(data = melted_movies_cor, aes(x=Var1, y=Var2, fill=value)) +
 
 ![Intentional Omitted Variables]("omitted_variables.png")
 
+The variables that are available in our dataset but are omitted in building our models are:
 
+* Genre
+* Director
+* Writer
+* Production Company
+* Lead Actor
+* Country
+* Release date
+* IMDb rating
+* Number of votes in IMDb
+
+Our EDA shows that these variables have low correlation with Gross earnings, so we simply omit them in our models.
 
 ### 5.2.2 Unintentional Omitted Variables
 
 ```{r warning=FALSE, message=FALSE, echo=FALSE,}
 # What are the most important *omitted variables* that you were not able to measure and include in your analysis? For each variable you name, you should *reason about the direction of bias* caused by omitting this variable and whether the omission of this variable calls into question the core results you are reporting. What data could you collect that would resolve any omitted variables bias? 
 ```
+
+There are other variables not available in our dataset that might have causal effects on a movie's gross earnings.
+
+
+
+
+
+
 
 # 6. Conclusion
 
