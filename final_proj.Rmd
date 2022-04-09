@@ -269,10 +269,9 @@ Since our analysis is based on a dataset with more than 5000 entries, we can use
 Our dataset doesn't satisfy the IID assumption. Our dataset has movies between year 1980 and 2020 scraped from IMDb. For movies that are actually in the same series, like 'Star Wars' or "Mission Impossible", their data will not be independent.
 
 ### 5.1.2 Unique BLP Exists
-We want to make sure that no variables are perfectly collinear with any one of the other variables.
+We want to make sure that no variables are perfectly collinear with any one of the other variables. From the correlation heatmap below, we can see that perfect collinearity only happens at the diagonal of the matrix which has all 1's and no where else. Also, while building our model, R didn't drop any variables considered to cause perfect collinearity with any other variables.
 
 ```{r warning=FALSE, message=FALSE, echo=FALSE,}
-
 
 movies_dataset_model <- movies_dataset[, c("gross", "budget", "female_indicator", "title_unique_score")]
 
@@ -286,7 +285,8 @@ melted_movies_cor <- melt(movies_cor)
 library(ggplot2)
 ggplot(data = melted_movies_cor, aes(x=Var1, y=Var2, fill=value)) +
   geom_tile() + 
-  geom_text(aes(Var2, Var1, label = value), color = "white", size = 4) +
+  # scale_fill_gradient(low = "white", high = "blue") +
+  geom_text(aes(Var2, Var1, label = value), color = "white", size = 6) +
   theme(axis.text.x = element_text(angle = 90, vjust = 1, hjust=1))
 ```
 
@@ -297,7 +297,17 @@ ggplot(data = melted_movies_cor, aes(x=Var1, y=Var2, fill=value)) +
 # Note that you may need to change your model specifications in response to violations of the large sample model. 
 ```
 
-## 5b. Structural limitations of your model
+\newpage
+
+## 5.2 Omitted Variables
+
+### 5.2.1 Intentional Omitted Variables
+
+![Intentional Omitted Variables]("omitted_variables.png")
+
+
+
+### 5.2.2 Unintentional Omitted Variables
 
 ```{r warning=FALSE, message=FALSE, echo=FALSE,}
 # What are the most important *omitted variables* that you were not able to measure and include in your analysis? For each variable you name, you should *reason about the direction of bias* caused by omitting this variable and whether the omission of this variable calls into question the core results you are reporting. What data could you collect that would resolve any omitted variables bias? 
