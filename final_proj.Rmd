@@ -50,6 +50,7 @@ movies_dataset <- movies_dataset[!is.na(movies_dataset$votes), ]
 movies_dataset <- movies_dataset[!is.na(movies_dataset$budget), ]
 movies_dataset <- movies_dataset[!is.na(movies_dataset$gross), ]
 movies_dataset <- movies_dataset[!is.na(movies_dataset$runtime), ]
+# movies_dataset$genre_f <- factor(movies_dataset$genre, ordered=FALSE)
 
 #filter only the Action genre
 # movies_dataset <- movies_dataset[movies_dataset$genre == "Action", ]
@@ -80,7 +81,7 @@ Our research question is:\
 _How the Lead actor's gender affect a movie's gross revenue?_
 \
 
-In this study we will explore the relationship between the following features, cast gender, budget, and title. First, to harness the power of the regression testing harness we engineered three linear regression models to predict the movie revenue. Second, we engineer the model using various data features. We iterated over different features including the following extracted features, cast gender, budget, and title. Third, we collected various types of datasets from different freely open sources. We then joined and sanitized the data for inspections and prediction modeling. 
+In this study we will explore the relationship between the following features, cast gender, budget, runtime, and title. First, to harness the power of the regression testing harness we engineered three linear regression models to predict the movie revenue. Second, we engineer the model using various data features. We iterated over different features including the following extracted features, cast gender, budget, runtime, and title. Third, we collected various types of datasets from different freely open sources. We then joined and sanitized the data for inspections and prediction modeling. 
 
 # 2. Description of the Data and Research Design
 
@@ -98,7 +99,7 @@ This dataset has the gender info for movie actors. The source has instructions o
 
 With this two datasets, we then perform an inner-join on them by their movie lead actor name to generate a single dataset that has all the movie info plus lead actor's gender info.
 
-Before we perform our analysis, we also clean up the data by removing all the entries that have empty values for the fields that we are interested (budget, gross). The final dataset has over 5000 rows of movie data.
+Before we perform our analysis, we also clean up the data by removing all the entries that have empty values for the fields that we are interested (budget, gross, runtime). The final dataset has over 5000 rows of movie data.
 
 In addition, we also generate a "title_unique_score" using a simple logic. We take all the words from all movies and count the number of occurrences for each word. Then for each title we sum the counts. This means that the lower the score, the more unique the title. The score might also be affected by the title length itself, since a short title will also tends to get a low score since it has less words.
 
@@ -125,20 +126,18 @@ ggplot(movies_dataset, aes(gross)) +
 Movie Gross Earnings has similar characteristics as the budget, also highly skewed to the low end.
 \
 ```{r , out.width="70%", warning=FALSE, message=FALSE, echo=FALSE}
-# ggplot(movies_dataset, aes(runtime)) + 
-#   geom_histogram(position="dodge", alpha=0.8) +
-#   ggtitle("Distribution of Movie Runtime")+
-#   scale_x_continuous(labels = comma)
-# \
-# Most movies have runtime under 150 minutes.
-# \
+ggplot(movies_dataset, aes(runtime)) +
+  geom_histogram(position="dodge", alpha=0.8) +
+  ggtitle("Distribution of Movie Runtime")+
+  scale_x_continuous(labels = comma)
 ```
-
+\
+Most movies have runtime under 150 minutes.
+\
 ```{r , out.width="70%", warning=FALSE, message=FALSE, echo=FALSE}
 ggplot(movies_dataset, aes(gender)) + 
   geom_histogram(position="dodge", alpha=0.8, binwidth = 0.5) +
   ggtitle("Lead Actor's Gender")
-
 ```
 \
 In this histogram that shows the number of Male versus Female Lead Actor. The value "2.0" represent 'Male', and you can see that there are much more Male lead actors in our movie dataset.
@@ -155,6 +154,19 @@ ggplot(movies_dataset, aes(title_unique_score)) +
 \
 The title unique score is skewed to the low end, which means most titles are pretty unique, since the titles are composed of words that has low occurrences.
 \
+```{r warning=FALSE, message=FALSE, echo=FALSE}
+# ggplot(movies_dataset, aes(genre_)) + 
+#   geom_histogram(position="dodge", alpha=0.8) +
+#   ggtitle("Distribution of Genre")+
+#   scale_x_continuous(labels = comma)
+```
+
+```{r warning=FALSE, message=FALSE, echo=FALSE}
+# ggplot(movies_dataset, aes(year)) + 
+#   geom_histogram(position="dodge", alpha=0.8) +
+#   ggtitle("Distribution of Year")+
+#   scale_x_continuous(labels = comma)
+```
 
 
 ```{r warning=FALSE, message=FALSE, echo=FALSE}
@@ -229,9 +241,10 @@ _Log(Gross) = Female_indicator + Log(Budget) + Log(Title_Unqiue_Score)_
 # 4. Results
 
 ```{r warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
-model_1 <- lm(log(gross) ~ female_indicator, movies_dataset)
-model_2 <- lm(log(gross) ~ female_indicator + log(budget), movies_dataset)
-model_3 <- lm(log(gross) ~ female_indicator + log(budget) + log(title_unique_score), movies_dataset)
+
+model_1 <- lm(log(gross) ~ female_indicator + log(budget), movies_dataset)
+model_2 <- lm(log(gross) ~ female_indicator + log(budget) + runtime, movies_dataset)
+model_3 <- lm(log(gross) ~ female_indicator + log(budget) + runtime + log(title_unique_score), movies_dataset)
 
 stargazer(
   model_1,
@@ -266,7 +279,7 @@ Based on these statistics, we see that using a female lead actor in a movie does
 Since our analysis is based on a dataset with more than 5000 entries, we can use the large-sample assumptions.
 
 ### 5.1.1 Independent and Identically Distributed (I.I.D.)
-Our dataset doesn't satisfy the IID assumption. Our dataset has movies between year 1980 and 2020 scraped from IMDb. For movies that are actually in the same series, like 'Star Wars' or "Mission Impossible", their data will not be independent.
+Our dataset doesn't satisfy the IID assumption. Our dataset has movies between year 1980 and 2020 scraped from IMDb. For movies that are actually in the same series, like 'Star Wars' or "Mission Impossible", their data will not be independent. Our analysis is based on robust standard errors which can adjust for dependencies issue in our dataset.
 
 ### 5.1.2 Unique BLP Exists
 We want to make sure that no variables are perfectly collinear with any one of the other variables. From the correlation heatmap below, we can see that perfect collinearity only happens at the diagonal of the matrix which has all 1's and no where else. Also, while building our model, R didn't drop any variables considered to cause perfect collinearity with any other variables.
@@ -275,7 +288,7 @@ We want to make sure that no variables are perfectly collinear with any one of t
 \
 ```{r warning=FALSE, message=FALSE, echo=FALSE,}
 
-movies_dataset_model <- movies_dataset[, c("gross", "budget", "female_indicator", "title_unique_score")]
+movies_dataset_model <- movies_dataset[, c("gross", "budget", "female_indicator", "title_unique_score", "runtime", "year")]
 
 movies_cor <- cor(movies_dataset_model)
 movies_cor<-round(movies_cor,3)
