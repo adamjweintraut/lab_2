@@ -389,3 +389,5 @@ There are other variables not available in our dataset that might have causal ef
 ```{r warning=FALSE, message=FALSE, echo=FALSE,}
 # Make sure that you end your report with a discussion that distills key insights from your estimates and addresses your research question. 
 ```
+In conclusion, our analysis shows strong evidence that a female lead actor brings more gross revenue to a movie than a male lead actor. In this case, it is about 13% more on average. The "Title Unique Score" also seems to have effects on the Gross, but not as much. Our model also performs Log transformation on the title unique score, the percentage change on Gross will be about +2.6%. The percentage change will be much lower if we take out the log from title unique score (~0.01%).
+
