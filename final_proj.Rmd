@@ -292,9 +292,9 @@ stargazer(
 
 ```
 
-In the first model, we see that the p-value of the "Female_indictor" is less than 0.01 which means there is significant evidence that female gender has effects on "Log(Gross)". The coefficient is a positive value, meaning that a movie with a female lead actor actually brings more gross earnings than a movie with a male lead actor. The coefficient value of -0.124 means that it will be 12% more on gross if a movie uses a female lead actor. The adjusted R-squared is 0.493, mainly because the variable 'Budget' we added to this model can explain almost half of the model.
+In the first model, we see that the p-value of the "Female_indictor" is less than 0.01 which means there is significant evidence that female gender has effects on "Log(Adj Gross)". The coefficient is a positive value, meaning that a movie with a female lead actor actually brings more gross earnings than a movie with a male lead actor. The coefficient value of -0.124 means that it will be 12% more on gross if a movie uses a female lead actor. The adjusted R-squared is 0.493, mainly because the variable 'Budget' we added to this model can explain almost half of the model.
 
-After introducing the runtime into our second model, we don't see any improvement on R-square. Coefficients and P-values of other variables also don't seem to be affected by this new variable.
+After introducing the "Runtime" variable into our second model, we don't see any improvement on R-square. P-values of other variables also seem to be affected by this new variable. Coefficient of "Log(adj budget)" does decrease slightly, meanig that its effect has been reduced by this new runtime variable.
 
 For our third model, it seems that the "title uniqueness" feature doesn't really make much difference to the model. Coefficients of the other feature variables don't change much, so as the R-square value. The title uniqueness score has a very low p-value less that 0.01. So it seems that title uniqueness does affect the gross earnings. The coefficient of the 'Log(title_unique_score)' is positive, meaning a high score will help increase gross earnings. A high title uniqueness score means that titles are less unique actually. This translates to that a movie with a more common title tends to bring in more gross earnings.
 
