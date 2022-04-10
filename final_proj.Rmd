@@ -25,7 +25,13 @@ get_robust_se <- function(model) {
     require(sandwich)
     
     sqrt(diag(sandwich::vcovHC(model)))
-  }
+}
+
+# install.packages("quantmod")
+library(quantmod)
+library(tibble)
+
+# getSymbols("CPIAUCSL", src='FRED') #Consumer Price Index for All Urban Consumers: All Items
 
 ```
 
@@ -60,7 +66,33 @@ movies_title_sim <- read.csv("datasets/movie_title_sim_all.csv")
 movies_title_sim <- movies_title_sim[, c("name", "title_unique_score")]
 
 movies_dataset <- inner_join(movies_dataset, movies_title_sim, by = c("name" = "name"))
+
+
+# Adjust Gross and Budget for inflation
+# avg.cpi <- apply.yearly(CPIAUCSL, mean)
+# 
+# # our data starts from 1980
+# cf <- avg.cpi/as.numeric(avg.cpi['1980'])
+# 
+# dcf <- data.frame(cf)
+# dcf$year <- rownames(dcf)
+# dcf$year <- as.numeric(format(as.Date(dcf$year, format="%Y-%m-%d"),"%Y"))
+# colnames(dcf)[1] <- "cpi"
+# 
+# write.csv(dcf,"datasets/cpi.csv", row.names = FALSE)
+
+cpi <- read.csv("datasets/cpi.csv")
+
+movies_dataset <- inner_join(movies_dataset, cpi, by = c("year" = "year"))
+
+movies_dataset$adj_gross <- movies_dataset$gross * movies_dataset$cpi
+movies_dataset$adj_gross <- round(movies_dataset$adj_gross)
+
+movies_dataset$adj_budget <- movies_dataset$budget * movies_dataset$cpi
+movies_dataset$adj_budget <- round(movies_dataset$adj_budget)
+
 ```
+
 
 # 1. Introduction
 
@@ -108,18 +140,18 @@ In this section we take a look at the data characteristics for our variables tha
 \
 
 ```{r , out.width="70%", warning=FALSE, message=FALSE, echo=FALSE}
-ggplot(movies_dataset, aes(budget)) + 
+ggplot(movies_dataset, aes(adj_budget)) + 
   geom_histogram(position="dodge", alpha=0.8) +
-  ggtitle("Distribution of Movie Budgets")+
+  ggtitle("Distribution of Movie Budgets (Adjusted for inflation)")+
   scale_x_continuous(labels = comma)
 ```
 \
 Movie Budget is highly skewed to the left which means most movies have relatively low budget, and there are only a few movies that have really high budget.
 \
 ```{r , out.width="70%", warning=FALSE, message=FALSE, echo=FALSE}
-ggplot(movies_dataset, aes(gross)) + 
+ggplot(movies_dataset, aes(adj_gross)) + 
   geom_histogram(position="dodge", alpha=0.8) +
-  ggtitle("Distribution of Movie Gross Earnings")+
+  ggtitle("Distribution of Movie Gross Earnings (Adjusted for inflation)")+
   scale_x_continuous(labels = comma)
 ```
 \
@@ -207,22 +239,22 @@ The title unique score is skewed to the low end, which means most titles are pre
 ```
 
 ## 3.1 Base Model: Female indicator and Gross Earnings
-In order to answer our research question, we build our first model with 'Gross earnings' as our outcome variable and 'Female Indicator' as our feature variable. A female indicator is a binary flag which has the value of 0 or 1. When it is '1', it means that the lead actor of that movie is a female. We generate this indicator by processing the 'gender' data and add a new column in the dataset to store the resulting indicator.
+In order to answer our research question, we build our first model with 'Gross earnings' as our outcome variable and 'Female Indicator' as our feature variable. A female indicator is a binary flag which has the value of 0 or 1. When it is '1', it means that the lead actor of that movie is a female. We generate this indicator by processing the 'gender' data and add a new column in the dataset to store the resulting indicator. We also include the 'Budget' variable since it has strong correlation with Gross.
 \
 Moreover, since the Gross earning is highly skewed, we also apply Log transformation to it in our first model. So the model becomes this:
 \
 \
-_Log(Gross) = Female_indicator_
+_Log(Gross) = Female_indicator + Log(Budget)_
 \
 
-## 3.2 Second Model: Adding Movie Budget
+## 3.2 Second Model: Adding Runtime
 For the second model we are trying to improve the fitness of the model by introducing a feature variable that has a strong correlation with our outcome varable which is gross earnings. From our EDA we generated a correlation heatmap to show the correlations between variables. We identify that the 'budget' variable has the strongest correlation with gross earnings. This also makes sense in reality, since a bigger budge movies are expected to have higher gross earnings in order to generate profits for the production companies. Of course big budget doesn't guarantee a big payout. Success of a movie still depends on other factors, like the story itself.
 \
 \
 The Budget data is also highly skewed, so we apply Log transformation to it in our second model as well:
 \
 \
-_Log(Gross) = Female_indicator + Log(Budget)_
+_Log(Gross) = Female_indicator + Log(Budget) + runtime_
 \
 
 
@@ -232,7 +264,7 @@ We are also interested to find out if the movie title has effects on gross earni
 So we will introduce this new feature into our 3rd model:
 \
 \
-_Log(Gross) = Female_indicator + Log(Budget) + Log(Title_Unqiue_Score)_
+_Log(Gross) = Female_indicator + Log(Budget) + runtime + Log(Title_Unqiue_Score)_
 \
 
 
@@ -242,9 +274,9 @@ _Log(Gross) = Female_indicator + Log(Budget) + Log(Title_Unqiue_Score)_
 
 ```{r warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
 
-model_1 <- lm(log(gross) ~ female_indicator + log(budget), movies_dataset)
-model_2 <- lm(log(gross) ~ female_indicator + log(budget) + runtime, movies_dataset)
-model_3 <- lm(log(gross) ~ female_indicator + log(budget) + runtime + log(title_unique_score), movies_dataset)
+model_1 <- lm(log(adj_gross) ~ female_indicator + log(adj_budget), movies_dataset)
+model_2 <- lm(log(adj_gross) ~ female_indicator + log(adj_budget) + runtime, movies_dataset)
+model_3 <- lm(log(adj_gross) ~ female_indicator + log(adj_budget) + runtime + log(title_unique_score), movies_dataset)
 
 stargazer(
   model_1,
@@ -256,6 +288,8 @@ stargazer(
   )
 
 ```
+
+TODO: need to update the models explanations here.
 
 In the first model, we see that the p-value of the "Female_indictor" is less than 0.01 which means there is significant evidence that female gender has effects on "Log(Gross)". The coefficient is a negative value, meaning that a movie with a female lead actor actually brings less gross earnings than a movie with a male lead actor. The coefficient value of -0.20 means that it will be 20% less on gross if a movie uses a female lead actor. The adjusted R-squared is 0.002 which is low, meaning that at this point the model doesn't fit the data really well. The next model we will focus on improving the R-square by introducing other covariates that can help explain more of the model.
 
@@ -291,7 +325,7 @@ We want to make sure that no variables are perfectly collinear with any one of t
 movies_dataset_model <- movies_dataset[, c("gross", "budget", "female_indicator", "title_unique_score", "runtime", "year")]
 
 movies_cor <- cor(movies_dataset_model)
-movies_cor<-round(movies_cor,3)
+movies_cor<-round(movies_cor,2)
 # movies_cor
 
 library(reshape2)
