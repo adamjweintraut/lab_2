@@ -27,9 +27,10 @@ get_robust_se <- function(model) {
     sqrt(diag(sandwich::vcovHC(model)))
 }
 
+
+#https://stackoverflow.com/questions/12590180/inflation-adjusted-prices-package
 # install.packages("quantmod")
 library(quantmod)
-library(tibble)
 
 # getSymbols("CPIAUCSL", src='FRED') #Consumer Price Index for All Urban Consumers: All Items
 
@@ -134,6 +135,8 @@ With this two datasets, we then perform an inner-join on them by their movie lea
 Before we perform our analysis, we also clean up the data by removing all the entries that have empty values for the fields that we are interested (budget, gross, runtime). The final dataset has over 5000 rows of movie data.
 
 In addition, we also generate a "title_unique_score" using a simple logic. We take all the words from all movies and count the number of occurrences for each word. Then for each title we sum the counts. This means that the lower the score, the more unique the title. The score might also be affected by the title length itself, since a short title will also tends to get a low score since it has less words.
+
+Finally, we uses a R package called 'quantmod' to retrieve CPI data for inflation adjustment for our Gross and Budgets data. Then we perform adjustment to the Gross and Budget data in our main dataset. We use 1980 as the base year for our inflation adjustment, then perform inner-join with the main dataset by the years. Additional calculations to adjust Gross and Budget is performed afterwards.
 
 ## 2a. Data Characteristics
 In this section we take a look at the data characteristics for our variables that we are interested and see if there is any need to perform cleanup or transformation before we build our models.\
@@ -244,7 +247,7 @@ In order to answer our research question, we build our first model with 'Gross e
 Moreover, since the Gross earning is highly skewed, we also apply Log transformation to it in our first model. So the model becomes this:
 \
 \
-_Log(Gross) = Female_indicator + Log(Budget)_
+_Log(Gross Adjusted for Inflation) = Female_indicator + Log(Budget Adjusted for Inflation)_
 \
 
 ## 3.2 Second Model: Adding Runtime
@@ -254,7 +257,7 @@ For the second model we are trying to improve the fitness of the model by introd
 The Budget data is also highly skewed, so we apply Log transformation to it in our second model as well:
 \
 \
-_Log(Gross) = Female_indicator + Log(Budget) + runtime_
+_Log(Gross Adjusted for Inflation) = Female_indicator + Log(Budget Adjusted for Inflation) + Runtime_
 \
 
 
@@ -264,7 +267,7 @@ We are also interested to find out if the movie title has effects on gross earni
 So we will introduce this new feature into our 3rd model:
 \
 \
-_Log(Gross) = Female_indicator + Log(Budget) + runtime + Log(Title_Unqiue_Score)_
+_Log(Gross Adjusted for Inflation) = Female_indicator + Log(Budget Adjusted for Inflation) + Runtime + Log(Title_Unqiue_Score)_
 \
 
 
@@ -289,15 +292,13 @@ stargazer(
 
 ```
 
-TODO: need to update the models explanations here.
+In the first model, we see that the p-value of the "Female_indictor" is less than 0.01 which means there is significant evidence that female gender has effects on "Log(Gross)". The coefficient is a positive value, meaning that a movie with a female lead actor actually brings more gross earnings than a movie with a male lead actor. The coefficient value of -0.124 means that it will be 12% more on gross if a movie uses a female lead actor. The adjusted R-squared is 0.493, mainly because the variable 'Budget' we added to this model can explain almost half of the model.
 
-In the first model, we see that the p-value of the "Female_indictor" is less than 0.01 which means there is significant evidence that female gender has effects on "Log(Gross)". The coefficient is a negative value, meaning that a movie with a female lead actor actually brings less gross earnings than a movie with a male lead actor. The coefficient value of -0.20 means that it will be 20% less on gross if a movie uses a female lead actor. The adjusted R-squared is 0.002 which is low, meaning that at this point the model doesn't fit the data really well. The next model we will focus on improving the R-square by introducing other covariates that can help explain more of the model.
-
-After introducing the budget into our second model, we see that both Female_indicator and Budget have a low p-value. This indicates that both of these feature variables are statistically significant in determining the gross earnings of a movie. Interestingly, the coefficient of the female_indicator is now a positive value, meaning that a movie with a female lead actor actually brings in more money (about 12% more) than a movie with male lead actor. Most importantly, the R-square has hugely improved, to almost 50%.
+After introducing the runtime into our second model, we don't see any improvement on R-square. Coefficients and P-values of other variables also don't seem to be affected by this new variable.
 
 For our third model, it seems that the "title uniqueness" feature doesn't really make much difference to the model. Coefficients of the other feature variables don't change much, so as the R-square value. The title uniqueness score has a very low p-value less that 0.01. So it seems that title uniqueness does affect the gross earnings. The coefficient of the 'Log(title_unique_score)' is positive, meaning a high score will help increase gross earnings. A high title uniqueness score means that titles are less unique actually. This translates to that a movie with a more common title tends to bring in more gross earnings.
 
-Based on these statistics, we see that using a female lead actor in a movie does help bringing more gross earnings in a significant way. The effect on gross earnings is about 11-12%, which is substantial.
+Based on these statistics, we see that using a female lead actor in a movie does help bringing more gross earnings in a significant way. The effect on gross earnings is about 13%, which is substantial.
 
 
 ```{r warning=FALSE, message=FALSE, echo=FALSE,}
@@ -363,11 +364,11 @@ The variables that are available in our dataset but are omitted in building our 
 * Production Company
 * Lead Actor
 * Country
-* Release date
+* Release year
 * IMDb rating
 * Number of votes in IMDb
 
-Our EDA shows that these variables have low correlation with Gross earnings, so we simply omit them in our models.
+Our EDA shows that these variables have low correlation with Gross earnings, so we simply omit them in our models. For "Release year", since we already adjusted our Gross and Budgets with inflation, so we didn't include year as a variable that could affect the model outcomes.
 
 ### 5.2.2 Unintentional Omitted Variables
 
