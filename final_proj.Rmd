@@ -92,6 +92,8 @@ movies_dataset$adj_gross <- round(movies_dataset$adj_gross)
 movies_dataset$adj_budget <- movies_dataset$budget * movies_dataset$cpi
 movies_dataset$adj_budget <- round(movies_dataset$adj_budget)
 
+write.csv(movies_dataset,"datasets/movies_dataset_cpi.csv", row.names = FALSE)
+
 ```
 
 
