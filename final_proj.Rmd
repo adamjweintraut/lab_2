@@ -100,6 +100,8 @@ With this two datasets, we then perform an inner-join on them by their movie lea
 
 Before we perform our analysis, we also clean up the data by removing all the entries that have empty values for the fields that we are interested (budget, gross). The final dataset has over 5000 rows of movie data.
 
+In addition, we also generate a "title_unique_score" using a simple logic. We take all the words from all movies and count the number of occurrences for each word. Then for each title we sum the counts. This means that the lower the score, the more unique the title. The score might also be affected by the title length itself, since a short title will also tends to get a low score since it has less words.
+
 ## 2a. Data Characteristics
 In this section we take a look at the data characteristics for our variables that we are interested and see if there is any need to perform cleanup or transformation before we build our models.\
 \
@@ -151,7 +153,7 @@ ggplot(movies_dataset, aes(title_unique_score)) +
 
 ```
 \
-The title unique score is skewed to the low end.
+The title unique score is skewed to the low end. Low score means Most titles are pretty unique.
 \
 
 
@@ -215,8 +217,6 @@ _Log(Gross) = Female_indicator + Log(Budget)_
 ## 3.3 Third Model: Adding Title Uniqueness
 We are also interested to find out if the movie title has effects on gross earning. First, we build a simple model that uses only 'title_unique_score' as the feature variable against gross earnings.
 
-The title uniqueness score has a very low p-value less that 0.01. It seems that title uniqueness does affect the gross earning. The coefficient of the 'Log(title_unique_score)' is positive, meaning a high score will help increase gross earnings. The R-square value is very low, which indicates that this model doesn't fit well with the data.
-
 So we will introduce this new feature into our 3rd model:
 \
 \
@@ -248,7 +248,7 @@ In the first model, we see that the p-value of the "Female_indictor" is less tha
 
 After introducing the budget into our second model, we see that both Female_indicator and Budget have a low p-value. This indicates that both of these feature variables are statistically significant in determining the gross earnings of a movie. Interestingly, the coefficient of the female_indicator is now a positive value, meaning that a movie with a female lead actor actually brings in more money (about 12% more) than a movie with male lead actor. Most importantly, the R-square has hugely improved, to almost 50%.
 
-For our third model, it seems that this feature doesn't really make much difference on our model. Coefficients of the other feature variables don't change much, so as the R-square value.
+For our third model, it seems that the "title uniqueness" feature doesn't really make much difference to the model. Coefficients of the other feature variables don't change much, so as the R-square value. The title uniqueness score has a very low p-value less that 0.01. So it seems that title uniqueness does affect the gross earnings. The coefficient of the 'Log(title_unique_score)' is positive, meaning a high score will help increase gross earnings. A high title uniqueness score means that titles are less unique actually. This translates to that a movie with a more common title tends to bring in more gross earnings.
 
 Based on these statistics, we see that using a female lead actor in a movie does help bringing more gross earnings in a significant way. The effect on gross earnings is about 11-12%, which is substantial.
 
