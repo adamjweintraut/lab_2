@@ -27,7 +27,6 @@ get_robust_se <- function(model) {
     sqrt(diag(sandwich::vcovHC(model)))
 }
 
-
 #https://stackoverflow.com/questions/12590180/inflation-adjusted-prices-package
 # install.packages("quantmod")
 library(quantmod)
@@ -59,15 +58,11 @@ movies_dataset <- movies_dataset[!is.na(movies_dataset$gross), ]
 movies_dataset <- movies_dataset[!is.na(movies_dataset$runtime), ]
 # movies_dataset$genre_f <- factor(movies_dataset$genre, ordered=FALSE)
 
-#filter only the Action genre
-# movies_dataset <- movies_dataset[movies_dataset$genre == "Action", ]
+# movies_title_sim <- read.csv("datasets/movie_title_sim_all.csv")
+# 
+# movies_title_sim <- movies_title_sim[, c("name", "title_unique_score")]
 
-movies_title_sim <- read.csv("datasets/movie_title_sim_all.csv")
-
-movies_title_sim <- movies_title_sim[, c("name", "title_unique_score")]
-
-movies_dataset <- inner_join(movies_dataset, movies_title_sim, by = c("name" = "name"))
-
+# movies_dataset <- inner_join(movies_dataset, movies_title_sim, by = c("name" = "name"))
 
 # Adjust Gross and Budget for inflation
 # avg.cpi <- apply.yearly(CPIAUCSL, mean)
@@ -92,62 +87,27 @@ movies_dataset$adj_gross <- round(movies_dataset$adj_gross)
 movies_dataset$adj_budget <- movies_dataset$budget * movies_dataset$cpi
 movies_dataset$adj_budget <- round(movies_dataset$adj_budget)
 
-write.csv(movies_dataset,"datasets/movies_dataset_cpi.csv", row.names = FALSE)
+# write.csv(movies_dataset,"datasets/movies_dataset_cpi.csv", row.names = FALSE)
 
+# We later use python to generate data for title similarities and export it to 'max_title_sim.csv'
+# and join it with our "movies_dataset_cpi.csv" above
 
-movies_dataset <- read.csv("datasets/movies_dataset_cpi_with_title_features.csv")
+movies_title_sim <- read.csv("datasets/movies_title_sim.csv")
+movies_title_sim <- movies_title_sim[, c("name", "max_title_similarity2")]
+movies_title_sim <- movies_title_sim %>%
+  mutate(max_title_similarity = max_title_similarity2)
 
+movies_dataset <- inner_join(movies_dataset, movies_title_sim, by = c("name" = "name"))
 
-genre_budget <- movies_dataset %>% 
-                group_by(genre) %>% 
-                summarise(genre_mean_adj_budget = mean(adj_budget, na.rm=TRUE))
-
-
-movies_dataset <- inner_join(movies_dataset, genre_budget, by = c("genre"))
-
-#remove year 2020
-# movies_dataset <- movies_dataset[movies_dataset$year != "2020", ]
-# 
-# movies_dataset <- movies_dataset[movies_dataset$year != "2019", ]
-
+# Add indicator on movies duration > 2 hours
 movies_dataset$runtime_hrs = movies_dataset$runtime / 60
-
 movies_dataset <- movies_dataset %>%
    mutate(is_longer_than_2hrs = case_when(
       runtime_hrs >= 2 ~ 1,
       runtime_hrs < 2 ~ 0
   ))
 
-# movies_dataset <- movies_dataset %>%
-#    mutate(is_longer_than_3hrs = case_when(
-#       runtime_hrs >= 3 ~ 1,
-#       runtime_hrs < 3 ~ 0
-#   ))
-
-movies_dataset <- movies_dataset %>% 
-  mutate(year_and_inflation_adjusted_budget = adj_budget/adjusted_scaler)
-
-names(movies_dataset)[names(movies_dataset) == 'year_and_inflation_adjusted_budget'] <- 'i_p_adjusted_budget'
-
-names(movies_dataset)[names(movies_dataset) == 'year_and_inflation_adjusted_gross'] <- 'i_p_adjusted_gross'
-
-#68761852.32
-
-# movies_dataset <- movies_dataset %>%
-#    mutate(writer_female_indicator = case_when(
-#       writer_gender == "male" ~ 0,
-#       writer_gender == "female" ~ 1
-#   ))
-# 
-# movies_dataset <- movies_dataset %>%
-#    mutate(is_same_gender = case_when(
-#       writer_female_indicator == female_indicator ~ 1,
-#       writer_female_indicator != female_indicator ~ 0
-#   ))
-
-
-# movies_dataset <- movies_dataset[movies_dataset$genre == "Comedy", ]
-
+## Genre categorial Indicators. Only selected the top 8 genres with number of movies > 100
 movies_dataset <- movies_dataset %>%
    mutate(is_genre_comedy = case_when(
       genre == "Comedy" ~ 1,
@@ -247,7 +207,6 @@ In this section we take a look at the data characteristics for our variables tha
 \
 
 
-
 ```{r , out.width="70%", warning=FALSE, message=FALSE, echo=FALSE}
 ggplot(movies_dataset, aes(adj_budget)) + 
   geom_histogram(position="dodge", alpha=0.8) +
@@ -267,15 +226,6 @@ ggplot(movies_dataset, aes(adj_gross)) +
 Movie Gross Earnings has similar characteristics as the budget, also highly skewed to the low end.
 \
 ```{r , out.width="70%", warning=FALSE, message=FALSE, echo=FALSE}
-ggplot(movies_dataset, aes(runtime)) +
-  geom_histogram(position="dodge", alpha=0.8) +
-  ggtitle("Distribution of Movie Runtime")+
-  scale_x_continuous(labels = comma)
-```
-\
-Most movies have runtime under 150 minutes.
-\
-```{r , out.width="70%", warning=FALSE, message=FALSE, echo=FALSE}
 ggplot(movies_dataset, aes(gender)) + 
   geom_histogram(position="dodge", alpha=0.8, binwidth = 0.5) +
   ggtitle("Lead Actor's Gender")
@@ -286,57 +236,15 @@ In this histogram that shows the number of Male versus Female Lead Actor. The va
 
 ```{r warning=FALSE, message=FALSE, echo=FALSE}
 
-ggplot(movies_dataset, aes(title_unique_score)) + 
+ggplot(movies_dataset, aes(max_title_similarity)) + 
   geom_histogram(position="dodge", alpha=0.8) +
-  ggtitle("Distribution of Movie Title Unique Score")+
+  ggtitle("Distribution of Movie Max Title Similarity")+
   scale_x_continuous(labels = comma)
 
 ```
 \
 The title unique score is skewed to the low end, which means most titles are pretty unique, since the titles are composed of words that has low occurrences.
 \
-```{r warning=FALSE, message=FALSE, echo=FALSE}
-# ggplot(movies_dataset, aes(genre_)) + 
-#   geom_histogram(position="dodge", alpha=0.8) +
-#   ggtitle("Distribution of Genre")+
-#   scale_x_continuous(labels = comma)
-```
-
-```{r warning=FALSE, message=FALSE, echo=FALSE}
-# ggplot(movies_dataset, aes(year)) + 
-#   geom_histogram(position="dodge", alpha=0.8) +
-#   ggtitle("Distribution of Year")+
-#   scale_x_continuous(labels = comma)
-```
-
-```{r warning=FALSE, message=FALSE, echo=FALSE}
-
-ggplot(movies_dataset, aes(max_semantic_similarity)) + 
-  geom_histogram(position="dodge", alpha=0.8) +
-  ggtitle("Distribution of Movie Title Unique Score")+
-  scale_x_continuous(labels = comma)
-
-
-ggplot(movies_dataset, aes(max_title_similarity2)) + 
-  geom_histogram(position="dodge", alpha=0.8) +
-  ggtitle("Distribution of Movie Title Unique Score")+
-  scale_x_continuous(labels = comma)
-
-```
-
-
-```{r warning=FALSE, message=FALSE, echo=FALSE}
-#movies_cast_gender %>% group_by(gender, gender_str) %>% summarise(count_genders = n()) %>% arrange(desc(count_genders))
-# movies_cast_gender %>% group_by(genre, genre_) %>% summarise(count_genres = n()) %>% arrange(desc(count_genres))
-# movies_cast_gender %>% group_by(rating, rating_) %>% summarise(count_rating = n()) %>% arrange(desc(count_rating))
-# 
-# movies_cast_gender %>% group_by(director, director_) %>% summarise(count_directors = n()) %>% arrange(desc(count_directors))
-# movies_cast_gender %>% group_by(writer) %>% summarise(count_writers = n()) %>% arrange(desc(count_writers))
-# movies_cast_gender %>% group_by(star) %>% summarise(count_stars = n()) %>% arrange(desc(count_stars))
-# movies_cast_gender %>% group_by(country) %>% summarise(count_country = n()) %>% arrange(desc(count_country))
-# movies_cast_gender %>% group_by(company) %>% summarise(count_company = n()) %>% arrange(desc(count_company))
-
-```
 
 
 \newpage
@@ -398,54 +306,11 @@ _Log(Gross Adjusted for Inflation) = Female_indicator + Log(Budget Adjusted for 
 
 ```{r warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
 
-#year_and_inflation_adjusted_gross
-#year_and_inflation_adjusted_budget
-
-#i_p_adjusted_budget
-#i_p_adjusted_gross
-
-#adj_gross
-#adj_budget
-
 model_1 <- lm(log(adj_gross) ~ female_indicator + log(adj_budget), movies_dataset)
-
-
-# model_2 <- lm(log(adj_gross) ~ female_indicator + log(adj_budget) + writer_gender + is_same_gender, movies_dataset)
-
-# model_2 <- lm(log(i_p_adjusted_gross) ~ female_indicator + log(i_p_adjusted_budget) + log(runtime), movies_dataset)
-
-# model_2 <- lm(log(adjusted_gross) ~ female_indicator + log(adjusted_budget) + genre_ + director_gender + is_same_gender, movies_dataset)
-
-# model_2 <- lm(log(adj_gross) ~ female_indicator + log(adj_budget) + genre_, movies_dataset)
-
-# model_2 <- lm(log(adj_gross) ~ female_indicator + log(adj_budget) + director_gender + is_same_gender, movies_dataset)
-
 
 model_2 <- lm(log(adj_gross) ~ female_indicator + log(adj_budget) + is_genre_action + is_genre_comedy + is_genre_drama + is_genre_adventure + is_genre_biography + is_genre_animation + is_genre_horror, movies_dataset)
 
-
-# model_3 <- lm(log(adj_gross) ~ female_indicator + log(adj_budget) + log(runtime) + log(title_unique_score) +  max_semantic_similarity + max_title_similarity +  mean_semantic_similarity + mean_title_similarity + log(genre_mean_adj_budget), movies_dataset)
-
-# model_3 <- lm(log(adj_gross) ~ female_indicator + log(adj_budget) + log(runtime) + max_title_similarity + log(genre_mean_adj_budget), movies_dataset)
-
-model_3 <- lm(log(adj_gross) ~ female_indicator + log(adj_budget) +  is_genre_action + is_genre_comedy + is_genre_drama + is_genre_adventure + is_genre_biography + is_genre_animation + is_genre_horror + max_title_similarity2 + is_longer_than_2hrs, movies_dataset)
-
-
-# model_3 <- lm(log(adj_gross) ~ female_indicator + log(adj_budget) + writer_gender + is_same_gender + log(title_unique_score), movies_dataset)
-
-# model_3 <- lm(log(adj_gross) ~ female_indicator + log(adj_budget) + genre_ + log(title_unique_score), movies_dataset)
-
-
-# model_3 <- lm(log(i_p_adjusted_gross) ~ female_indicator + log(i_p_adjusted_budget) + log(runtime) + max_title_similarity2, movies_dataset)
-
-# model_3 <- lm(log(adj_gross) ~ female_indicator + log(adj_budget) + log(runtime) + max_title_similarity2 + year + is_longer_than_2hrs + is_genre_drama + is_genre_comedy + is_genre_action, movies_dataset)
-
-# model_3 <- lm(log(adj_gross) ~ female_indicator + log(adj_budget) + year, movies_dataset)
-
-
-summary(model_3)
-
-# model_4 <- lm(log(adj_gross) ~ max_semantic_similarity + max_title_similarity + len_of_title + len_of_title2 + log_len_of_title + log_len_of_title2, movies_dataset)
+model_3 <- lm(log(adj_gross) ~ female_indicator + log(adj_budget) +  is_genre_action + is_genre_comedy + is_genre_drama + is_genre_adventure + is_genre_biography + is_genre_animation + is_genre_horror + max_title_similarity + is_longer_than_2hrs, movies_dataset)
 
 stargazer(
   model_1,
@@ -490,7 +355,7 @@ We want to make sure that no variables are perfectly collinear with any one of t
 \
 ```{r warning=FALSE, message=FALSE, echo=FALSE,}
 
-movies_dataset_model <- movies_dataset[, c("gross", "budget", "female_indicator", "title_unique_score", "runtime", "year")]
+movies_dataset_model <- movies_dataset[, c("gross", "budget", "female_indicator", "max_title_similarity", "runtime", "year")]
 
 movies_cor <- cor(movies_dataset_model)
 movies_cor<-round(movies_cor,2)
