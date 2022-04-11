@@ -418,7 +418,7 @@ There are other variables not available in our dataset that might have causal ef
 ```{r warning=FALSE, message=FALSE, echo=FALSE,}
 # Make sure that you end your report with a discussion that distills key insights from your estimates and addresses your research question. 
 ```
-In conclusion, our analysis shows strong evidence that a female lead actor brings more gross revenue to a movie than a male lead actor. In this case, it is about 14% more on average. The "Max Title Similarity" score also seems to have positive effects on the Gross. The score value is between 0 and 1. When it is 1 (high similarity), it will improve gross earnings by a massive 67%.
+In conclusion, our analysis shows strong evidence that a female lead actor brings more gross revenue to a movie than a male lead actor. In this case, it is about 14% more on average. The "Max Title Similarity" score also seems to have positive effects on the Gross. The score value is between 0 and 1. When it is 1 (high similarity), it will improve gross earnings by a massive 67%. The indicator on whether a movie is longer than 2 hours also shows a significant effect on gross, bringing in 34% more gross if is longer than 2 hours.
 
 
 
