@@ -294,6 +294,9 @@ We are also interested to find out if the movie title and movie duration have ef
 _Log(Gross Adjusted for Inflation) = Female_indicator + Log(Budget Adjusted for Inflation) + Is_Genre_Action + Is_Genre_Comedy + Is_Genre_Drama + Is_Genre_Adventure + Is_Genre_Biography + Is_Genre_Animation + Is_Genre_Horror_
 \
 
+## 3.3 Robust Standard Errors
+Our dataset is not IID, which will be explained in the "Limitations of your Model" section. Therefore, our models are built based on robust standard errors.
+
 
 \newpage
 
@@ -321,11 +324,9 @@ stargazer(
 
 In the first model, we see that the p-value of the "Female_indictor" is less than 0.01 which means there is significant evidence that female gender has effects on "Log(Adj Gross)". The coefficient is a positive value, meaning that a movie with a female lead actor actually brings more gross earnings than a movie with a male lead actor. The coefficient value of -0.124 means that it will be 12% more on gross if a movie uses a female lead actor. The adjusted R-squared is 0.493, mainly because the variable 'Budget' we added to this model can explain almost half of the model.
 
-After introducing the "Runtime" variable into our second model, we don't see any improvement on R-square. P-values of other variables also seem to be affected by this new variable. Coefficient of "Log(adj budget)" does decrease slightly, meanig that its effect has been reduced by this new runtime variable.
+After introducing the genre categorical indicators into our second model, most of them have a p-value less that 0.01, except for "is_genre_drama". Coefficients for both female_indicator and budget have been reduced, but remain significant.Adjusted R-square of the model has also improved to 0.505.
 
-For our third model, it seems that the "title uniqueness" feature doesn't really make much difference to the model. Coefficients of the other feature variables don't change much, so as the R-square value. The title uniqueness score has a very low p-value less that 0.01. So it seems that title uniqueness does affect the gross earnings. The coefficient of the 'Log(title_unique_score)' is positive, meaning a high score will help increase gross earnings. A high title uniqueness score means that titles are less unique actually. This translates to that a movie with a more common title tends to bring in more gross earnings.
-
-Based on these statistics, we see that using a female lead actor in a movie does help bringing more gross earnings in a significant way. The effect on gross earnings is about 13%, which is substantial.
+For our third model, the variable "max_title_similarity" and "is_longer_than_2hrs" both have low p-values, showing evidence that they also have effects on the gross earnings. P-values for female indicator remains signifcant. Adjusted R-square of the model has also improved to 0.518.
 
 
 ```{r warning=FALSE, message=FALSE, echo=FALSE,}
@@ -405,10 +406,11 @@ Our EDA shows that these variables have low correlation with Gross earnings, so 
 
 There are other variables not available in our dataset that might have causal effects on a movie's gross earnings.
 
-* Film distribution platforms
-* In theater duration
-* Story of the movie
-* Acting skills of the cast
+* Film distribution platforms: We don't have data to tell us what platforms (theaters, streaming, etc) the movies were released on. If a movie was released to more platforms, there are more chance to make money from different audience.
+* In theater duration:  We don't have data to tell us how long the movies have been on the distributon platforms. The longer a movie is on, the more time it can make more money.
+* Story of the movie: How good is the story is subjective and hard to quantify. We don't have data on that but it could be a big factor on gross. A good movie could mean that people are willing to pay to watch couple more times, or purchase it and put it into their collection.
+* Acting skills of the cast: Acting skills could be subjective and hard to quantify, but could affect how people willing to pay for the movies.
+* World population: Population grows over the years, and more population means more people paying for movies.
 
 
 # 6. Conclusion
@@ -416,11 +418,7 @@ There are other variables not available in our dataset that might have causal ef
 ```{r warning=FALSE, message=FALSE, echo=FALSE,}
 # Make sure that you end your report with a discussion that distills key insights from your estimates and addresses your research question. 
 ```
-In conclusion, our analysis shows strong evidence that a female lead actor brings more gross revenue to a movie than a male lead actor. In this case, it is about 13% more on average. The "Title Unique Score" also seems to have effects on the Gross, but not as much. Our model also performs Log transformation on the title unique score, the percentage change on Gross will be about +2.6%. The percentage change will be much lower if we take out the log from title unique score (~0.01%).
+In conclusion, our analysis shows strong evidence that a female lead actor brings more gross revenue to a movie than a male lead actor. In this case, it is about 14% more on average. The "Max Title Similarity" score also seems to have positive effects on the Gross. The score value is between 0 and 1. When it is 1 (high similarity), it will improve gross earnings by a massive 67%.
 
-
-
-Limitations:
-Title similarity based on the dataset, not the original population.
 
 
