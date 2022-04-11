@@ -198,7 +198,7 @@ With this two datasets, we then perform an inner-join on them by their movie lea
 
 Before we perform our analysis, we also clean up the data by removing all the entries that have empty values for the fields that we are interested (budget, gross, runtime). The final dataset has over 5000 rows of movie data.
 
-In addition, we also generate a "max_title_similarity" score for how similar a movie title to the rest of the movies in the dataset. The score is a value between 0 and 1, where 1 is the highest similarity.
+In addition, we also generate a "max_title_similarity" score for how similar a movie title to the rest of the movies in the dataset. The score is a value between 0 and 1, where 1 is the highest similarity. We use TFIDF Vectorizer to convert titles to numbers. Then we use Cosine similarity as a measurement of title similarity. It does not account for semantic information.
 
 Finally, we uses a R package called 'quantmod' to retrieve CPI data for inflation adjustment for our Gross and Budget data. Then we perform adjustment to the Gross and Budget data in our main dataset. We use 1980 as the base year for our inflation adjustment, then perform inner-join with the main dataset by the years. Additional calculations to adjust Gross and Budget are performed afterwards and added as columns to the main dataset.
 
