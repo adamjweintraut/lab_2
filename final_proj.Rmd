@@ -198,7 +198,7 @@ With this two datasets, we then perform an inner-join on them by their movie lea
 
 Before we perform our analysis, we also clean up the data by removing all the entries that have empty values for the fields that we are interested (budget, gross, runtime). The final dataset has over 5000 rows of movie data.
 
-In addition, we also generate a "max_title_similarity" to generate a data for how similar a movie title to the rest of the movies in the dataset.
+In addition, we also generate a "max_title_similarity" score for how similar a movie title to the rest of the movies in the dataset. The score is a value between 0 and 1, where 1 is the highest similarity.
 
 Finally, we uses a R package called 'quantmod' to retrieve CPI data for inflation adjustment for our Gross and Budget data. Then we perform adjustment to the Gross and Budget data in our main dataset. We use 1980 as the base year for our inflation adjustment, then perform inner-join with the main dataset by the years. Additional calculations to adjust Gross and Budget are performed afterwards and added as columns to the main dataset.
 
@@ -243,7 +243,7 @@ ggplot(movies_dataset, aes(max_title_similarity)) +
 
 ```
 \
-The Max Title Similarity score has 3 spikes. The biggest one is at the 0 score, the two small ones at around 0.125 and 1. The data near the middle of the range has a bell shape similar to a normal distribution.
+The Max Title Similarity score has 3 spikes. The biggest one is at the 0 score, which means that most of the movies have title name that are not similar to the others at all. There are another two small spikes at around 0.125 and 1. The spike at 1 indicates that there are movies that are very similar to some other movies in the dataset. The data near the middle of the range has a bell shape similar to a normal distribution.
 \
 
 
@@ -271,7 +271,7 @@ The Max Title Similarity score has 3 spikes. The biggest one is at the 0 score, 
 ```
 
 ## 3.1 Base Model: Female indicator and Gross Earnings
-In order to answer our research question, we build our first model with 'Gross earnings' as our outcome variable and 'Female Indicator' as our feature variable. A female indicator is a binary flag which has the value of 0 or 1. When it is '1', it means that the lead actor of that movie is a female. We generate this indicator by processing the 'gender' data and add a new column in the dataset to store the resulting indicator. We also include the 'Budget' variable since it has strong correlation with Gross.
+In order to answer our research question, we build our first model with 'Gross earnings' as our outcome variable and 'Female Indicator' as our feature variable. A female indicator is a binary flag which has the value of 0 or 1. When it is '1', it means that the lead actor of that movie is a female. We generate this indicator by processing the 'gender' data and add a new column in the dataset to store the resulting indicator. We also include the 'Budget' variable since it has strong correlation with Gross, also help setting up the baseline for R-square.
 \
 Moreover, since the Gross earning and Budget are highly skewed, we also apply Log transformation to them in our first model.
 \
@@ -322,11 +322,11 @@ stargazer(
 
 ```
 
-In the first model, we see that the p-value of the "Female_indictor" is less than 0.01 which means there is significant evidence that female gender has effects on "Log(Adj Gross)". The coefficient is a positive value, meaning that a movie with a female lead actor actually brings more gross earnings than a movie with a male lead actor. The coefficient value of -0.124 means that it will be 12% more on gross if a movie uses a female lead actor. The adjusted R-squared is 0.493, mainly because the variable 'Budget' we added to this model can explain almost half of the model.
+In the first model, we see that the p-value of the "Female_indictor" is less than 0.01 which means there is significant evidence that female gender has effects on "Log(Adj Gross)". The coefficient is a positive value, meaning that a movie with a female lead actor actually brings more gross earnings than a movie with a male lead actor. The coefficient value of 0.124 means that it will be 12% more on gross if a movie uses a female lead actor. The adjusted R-squared is 0.493, mainly because the variable 'Budget' we added to this model can explain almost half of the model.
 
-After introducing the genre indicators into our second model, most of them have a p-value less that 0.01, except for "is_genre_drama". Coefficients for both female_indicator and budget have been reduced, but remain significant.Adjusted R-square of the model has also improved to 0.505.
+After introducing the genre indicators into our second model, most of them have a p-value less that 0.01, except for "is_genre_drama". Coefficients for both female_indicator and budget have been reduced, but remain significant. Adjusted R-square of the model has also improved to 0.505.
 
-For our third model, the variable "max_title_similarity" and "is_longer_than_2hrs" both have low p-values, showing evidence that they also have effects on the gross earnings. P-values for female indicator remains signifcant. Adjusted R-square of the model has also improved to 0.518.
+For our third model, the variable "max_title_similarity" and "is_longer_than_2hrs" both have low p-values, showing evidence that they also have effects on the gross earnings. P-values for female indicator remains significant, and its coefficient has increased. Adjusted R-square of the model has also improved to 0.518.
 
 
 ```{r warning=FALSE, message=FALSE, echo=FALSE,}
@@ -342,7 +342,7 @@ For our third model, the variable "max_title_similarity" and "is_longer_than_2hr
 Since our analysis is based on a dataset with more than 5000 entries, we can use the large-sample assumptions.
 
 ### 5.1.1 Independent and Identically Distributed (I.I.D.)
-Our dataset doesn't satisfy the IID assumption. Our dataset has movies between year 1980 and 2020 scraped from IMDb. For movies that are actually in the same series, like 'Star Wars' or "Mission Impossible", their data will not be independent. Our analysis is based on robust standard errors which can adjust for dependencies issue in our dataset.
+Our dataset doesn't satisfy the IID assumption. Our dataset has movies between year 1980 and 2020 scraped from IMDb. For movies that are actually in the same series, like 'Star Wars' or "Mission Impossible", their data will not be independent. Since our dataset is also a time series data, there might be dependencies between data in different timeline. Our analysis is based on robust standard errors which can adjust for dependency issues in our dataset.
 
 ### 5.1.2 Unique BLP Exists
 We want to make sure that no variables are perfectly collinear with any one of the other variables. From the correlation heatmap below, we can see that perfect collinearity only happens at the diagonal of the matrix which has all 1's and no where else. Also, while building our model, R didn't drop any variables considered to cause perfect collinearity with any other variables.
@@ -386,7 +386,6 @@ ggplot(data = melted_movies_cor, aes(x=Var1, y=Var2, fill=value)) +
 
 The variables that are available in our dataset but are omitted in building our models are:
 
-* Genre
 * Director
 * Writer
 * Production Company
