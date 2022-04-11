@@ -107,7 +107,7 @@ movies_dataset <- movies_dataset %>%
       runtime_hrs < 2 ~ 0
   ))
 
-## Genre Categorical Indicators. Only selected the top 8 genres with number of movies > 100
+## Genre Indicators. Only selected the top 8 genres with number of movies > 100
 movies_dataset <- movies_dataset %>%
    mutate(is_genre_comedy = case_when(
       genre == "Comedy" ~ 1,
@@ -279,7 +279,7 @@ Moreover, since the Gross earning and Budget are highly skewed, we also apply Lo
 _Log(Gross Adjusted for Inflation) = Female_indicator + Log(Budget Adjusted for Inflation)_
 \
 
-## 3.2 Second Model: Adding Genre Categorical Indicators
+## 3.2 Second Model: Adding Genre Indicators
 For the second model, we add explanatory variables that reduce effect caused by the female_indicator variable. We suspect that genre might have correlation with the gender of the lead actor. By introducing genre indicators, they should reduce female_indicator's effect on gross earnings.
 \
 \
@@ -324,7 +324,7 @@ stargazer(
 
 In the first model, we see that the p-value of the "Female_indictor" is less than 0.01 which means there is significant evidence that female gender has effects on "Log(Adj Gross)". The coefficient is a positive value, meaning that a movie with a female lead actor actually brings more gross earnings than a movie with a male lead actor. The coefficient value of -0.124 means that it will be 12% more on gross if a movie uses a female lead actor. The adjusted R-squared is 0.493, mainly because the variable 'Budget' we added to this model can explain almost half of the model.
 
-After introducing the genre categorical indicators into our second model, most of them have a p-value less that 0.01, except for "is_genre_drama". Coefficients for both female_indicator and budget have been reduced, but remain significant.Adjusted R-square of the model has also improved to 0.505.
+After introducing the genre indicators into our second model, most of them have a p-value less that 0.01, except for "is_genre_drama". Coefficients for both female_indicator and budget have been reduced, but remain significant.Adjusted R-square of the model has also improved to 0.505.
 
 For our third model, the variable "max_title_similarity" and "is_longer_than_2hrs" both have low p-values, showing evidence that they also have effects on the gross earnings. P-values for female indicator remains signifcant. Adjusted R-square of the model has also improved to 0.518.
 
