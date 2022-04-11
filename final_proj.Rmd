@@ -291,7 +291,7 @@ _Log(Gross Adjusted for Inflation) = Female_indicator + Log(Budget Adjusted for 
 We are also interested to find out if the movie title and movie duration have effects on gross earning. We suspect that title similarity and movie duration might affect the gross earnings. Therefore, we added this "max_title_similarity" score as a control variable, along with another indicator "is_longer_than_2hrs" to our third model to try improve the R-square of the model.
 \
 \
-_Log(Gross Adjusted for Inflation) = Female_indicator + Log(Budget Adjusted for Inflation) + Is_Genre_Action + Is_Genre_Comedy + Is_Genre_Drama + Is_Genre_Adventure + Is_Genre_Biography + Is_Genre_Animation + Is_Genre_Horror_
+_Log(Gross Adjusted for Inflation) = Female_indicator + Log(Budget Adjusted for Inflation) + Is_Genre_Action + Is_Genre_Comedy + Is_Genre_Drama + Is_Genre_Adventure + Is_Genre_Biography + Is_Genre_Animation + Is_Genre_Horror + Max_Title_Similarity + Is_Longer_Than_2hrs_
 \
 
 ## 3.3 Robust Standard Errors
