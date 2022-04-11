@@ -107,7 +107,7 @@ movies_dataset <- movies_dataset %>%
       runtime_hrs < 2 ~ 0
   ))
 
-## Genre categorial Indicators. Only selected the top 8 genres with number of movies > 100
+## Genre Categorical Indicators. Only selected the top 8 genres with number of movies > 100
 movies_dataset <- movies_dataset %>%
    mutate(is_genre_comedy = case_when(
       genre == "Comedy" ~ 1,
@@ -198,7 +198,7 @@ With this two datasets, we then perform an inner-join on them by their movie lea
 
 Before we perform our analysis, we also clean up the data by removing all the entries that have empty values for the fields that we are interested (budget, gross, runtime). The final dataset has over 5000 rows of movie data.
 
-In addition, we also generate a "title_unique_score" using a simple logic. We take all the words from all movies and count the number of occurrences for each word. Then for each title we sum the counts. This means that the lower the score, the more unique the title. The score might also be affected by the title length itself, since a short title will also tends to get a low score since it has less words.
+In addition, we also generate a "max_title_similarity" to generate a data for how similar a movie title to the rest of the movies in the dataset.
 
 Finally, we uses a R package called 'quantmod' to retrieve CPI data for inflation adjustment for our Gross and Budget data. Then we perform adjustment to the Gross and Budget data in our main dataset. We use 1980 as the base year for our inflation adjustment, then perform inner-join with the main dataset by the years. Additional calculations to adjust Gross and Budget are performed afterwards and added as columns to the main dataset.
 
@@ -243,7 +243,7 @@ ggplot(movies_dataset, aes(max_title_similarity)) +
 
 ```
 \
-The title unique score is skewed to the low end, which means most titles are pretty unique, since the titles are composed of words that has low occurrences.
+The Max Title Similarity score has 3 spikes. The biggest one is at the 0 score, the two small ones at around 0.125 and 1. The data near the middle of the range has a bell shape similar to a normal distribution.
 \
 
 
@@ -273,30 +273,25 @@ The title unique score is skewed to the low end, which means most titles are pre
 ## 3.1 Base Model: Female indicator and Gross Earnings
 In order to answer our research question, we build our first model with 'Gross earnings' as our outcome variable and 'Female Indicator' as our feature variable. A female indicator is a binary flag which has the value of 0 or 1. When it is '1', it means that the lead actor of that movie is a female. We generate this indicator by processing the 'gender' data and add a new column in the dataset to store the resulting indicator. We also include the 'Budget' variable since it has strong correlation with Gross.
 \
-Moreover, since the Gross earning is highly skewed, we also apply Log transformation to it in our first model. So the model becomes this:
+Moreover, since the Gross earning and Budget are highly skewed, we also apply Log transformation to them in our first model.
 \
 \
 _Log(Gross Adjusted for Inflation) = Female_indicator + Log(Budget Adjusted for Inflation)_
 \
 
-## 3.2 Second Model: Adding Runtime
-For the second model we are trying to improve the fitness of the model by introducing a feature variable that has a strong correlation with our outcome varable which is gross earnings. 
+## 3.2 Second Model: Adding Genre Categorical Indicators
+For the second model, we add explanatory variables that reduce effect caused by the female_indicator variable. We suspect that genre might have correlation with the gender of the lead actor. By introducing genre indicators, they should reduce female_indicator's effect on gross earnings.
 \
 \
-The Runtime data is also highly skewed, so we apply Log transformation to it in our second model as well:
-\
-\
-_Log(Gross Adjusted for Inflation) = Female_indicator + Log(Budget Adjusted for Inflation) + Log(Runtime)_
+_Log(Gross Adjusted for Inflation) = Female_indicator + Log(Budget Adjusted for Inflation) + Is_Genre_Action + Is_Genre_Comedy + Is_Genre_Drama + Is_Genre_Adventure + Is_Genre_Biography + Is_Genre_Animation + Is_Genre_Horror_
 \
 
 
-## 3.3 Third Model: Adding Title Uniqueness
-We are also interested to find out if the movie title has effects on gross earning. First, we build a simple model that uses only 'title_unique_score' as the feature variable against gross earnings.
-
-So we will introduce this new feature into our 3rd model:
+## 3.3 Third Model: Adding Title Similarity and Movie Duration Indicator
+We are also interested to find out if the movie title and movie duration have effects on gross earning. We suspect that title similarity and movie duration might affect the gross earnings. Therefore, we added this "max_title_similarity" score as a control variable, along with another indicator "is_longer_than_2hrs" to our third model to try improve the R-square of the model.
 \
 \
-_Log(Gross Adjusted for Inflation) = Female_indicator + Log(Budget Adjusted for Inflation) + Runtime + Log(Title_Unqiue_Score)_
+_Log(Gross Adjusted for Inflation) = Female_indicator + Log(Budget Adjusted for Inflation) + Is_Genre_Action + Is_Genre_Comedy + Is_Genre_Drama + Is_Genre_Adventure + Is_Genre_Biography + Is_Genre_Animation + Is_Genre_Horror_
 \
 
 
